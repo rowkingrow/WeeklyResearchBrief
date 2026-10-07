@@ -1,0 +1,826 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-07",
+  "dedup_scope": "空仓库建立的首期索引；15篇正式论文；用户既有材料不等同于已报索引",
+  "papers": [
+    {
+      "id": "B01",
+      "doi": "10.1038/s41467-026-75581-w",
+      "title": "Excess mortality attributable to the 2025 Iberian Peninsula blackout",
+      "title_zh": "停电后的延迟死亡负担",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2026-07-20",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-08-21",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "重点；正文、方法、交叉验证、数据与代码声明",
+      "supplement_read": false,
+      "topics": [
+        "停电",
+        "健康结局",
+        "不平等"
+      ],
+      "evidence_type": "实测全因死亡记录＋模型反事实超额死亡",
+      "summary": "研究关涉依赖供电与医疗连续性的居民。作者以伊比利亚22个地区2010—2024年的日死亡资料训练三种贝叶斯时空模型，校验2025年停电前预测，并控制温度、疫情、节假日和趋势。西班牙停电后两天出现约167例超额死亡，可信区间28—300；葡萄牙证据较弱。作者将其解释为停电健康负担可能延迟显现。单次事件、地区汇总和潜在残余混杂限制机制与因果解释，死亡记录中的每一例也无法逐一归因。对本研究的启发是把灾后服务恢复时序纳入影响窗口，承接两篇论文的“扰动—响应”逻辑。西班牙日死亡资料需审批，代码可读；最小验证应先确认本地可获得的结局粒度，再检验常态期反事实预测误差。未来比较应事先规定滞后窗口，并把同期温度、空气污染和其他公共卫生冲击列入因果图审查。",
+      "data_status": "西班牙死亡记录受限；其他数据原文声明可获得；研究数据样例未取得",
+      "code_status": "已核实GitHub入口；模型未执行",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-026-75581-w",
+        "doi": "https://doi.org/10.1038/s41467-026-75581-w",
+        "resources": [
+          [
+            "分析代码",
+            "https://github.com/jriou/blackout-burden"
+          ],
+          [
+            "代码归档",
+            "https://zenodo.org/records/20643229"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-026-75581-w"
+      },
+      "minimum_check": "核实一地区日结局与停电持续时间能否匹配；用非事件周检查偏差、RMSE与区间覆盖率。",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "延迟结局与可验证反事实",
+        "observability": "受限健康资料",
+        "implementation_cost": "审批成本高；模型成本中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B02",
+      "doi": "10.1038/s41467-026-69190-w",
+      "title": "Global patterns of inequality in pedestrian shade provision",
+      "title_zh": "谁能在步行途中获得遮阴",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2026-02-10",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-03-18",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "重点；正文、方法、验证设定、数据入口与香港样例",
+      "supplement_read": false,
+      "topics": [
+        "遮阴",
+        "服务可达性",
+        "不平等"
+      ],
+      "evidence_type": "模拟遮阴资源＋人口社会经济分布",
+      "summary": "研究关注步行者在日常出行中的遮阴条件。九座城市利用建筑、树木高度与道路数据生成半小时遮阴图，比较邻里收入与公共步行空间的遮阴分布；低收入和外围社区通常资源较少。作者强调城市平均绿量会掩盖出行环境差异。模型采用代表性日期、固定树冠透射率和OSM推算步道，真实步行活动、人工棚架及灾后通行变化仍有缺口。对第三篇可启发“灾后树冠受损如何改变前往生活服务的可行路线”；与第二篇共享网络重组视角，结局转向人的出行条件。已取得香港129条邻里记录并核查字段、投影，原始DSM覆盖与许可仍待逐城确认。最小验证可从一条服务路线的现场遮阴和灾前后树冠真值开始。跨事件推广还需核验道路拓扑与步行需求的稳定性，并区分设施存在、实际开放及使用行为。",
+      "data_status": "已取得香港样例；129条邻里记录、14字段、HK1980投影；完整细尺度输入待确认",
+      "code_status": "已核实Slim Shady README与代码入口；未运行",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-026-69190-w",
+        "doi": "https://doi.org/10.1038/s41467-026-69190-w",
+        "resources": [
+          [
+            "九城数据",
+            "https://zenodo.org/records/17972371"
+          ],
+          [
+            "遮阴代码",
+            "https://github.com/lukasbeuster/slim_shady"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-026-69190-w"
+      },
+      "minimum_check": "核对样例字段含义、人口权重和一条实际人行路线；检查灾前后高分辨率树冠观测与服务开放记录。",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "以公共步行空间衡量适应资源",
+        "observability": "汇总样例可得；时序输入待查",
+        "implementation_cost": "小样本低；九城DSM与计算中高"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B03",
+      "doi": "10.1038/s42256-026-01308-7",
+      "title": "Regional climate risk assessment from climate models using probabilistic machine learning",
+      "title_zh": "生成式降尺度怎样支持复合风险评估",
+      "journal": "Nature Machine Intelligence",
+      "article_type": "Article",
+      "first_online_date": "2026-09-28",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-09-28",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "重点；正文、方法、验证指标、代码README与归档入口",
+      "supplement_read": false,
+      "topics": [
+        "方法",
+        "台风",
+        "复合灾害"
+      ],
+      "evidence_type": "生成气候场与危险统计",
+      "summary": "GenFocal面向基础设施和区域适应规划，组合分布偏差订正与时空超分辨率，生成热浪和热带气旋集合。未配对学习用于偏差订正；超分辨率仍由ERA5降采样构造训练对。作者用2010—2019年ERA5比较气旋统计、温湿尾部依赖和持续热事件，并与WRF降尺度比较未来区域变化。结果支持其在既定测试域的统计保真度。局限包括再分析作为验证参照、未来分布外条件及危险到健康或停电结局间的额外模型需求。对现有两篇可提供条件情景，第三篇应先有可观测的社会结局。代码入口已核实，权重与大体量训练资料为原文声明公开；最小验证是复算一个区域的热事件持续性及尾部依赖，随后用站点检验偏差。生成集合适合估计条件分布；某次历史灾害的真实位置与影响仍应由事件观测约束。",
+      "data_status": "模型输出、训练数据、权重原文声明公开；代码归档入口已核实；气象样例未取得",
+      "code_status": "GitHub README及Zenodo软件记录已核实",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s42256-026-01308-7",
+        "doi": "https://doi.org/10.1038/s42256-026-01308-7",
+        "resources": [
+          [
+            "代码",
+            "https://github.com/google-research/swirl-dynamics/tree/main/swirl_dynamics/projects/genfocal"
+          ],
+          [
+            "软件归档",
+            "https://doi.org/10.5281/zenodo.21268077"
+          ],
+          [
+            "模型权重",
+            "https://doi.org/10.5281/zenodo.21285802"
+          ],
+          [
+            "数据目录",
+            "https://console.cloud.google.com/storage/browser/genfocal"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s42256-026-01308-7"
+      },
+      "minimum_check": "先使用现成输出核对联合极端与持续时间；GPU推理、训练和跨区域迁移另行估算HPC资源。",
+      "assessment": {
+        "journal_standing": "方法领域高影响",
+        "scientific_increment": "无事件对齐的订正＋连贯时空集合",
+        "observability": "数据声明公开；真实结局需另配",
+        "implementation_cost": "现成输出中；重训与大集合高"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {
+        "has_preprint": [
+          {
+            "identifier": "arXiv:2412.08079",
+            "url": "https://arxiv.org/abs/2412.08079",
+            "source": "出版社及作者页链接；同题正式发表"
+          }
+        ]
+      }
+    },
+    {
+      "id": "B04",
+      "doi": "10.1038/s41558-026-02670-5",
+      "title": "Global heat stress intensification and its expanding footprint on the human population",
+      "title_zh": "夜间恢复窗口正在收缩",
+      "journal": "Nature Climate Change",
+      "article_type": "Article",
+      "first_online_date": "2026-06-22",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2026-08",
+      "version_of_record_date": "2026-06-22",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "重点；正文、方法、局限、公开数据入口",
+      "supplement_read": false,
+      "topics": [
+        "热应激",
+        "昼夜复合",
+        "人口暴露"
+      ],
+      "evidence_type": "再分析人体热应激指标＋人口暴露",
+      "summary": "研究面向持续受热的人群，使用1950—2024年ERA5-HEAT及格网人口，联合刻画白天强热应激、热夜和连续昼夜事件。作者发现最热夜晚的UTCI升温快于最热白天，危险热条件的空间覆盖扩大。它把夜间恢复条件纳入气候风险描述，为停电后夜间居住暴露和次日户外劳动提供可操作指标。UTCI整合气温、湿度、风与辐射，并含标准人体响应假设；这里报告的是环境热应激及人口暴露。再分析对城市微气候、极端值的刻画与十年人口快照均有限制。与第一篇可连接恢复期作业环境，与第二篇可连接活动时段重排。数据入口已核实，代码需申请；最小检查为两个台风事件的逐小时昼夜序列与邻近站点比较。港口与沿海场景需进一步检查海陆格点混合、风场和夜间辐射条件对阈值判断的影响。",
+      "data_status": "原文声明公开；CDS ERA5-HEAT入口已核实；气象样例未取得",
+      "code_status": "作者合理请求提供",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41558-026-02670-5",
+        "doi": "https://doi.org/10.1038/s41558-026-02670-5",
+        "resources": [
+          [
+            "ERA5-HEAT",
+            "https://cds.climate.copernicus.eu/datasets/derived-utci-historical"
+          ],
+          [
+            "历史人口",
+            "https://zenodo.org/records/6011021"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41558-026-02670-5"
+      },
+      "minimum_check": "统一当地时间、风速高度与辐射定义；核验灾后逐小时昼夜连续暴露；全球全时段重算成本较高。",
+      "assessment": {
+        "journal_standing": "气候领域高影响",
+        "scientific_increment": "昼夜连续热应激与人口暴露",
+        "observability": "公开再分析；微气候验证需补",
+        "implementation_cost": "区域窗口低中；全球小时资料高"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B05",
+      "doi": "10.1038/s41467-026-71825-x",
+      "title": "Trees halve urban heat island effect globally but unequal benefits only modestly mitigate climate-change warming",
+      "title_zh": "树冠降温收益为何分配不均",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2026-05-06",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-05-06",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "重点；正文、方法、三城过程模型、Dryad目录",
+      "supplement_read": false,
+      "topics": [
+        "树冠",
+        "近地气温",
+        "适应不平等"
+      ],
+      "evidence_type": "观测约束统计估计＋过程模型情景",
+      "summary": "研究关注城市居民获得的树冠降温收益，以8919个城市区域的树冠和格网近地气温建立统计模型，并用三座城市的过程模型补充热应激情景。作者估计现有树冠削减相对无树冠情景约41%—49%的潜在气温热岛，人口加权平均降温约0.15℃，收益更多集中于高收入地区和郊区。该百分比的分母是潜在热岛强度。模型转移、格网气温和假设无树情景限制对突发风灾的解释。第三篇可检验台风造成的树冠损失是否长期改变热适应资源，并与既有台风扰动研究形成连贯脉络。Dryad已核实数据代码目录，主包约1.38GB。最小验证应先比较受损与匹配未受损街区的树冠、近地气温和遮阴，单独处理季节与城市开发。收益随气候与空间需求变化，灾后研究应同步检查树冠修复和居民实际使用条件。",
+      "data_status": "已核实Dryad入口及1.38GB目录；样例未下载",
+      "code_status": "Dryad公开R/Python/GEE与i-Tree配置目录已核实",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-026-71825-x",
+        "doi": "https://doi.org/10.1038/s41467-026-71825-x",
+        "resources": [
+          [
+            "数据与代码",
+            "https://datadryad.org/dataset/doi:10.5061/dryad.905qfttz0"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-026-71825-x"
+      },
+      "minimum_check": "先在一城核查树冠损失真值和地面温湿风；过程模拟依赖i-Tree、空间数据与适用参数。",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "气温口径＋全球收益不平等",
+        "observability": "公开目录；风灾时序另需核查",
+        "implementation_cost": "统计中；过程情景中高"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {
+        "has-preprint": [
+          {
+            "id-type": "doi",
+            "id": "10.21203/rs.3.rs-6982703/v1",
+            "asserted-by": "object"
+          }
+        ]
+      }
+    },
+    {
+      "id": "B06",
+      "doi": "10.1038/s41558-026-02749-z",
+      "title": "New labour and agricultural damages improve climate cost estimates",
+      "title_zh": "热劳动损失进入气候成本核算",
+      "journal": "Nature Climate Change",
+      "article_type": "Article",
+      "first_online_date": "2026-09-16",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2026-10",
+      "version_of_record_date": "2026-09-16",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "摘要、图注、数据代码声明",
+      "supplement_read": false,
+      "topics": [
+        "劳动",
+        "气候经济"
+      ],
+      "evidence_type": "模型劳动能力损失与经济损害",
+      "summary": "将偏差订正CMIP6、两类劳动响应函数和经济模型连接，估计热劳动损害并更新农业损害。对复工问题的启发是先分工种与作业时段量化热约束，再连接生产活动；可延伸第一篇能耗和第二篇活动重排。响应函数与适应假设决定外推，模型劳动能力指标需与实际工时或产出核验。",
+      "data_status": "劳动能力栅格原文声明公开；入口与样例待确认",
+      "code_status": "Zenodo及Code Ocean原文声明公开；运行待确认",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41558-026-02749-z",
+        "doi": "https://doi.org/10.1038/s41558-026-02749-z",
+        "resources": [
+          [
+            "劳动能力",
+            "https://doi.org/10.5281/zenodo.21636524"
+          ],
+          [
+            "分行业数据",
+            "https://doi.org/10.5281/zenodo.21712766"
+          ],
+          [
+            "经济代码",
+            "https://doi.org/10.5281/zenodo.21483095"
+          ],
+          [
+            "补充代码",
+            "https://doi.org/10.24433/CO.9032029.v1"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41558-026-02749-z"
+      },
+      "minimum_check": "一个作业点、一周WBGT与工时核对；完整经济链需专业模型。",
+      "assessment": {
+        "journal_standing": "气候领域高影响",
+        "scientific_increment": "劳动损害纳入成本且更新农业估计",
+        "observability": "公开产品声明；真实工时待查",
+        "implementation_cost": "局地指标低；经济模型高"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B07",
+      "doi": "10.1038/s44360-026-00193-z",
+      "title": "Extreme event attribution for heat-related mortality due to anthropogenic climate change across Europe",
+      "title_zh": "从高温归因推进到健康负担归因",
+      "journal": "Nature Health",
+      "article_type": "Article",
+      "first_online_date": "2026-09-07",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-09-07",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "摘要、图注、数据可用性",
+      "supplement_read": false,
+      "topics": [
+        "健康归因",
+        "极端热"
+      ],
+      "evidence_type": "死亡统计支持的模型归因健康负担",
+      "summary": "把极端事件归因与流行病学模型连接，分析34个欧洲国家的热相关死亡风险变化，显示区域和年龄差异。可借鉴第一篇的反事实思路，但第三篇需建立暴露—结局关系。周尺度结局和响应函数外推限制灾后短时机制识别；归因人数含模型假设，使用前须检查时间聚合。",
+      "data_status": "Eurostat死亡、人口及ERA5-Land原文声明公开；样例未取得",
+      "code_status": "本轮公开预览未见可核实代码入口",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s44360-026-00193-z",
+        "doi": "https://doi.org/10.1038/s44360-026-00193-z",
+        "resources": [
+          [
+            "Eurostat周死亡",
+            "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Weekly_death_statistics"
+          ],
+          [
+            "ERA5-Land",
+            "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s44360-026-00193-z"
+      },
+      "minimum_check": "先核对一国周死亡时间覆盖、年龄分组和暴露聚合偏差。",
+      "assessment": {
+        "journal_standing": "健康领域新刊；长期声望尚待积累",
+        "scientific_increment": "事件概率归因延伸至健康负担",
+        "observability": "汇总死亡声明公开",
+        "implementation_cost": "区域复核中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B08",
+      "doi": "10.1038/s44360-026-00184-0",
+      "title": "Impact of household air conditioning usage on heat-related mortality in the USA",
+      "title_zh": "空调使用与热死亡保护效应",
+      "journal": "Nature Health",
+      "article_type": "Article",
+      "first_online_date": "2026-08-31",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-08-31",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "摘要、图注、数据代码声明",
+      "supplement_read": false,
+      "topics": [
+        "空调",
+        "停电",
+        "健康"
+      ],
+      "evidence_type": "实测死亡记录＋模型关联与归因",
+      "summary": "结合约三千万条美国死亡记录与县级空调使用，发现保护关联随使用水平增加趋于平台。它提示灾后停电可改变既有适应条件，承接两篇的扰动研究。县级年度指标与残余混杂限制个体解释，也难直接描述短时断电。第三篇最小检查应先核实受限结局渠道及地区实际制冷可用性。",
+      "data_status": "死亡记录需CDC研究数据中心申请；空调使用数据获取条件待确认",
+      "code_status": "原文提供GitHub；入口未单独读取",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s44360-026-00184-0",
+        "doi": "https://doi.org/10.1038/s44360-026-00184-0",
+        "resources": [
+          [
+            "代码",
+            "https://github.com/CHENlab-Yale/Heat_AC_Use_Mortality_US"
+          ],
+          [
+            "气象",
+            "https://prism.oregonstate.edu/"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s44360-026-00184-0"
+      },
+      "minimum_check": "检查空调使用年份、空间粒度、停电持续时间和健康数据许可。",
+      "assessment": {
+        "journal_standing": "健康领域新刊；长期声望尚待积累",
+        "scientific_increment": "适应使用量与收益非线性",
+        "observability": "关键健康资料受限",
+        "implementation_cost": "审批高；分析中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B09",
+      "doi": "10.1038/s41467-026-77077-z",
+      "title": "Large fisheries declines linked to compound and extreme climate events",
+      "title_zh": "海洋热与低生产力共同冲击渔获",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2026-09-01",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-09-01",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "摘要、方法选择性阅读、数据代码声明",
+      "supplement_read": false,
+      "topics": [
+        "海洋",
+        "生计",
+        "食物安全"
+      ],
+      "evidence_type": "渔获统计关联＋未来风险投影",
+      "summary": "整合1246物种、254区域的长期渔获、温度与海洋生产力资料，复合极端与低渔获概率增加相关。对第三篇可启发沿海生计损失与恢复条件，并连接第二篇活动空间变化。捕捞努力、管理及市场会影响渔获，商业船AIS覆盖也需重验。最小检查为一种渔业的独立努力量和上岸量时序。",
+      "data_status": "处理数据原文声明公开；Zenodo版本与文件目录已核实；样例未取得",
+      "code_status": "Zenodo v1.0.1归档入口已核实",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-026-77077-z",
+        "doi": "https://doi.org/10.1038/s41467-026-77077-z",
+        "resources": [
+          [
+            "数据代码",
+            "https://doi.org/10.5281/zenodo.21350761"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-026-77077-z"
+      },
+      "minimum_check": "检查区域年尺度产品能否支持事件窗口；补查捕捞努力、管理变化与登陆统计。",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "温度与生产力联合极端",
+        "observability": "全球处理资料可得；事件粒度受限",
+        "implementation_cost": "基础复核中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B10",
+      "doi": "10.1038/s41467-026-72636-w",
+      "title": "Dense canopies reverse the cooling effect of urban greening in humid cities",
+      "title_zh": "湿热城市中的树冠效应边界",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2026-05-04",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-07-09",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "摘要、方法与数据声明选择性阅读",
+      "supplement_read": false,
+      "topics": [
+        "湿热",
+        "树冠",
+        "测量口径"
+      ],
+      "evidence_type": "模型热指数与解释性关联",
+      "summary": "在138个印度城市分析植被结构、活性与湿度调整热指数的关联，提示收益随气候背景而变。它为灾后树冠研究提供竞争解释，也连接现有台风环境扰动脉络。相关模型和解释变量依赖限制机制判断；地表温度、2米气温和热指数须分开。最小检查是站点温湿观测与树冠结构变化是否同步。",
+      "data_status": "MODIS、ERA5-Land、IMDAA和HadISD原文声明公开；本轮未取样",
+      "code_status": "GitHub原文提供；归档DOI尚待作者补充",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-026-72636-w",
+        "doi": "https://doi.org/10.1038/s41467-026-72636-w",
+        "resources": [
+          [
+            "代码",
+            "https://github.com/angana16/Heat-Index-and-urban-vegetation"
+          ],
+          [
+            "验证观测",
+            "https://www.metoffice.gov.uk/hadobs/hadisd/data.html"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-026-72636-w"
+      },
+      "minimum_check": "核验站点验证、湿度与气温构造及空间独立验证；注意正文EVI产品名称与链接标识需复核。",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "湿度对绿化效果的条件限制",
+        "observability": "遥感与再分析可得",
+        "implementation_cost": "局地中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B11",
+      "doi": "10.1038/s41598-026-52565-w",
+      "title": "Ground-station and ERA5-Land evaluation for heat-induced labour loss assessment across developed-economy regions in Pacific Asia",
+      "title_zh": "再分析劳动热风险需要地面校验",
+      "journal": "Scientific Reports",
+      "article_type": "Article",
+      "first_online_date": "2026-05-31",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2026-08-11",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "摘要、方法、验证结果、数据声明",
+      "supplement_read": false,
+      "topics": [
+        "劳动",
+        "再分析验证"
+      ],
+      "evidence_type": "站点气象驱动的模型劳动能力指标",
+      "summary": "用亚太37个站点检验ERA5-Land驱动的WBGT劳动损失，热带表现弱于温带。它能约束第三篇复工热暴露测量，也支持两篇研究中的环境变量质量控制。站点气象与响应函数共同生成参照值，实际劳动产出仍需独立资料；作者的经验修正比例适用范围有待复验。",
+      "data_status": "站点机构、ERA5-Land原文列明；具体小时序列获取条件待确认",
+      "code_status": "Zenodo原文声明归档",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41598-026-52565-w",
+        "doi": "https://doi.org/10.1038/s41598-026-52565-w",
+        "resources": [
+          [
+            "代码",
+            "https://doi.org/10.5281/zenodo.19202516"
+          ],
+          [
+            "ERA5-Land",
+            "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41598-026-52565-w"
+      },
+      "minimum_check": "选择有风、湿度、辐射的沿海站点，核验逐小时偏差与日内作业阈值。",
+      "assessment": {
+        "journal_standing": "广覆盖专业期刊",
+        "scientific_increment": "区域验证和误差量化",
+        "observability": "关键站点辐射序列待核",
+        "implementation_cost": "小样本低中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    },
+    {
+      "id": "B12",
+      "doi": "10.1038/s41467-025-59737-8",
+      "title": "Hurricane Ida’s blackout-heatwave compound risk in a changing climate",
+      "title_zh": "Ida停电—热浪风险的直接先例",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2025-05-15",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2025-05-15",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "摘要、数据代码声明；方法选择性阅读",
+      "supplement_read": false,
+      "topics": [
+        "台风",
+        "停电",
+        "复合热"
+      ],
+      "evidence_type": "电力网络模型与复合危险情景",
+      "summary": "连接气旋、海平面、热浪和电网韧性模型，估计路易斯安那Ida级复合事件未来更频繁，作者识别热浪增强为主要驱动。该文是第三篇停电—热方案的直接先例，并与现有Ida经验相关。客户小时属于服务中断暴露量；电网参数和恢复假设限制迁移。先核实真实停电时序与网络输入再设计独立贡献。",
+      "data_status": "电网来源已列；生成统计归档入口已核实；原始网络完整性待确认",
+      "code_status": "Zenodo解析至版本15012709，MATLAB包目录已核实",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-025-59737-8",
+        "doi": "https://doi.org/10.1038/s41467-025-59737-8",
+        "resources": [
+          [
+            "数据代码概念DOI",
+            "https://doi.org/10.5281/zenodo.15012708"
+          ],
+          [
+            "已解析版本",
+            "https://doi.org/10.5281/zenodo.15012709"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-025-59737-8"
+      },
+      "minimum_check": "查两个事件的真实停电与气象覆盖、恢复假设和服务可达性数据。",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "电力失效与连续热情景联结",
+        "observability": "专业网络与恢复资料依赖",
+        "implementation_cost": "完整复现高"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "retrospective",
+      "retrospective_reason": "2025-05-15早于核心窗；是Ida停电—热复合风险的最近直接设计先例。",
+      "version_relations": {
+        "has-preprint": [
+          {
+            "id-type": "doi",
+            "id": "10.21203/rs.3.rs-4096843/v1",
+            "asserted-by": "object"
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13",
+      "doi": "10.1038/s41467-023-38084-6",
+      "title": "Spatiotemporal distribution of power outages with climate events and social vulnerability in the USA",
+      "title_zh": "美国停电暴露与脆弱性的测量基线",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2023-04-29",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": "2023-04-29",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "正文与方法选择性阅读、数据代码声明",
+      "supplement_read": false,
+      "topics": [
+        "停电",
+        "不平等",
+        "医疗依赖"
+      ],
+      "evidence_type": "观测停电＋社会脆弱性指标",
+      "summary": "将2018—2020年县级小时停电与天气、社会脆弱性、依赖电力的医疗设备分布连接，识别长期停电和脆弱性共存地区。可支持第三篇观测门槛设计，延续两篇对样本覆盖的审查。原始停电记录收费且空间覆盖不均；公开年度汇总适合背景筛选，短时恢复研究需更细资料。",
+      "data_status": "原始PowerOutage.us数据需购买；年度汇总原文声明公开",
+      "code_status": "GitHub与Zenodo原文列明",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-023-38084-6",
+        "doi": "https://doi.org/10.1038/s41467-023-38084-6",
+        "resources": [
+          [
+            "汇总与代码",
+            "https://github.com/viviando/National-Power-Outages"
+          ],
+          [
+            "软件归档",
+            "https://doi.org/10.5281/zenodo.7668274"
+          ],
+          [
+            "原始记录条件",
+            "https://poweroutage.us/products"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-023-38084-6"
+      },
+      "minimum_check": "逐县核实小时覆盖与缺测规则；比较绝对客户小时与相对停电率。",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "统一健康相关停电暴露指标",
+        "observability": "原始记录付费且缺测",
+        "implementation_cost": "取得原始记录后中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "retrospective",
+      "retrospective_reason": "2023-04-29；奠定停电时长、客户分母和覆盖审核的测量框架。",
+      "version_relations": {}
+    },
+    {
+      "id": "B14",
+      "doi": "10.1029/2025ef006000",
+      "title": "Rising Global Elderly Health Inequalities in the Face of Temperature Extremes",
+      "title_zh": "老龄化如何改变极端温度风险地图",
+      "journal": "Earth’s Future",
+      "article_type": "Research Article",
+      "first_online_date": "2025-07-04",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2025-07",
+      "version_of_record_date": "2025-07-04",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-07，所读出版社页面未见独立更正公告；已取得的Crossref记录未列更新关系。此为本轮可见范围，后续重查。",
+      "reading_scope": "正文方法与限制、数据声明选择性阅读",
+      "supplement_read": false,
+      "topics": [
+        "老龄化",
+        "不平等",
+        "导师背景"
+      ],
+      "evidence_type": "综合风险指标EMRI",
+      "summary": "导师参与研究结合ERA5、CMIP6、人口年龄结构和收入建立EMRI，呈现老年群体风险不平等。该指标有助于第三篇明确脆弱群体，并与两篇的暴露分布研究形成联系。作者明确其适用于风险表征，年龄特异死亡预测需额外证据；最小检查可比较年龄分层与全人口加权的热点排序。",
+      "data_status": "ERA5、CMIP6、WorldPop、World Bank、GBD等原文列明；使用条件与样例待核",
+      "code_status": "本轮未见独立代码归档",
+      "links": {
+        "publisher": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025EF006000",
+        "doi": "https://doi.org/10.1029/2025ef006000",
+        "resources": [
+          [
+            "WorldPop年龄结构",
+            "https://hub.worldpop.org/geodata/listing?id=65"
+          ],
+          [
+            "GBD来源",
+            "https://vizhub.healthdata.org/gbd-compare/"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1029/2025ef006000"
+      },
+      "minimum_check": "审查指标权重、年龄定义、人口外推与死亡资料来源；以风险指标口径复算。",
+      "assessment": {
+        "journal_standing": "地球系统领域重要期刊",
+        "scientific_increment": "年龄特异风险与不平等",
+        "observability": "多公共产品；指标依赖假设",
+        "implementation_cost": "区域复算低中"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "retrospective",
+      "retrospective_reason": "2025-07-04；为导师公开研究关联及风险指标边界提供基础。",
+      "version_relations": {}
+    },
+    {
+      "id": "B15",
+      "doi": "10.1038/s44304-026-00246-z",
+      "title": "Heterogeneous effects of tropical cyclones on diarrheal diseases across multiple Asian regions by cyclone definitions",
+      "title_zh": "气旋定义会改变腹泻健康关联",
+      "journal": "npj Natural Hazards",
+      "article_type": "Article",
+      "first_online_date": "2026-07-23",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "version_of_record_date": null,
+      "correction_dates": [],
+      "correction_status": "摘要页未见更正公告；Crossref更正关系待补核。",
+      "reading_scope": "摘要级；出版社元数据",
+      "supplement_read": false,
+      "topics": [
+        "台风",
+        "饮水食品相关健康",
+        "跨地区"
+      ],
+      "evidence_type": "实测发病死亡汇总＋统计关联",
+      "summary": "用亚洲10地区的周腹泻资料比较风、雨和联合气旋定义，发病关联存在异质性，死亡关联多有较宽区间。提示第三篇应围绕实际致害路径界定暴露，承接两篇的事件窗口设计。腹泻结局对饮水或食品机制的区分仍需证据；最小检查为关键地区周记录、检测变化与风雨定义的稳定性。",
+      "data_status": "摘要页资料共享条件待确认",
+      "code_status": "待确认",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s44304-026-00246-z",
+        "doi": "https://doi.org/10.1038/s44304-026-00246-z",
+        "resources": [],
+        "metadata": "https://api.crossref.org/works/10.1038/s44304-026-00246-z"
+      },
+      "minimum_check": "先确认健康结局获取与完整度，并在相同样本上比较风、雨、联合定义；需补读全文。",
+      "assessment": {
+        "journal_standing": "灾害领域新刊；长期声望待积累",
+        "scientific_increment": "暴露定义与结局类型异质性",
+        "observability": "健康资料许可待确认",
+        "implementation_cost": "数据审批不确定"
+      },
+      "first_reported_issue": "2026-10-07-baseline",
+      "last_reported_issue": "2026-10-07-baseline",
+      "selection": "core_12_months",
+      "retrospective_reason": null,
+      "version_relations": {}
+    }
+  ]
+}
