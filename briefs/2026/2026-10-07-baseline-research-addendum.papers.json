@@ -1,0 +1,16 @@
+{
+  "kind": "RESEARCH_ADDENDUM",
+  "date": "2026-10-07",
+  "baseline_commit": "15b7abb1d0a2d14089547f797f892fd378e32634",
+  "baseline_path": "briefs/2026/2026-10-07-baseline.md",
+  "original_brief_retained": true,
+  "data_samples_obtained_this_review": false,
+  "updates": [
+    {"id":"B15","doi":"10.1038/s44304-026-00246-z","reading":"accepted-manuscript methods, limitations, data and code declarations","data_status":"PROVIDER_APPROVAL_REQUIRED_SAMPLE_NOT_OBTAINED","code_url":"https://github.com/linszuyu/tc-diarrhea-multi-region","code_check":"ROOT_DIRECTORY_RETURNED_README_AND_CODE; NO_EXECUTION","evidence_pages":[26,29,30,31,32]},
+    {"id":"B09","doi":"10.1038/s41467-026-77077-z","reading":"publisher search-index introduction, methods and limitations; direct webpage cache error","analysis_resolution":"annual species-EEZ, 1993-2019","outcome":"catch production/removal anomaly; biomass inference requires independent evidence","zenodo_status_this_review":"ACCESS_FAILED_PRIOR_CHECK_PRESERVED"},
+    {"id":"B12","topic":"offshore wind and grid extension","direct_precedents":["10.1038/s41467-025-65105-3","10.1016/j.apenergy.2026.127542","10.1016/j.apenergy.2026.127608"],"reading":"abstracts/highlights and selected results","novelty":"NOT_ESTABLISHED"},
+    {"id":"B14","topic":"ageing and service dependence","direct_precedents":["10.1038/s41467-023-37675-7","10.1038/s41467-023-38084-6","10.1016/j.ijdrr.2023.103844"],"data_entrypoints":["https://empowerprogram.hhs.gov/about-empowermap.html","https://doi.org/10.1038/s41597-024-03095-5"],"qualification":"OFFICIAL_DOCUMENTATION_READ; SAMPLE_AND_LINKAGE_PENDING"},
+    {"id":"B02","doi":"10.1038/s41467-026-69190-w","interpretation_update":"Post-storm immediate route accessibility and later canopy cooling recovery require distinct studies; proposed later-season question remains untested"},
+    {"id":"B07","doi":"10.1038/s44360-026-00193-z","new_fulltext_claim":false,"related_hurricane_health_precedents":["10.1038/s41586-024-07945-5","10.3201/eid2908.221906","10.1128/mbio.01476-23"]}
+  ]
+}

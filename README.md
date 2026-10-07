@@ -6,6 +6,10 @@
 
 [2026-10-07｜首期基线，15篇、5篇重点](briefs/2026/2026-10-07-baseline.md) · [配套元数据](briefs/2026/2026-10-07-baseline.papers.json)
 
+[2026-10-07｜研究补注：疾病资料条件、渔业时间尺度及风电/老龄化直接先例](briefs/2026/2026-10-07-baseline-research-addendum.md) · [补注元数据](briefs/2026/2026-10-07-baseline-research-addendum.papers.json)
+
+补注追加本次原文核查和研究解释；首期正文及原索引保留其版本与阅读时点。后续引用B02、B07、B09、B12、B14、B15时同时核读补注。
+
 ## 历史目录
 
 - [2026年](briefs/2026/)
