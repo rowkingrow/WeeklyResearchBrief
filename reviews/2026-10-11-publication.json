@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "issue": "2026-10-11",
+  "status": "published_and_content_readback_verified",
+  "repository": "rowkingrow/WeeklyResearchBrief",
+  "branch": "main",
+  "visibility": "public",
+  "content_commit": "56f63444596ff4e994b8484393a2e14443927a65",
+  "content_commit_url": "https://github.com/rowkingrow/WeeklyResearchBrief/commit/56f63444596ff4e994b8484393a2e14443927a65",
+  "replaces_scheduled_at": "2026-10-12T08:00:00+08:00",
+  "actual_started_at": "2026-10-11T10:12:02+08:00",
+  "search_cutoff": "2026-10-11T10:12:02+08:00",
+  "content_completed_at": "2026-10-11T10:27:07+08:00",
+  "publication_readback_completed_at": "2026-10-11T10:28:10+08:00",
+  "actual_completed_at": "2026-10-11T10:28:44+08:00",
+  "completion_definition": "正文、元数据、索引、README、衔接配置与核验记录已在main发布并全部回读一致；此时间记录该验收完成，随后归档本独立回执。",
+  "files": [
+    {
+      "path": "briefs/2026/2026-10-11.md",
+      "match": true,
+      "blob_sha": "25aee6259b962dff90f5ed8d78bba01bb9f66fc7",
+      "sha256": "a9e65c3c2ce78c659c117be8ad2f40c64e632dd44a34a28e4a76a5db8bdb3678",
+      "bytes": 11263,
+      "verification": "UTF-8 content equals submitted local file"
+    },
+    {
+      "path": "briefs/2026/2026-10-11.papers.json",
+      "match": true,
+      "blob_sha": "aa5e0d439901b3c57601bf4cd495e799fe962f7c",
+      "sha256": "2d462a415047d5e4cfd339c3771221a5ca812113d382e66b5115f3bcd4c420ea",
+      "bytes": 30145,
+      "verification": "UTF-8 content equals submitted local file"
+    },
+    {
+      "path": "index/papers.json",
+      "match": true,
+      "blob_sha": "93c6f95e21c7976c2e8d5b459e715164159c3726",
+      "sha256": "d78042664d42a63c28bfb9280e3963f7bf9a419ef711d00aea76093f3f84ef73",
+      "bytes": 70563,
+      "verification": "UTF-8 content equals submitted local file"
+    },
+    {
+      "path": "README.md",
+      "match": true,
+      "blob_sha": "4e11fa001a4541a3be024f63430e717f43f17a7a",
+      "sha256": "c7e214b3f91e1228e9d3a3df0e4996e99e3f50ddc6e51ed586548eef96546d2a",
+      "bytes": 2441,
+      "verification": "UTF-8 content equals submitted local file"
+    },
+    {
+      "path": "config/AUTOMATION.md",
+      "match": true,
+      "blob_sha": "49aec89dc7c492e7199c95b3fef4e5186debff0b",
+      "sha256": "32359739595077114b7961b16e1fe8d1acdacd5e61405f5c1084376b958fd3d1",
+      "bytes": 3985,
+      "verification": "UTF-8 content equals submitted local file"
+    },
+    {
+      "path": "reviews/2026-10-11-checks.md",
+      "match": true,
+      "blob_sha": "acfaca93b05bc380f87bb19be3a0d79c4576882b",
+      "sha256": "95bb591536dfda8fe7ddf9d13d93204b010eea43f0125f574545b56baef4ff8d",
+      "bytes": 5722,
+      "verification": "UTF-8 content equals submitted local file"
+    }
+  ],
+  "prior_index_entries_unchanged": 15,
+  "historical_briefs_untouched": true,
+  "force_push": false,
+  "followup": {
+    "next_regular_window": [
+      "2026-10-12T08:00:00+08:00",
+      "2026-10-19T08:00:00+08:00"
+    ],
+    "bridge_backfill": [
+      "2026-10-11T10:12:02+08:00",
+      "2026-10-12T08:00:00+08:00"
+    ],
+    "schedule_changed_by_this_run": false
+  },
+  "limitations": [
+    "Crossref发现检索部分限流，已用出版社搜索和PubMed补充；未声称穷尽",
+    "健康及商业轨迹资料未申请或取得",
+    "公园样例仅下载压缩包，未核查字段",
+    "BODC数据登记已核实，落地目录未完成数据下载",
+    "Nature Food条目为摘要级"
+  ]
+}
