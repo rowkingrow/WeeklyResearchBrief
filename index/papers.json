@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-07",
-  "dedup_scope": "空仓库建立的首期索引；15篇正式论文；用户既有材料不等同于已报索引",
+  "updated_at": "2026-10-11",
+  "dedup_scope": "保留2026-10-07基线15条；本期与main最新索引、基线研究补注及其papers.json按标准化DOI、归一题名和版本关系去重。补注已知先例不重复作为新增。2026-10-11新增6篇窗口内及1篇补录。",
   "papers": [
     {
       "id": "B01",
@@ -821,6 +821,467 @@
       "selection": "core_12_months",
       "retrospective_reason": null,
       "version_relations": {}
+    },
+    {
+      "id": "W20261011-01",
+      "doi": "10.1038/s43247-026-04118-2",
+      "title": "Chlorophyll extremes during a surface marine heatwave in a seasonally stratified shelf sea",
+      "title_zh": "海洋热浪下的表层与深层叶绿素",
+      "journal": "Communications Earth & Environment",
+      "article_type": "Article",
+      "first_online_date": "2026-10-08",
+      "focus": true,
+      "summary": "研究关涉沿海生态生产力的短时变化。2023年苏格兰陆架海热浪期间，滑翔机连续剖面记录到表层不足两天的叶绿素峰值，以及持续的次表层增高；深度积分信息补充了卫星表层视角。作者用船测样品校准荧光，并检查夜间资料以评估淬灭影响，解释涉及层化、光照和输运。五月校准向六月迁移、移动剖面的时空混叠及单事件设计，仍限制机制归因。叶绿素属于生态观测，连接渔获或沿海生计还需额外证据。我们的推论是第三篇海洋方向应先确认台风关键时段的垂向真值；既有两篇的船舶响应可提供活动端信息。数据登记入口已核实，样例未取得，滑翔机观测具有稀缺性。最小检查是配对一条剖面与同期卫星，核对云缺测、混合层和叶绿素变化，再判断跨事件比较条件。",
+      "reading_scope": "重点；接收稿全文、方法、校准及夜间敏感性检查、数据声明；补充材料未逐项读取",
+      "topics": [
+        "海洋热浪",
+        "生态生产力",
+        "沿海生计"
+      ],
+      "evidence_type": "环境危险＋实测垂向叶绿素；未测渔业产量或居民健康",
+      "data_status": "已核实DataCite登记入口；BODC落地页本次返回目录，具体数据下载待确认；未取得样例",
+      "code_status": "原数据元数据列GEOMAR处理工具；论文完整分析代码公开状态待确认",
+      "assessment": {
+        "journal_standing": "地球环境领域高影响综合子刊",
+        "scientific_increment": "高频垂向观测揭示表层视角遗漏的过程；单事件推广待验证",
+        "observability": "现成滑翔机资料有登记；目标台风时段覆盖未知",
+        "implementation_cost": "已有观测分析中等；新增观测成本高"
+      },
+      "minimum_check": "先取得一条剖面，审查校准与时间坐标，配对同期卫星并量化云缺测、层化和基线覆盖。",
+      "author_interpretation": "层化、光照及输运可解释叶绿素响应，机制并未完全分离。",
+      "limitations": [
+        "单海域单事件",
+        "荧光与叶绿素校准具有季节和群落依赖",
+        "移动剖面时空混叠",
+        "叶绿素不能直接代表鱼类生物量或渔获"
+      ],
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_of_record_date": null,
+      "version_status": "出版社接收稿先行在线",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-11，本轮所读出版社/全文及Crossref记录未见独立更正；不代表穷尽更正检索。",
+      "correction_checked_at": "2026-10-11",
+      "supplement_read": false,
+      "links": {
+        "publisher": "https://www.nature.com/articles/s43247-026-04118-2",
+        "doi": "https://doi.org/10.1038/s43247-026-04118-2",
+        "resources": [
+          [
+            "观测数据DOI",
+            "https://doi.org/10.5285/4c2fe1b0-c140-b645-e063-7086abc0c54f"
+          ],
+          [
+            "DataCite核验",
+            "https://api.datacite.org/dois/10.5285/4c2fe1b0-c140-b645-e063-7086abc0c54f"
+          ],
+          [
+            "数据处理工具",
+            "https://git.geomar.de/open-source/geomar_glider_toolbox"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s43247-026-04118-2"
+      },
+      "first_reported_issue": "2026-10-11",
+      "last_reported_issue": "2026-10-11",
+      "selection": "core_7_days",
+      "retrospective_reason": null,
+      "version_relations": {},
+      "first_online_basis": "出版社首次在线日期与Crossref published-online核对；日精度、出版社时区未给。所选核心文献均不在窗口边界日。"
+    },
+    {
+      "id": "W20261011-02",
+      "doi": "10.1029/2026gh001920",
+      "title": "Compound Heatwaves and Health Inequality: A Nationwide Study on Emergency Admissions and Socioeconomic Vulnerability in South Korea",
+      "title_zh": "昼夜复合热浪与老龄群体急诊住院",
+      "journal": "GeoHealth",
+      "article_type": "Research Article",
+      "first_online_date": "2026-10-08",
+      "focus": true,
+      "summary": "研究面向热浪中的医疗需求，以韩国2011—2019年夏季约201万次成人急诊入院记录，结合气象站近地气温，采用时间分层病例交叉和分布滞后模型。作者报告昼夜复合热浪与住院增加相关，泌尿生殖系统疾病以及老年、低收入群体更突出。结局为实际住院记录，个体归因依赖统计模型；地区平均气温尚未描述室内暴露，个体重复住院相关性也因计算限制未显式处理。我们的推论是灾后服务研究应同时检查夜间降温、设施开放和就医受阻，论文自身未检验气旋或停电。它延续两篇的扰动—响应逻辑，第三篇需新增服务机制及独立结局。NHIS数据须审批，课题组尚未确认渠道，分析代码未定位。最小检查是核实事件日期、居住区、年龄和入院时间能否获批，并审查灾时停诊造成的记录变化。",
+      "reading_scope": "重点；PMC全文、方法、分组与敏感性分析描述、局限及数据声明；未读取全部补充材料",
+      "topics": [
+        "复合热浪",
+        "老龄化",
+        "医疗需求",
+        "不平等"
+      ],
+      "evidence_type": "实测健康结局记录＋模型关联；暴露为气象站近地气温，未计算地表温度或人体热应激",
+      "data_status": "原文声明健康记录需NHIS正式申请与审批；作者无权转交；未核实审批资格或取得样例",
+      "code_status": "所读全文未定位公开分析代码",
+      "assessment": {
+        "journal_standing": "地球环境与健康交叉专业期刊",
+        "scientific_increment": "区分昼夜热浪及病因、收入和年龄异质性；灾害服务机制待建立",
+        "observability": "气温可观测；个体健康记录受限",
+        "implementation_cost": "资料审批成本高；计算中等至高"
+      },
+      "minimum_check": "确认健康合作与可获字段、授权期和地区粒度；核对设施停诊、转诊、迁出及报告中断。",
+      "author_interpretation": "昼夜持续热暴露对低收入老龄人群和部分疾病造成更突出负担。",
+      "limitations": [
+        "区级暴露与个体室内温度不一致",
+        "残余时变混杂",
+        "重复入院个体内相关性未显式建模",
+        "未识别停电或气旋效应"
+      ],
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2026-10",
+      "volume": "10",
+      "issue": "10",
+      "version_of_record_date": null,
+      "version_status": "正式期刊论文（PMC全文）",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-11，本轮所读出版社/全文及Crossref记录未见独立更正；不代表穷尽更正检索。",
+      "correction_checked_at": "2026-10-11",
+      "supplement_read": false,
+      "links": {
+        "publisher": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026GH001920",
+        "doi": "https://doi.org/10.1029/2026gh001920",
+        "resources": [
+          [
+            "开放全文",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC13648162/"
+          ],
+          [
+            "NHIS申请入口（原文提供）",
+            "https://nhiss.nhis.or.kr/en/z/a/001/lpza001m01en.do"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1029/2026gh001920"
+      },
+      "first_reported_issue": "2026-10-11",
+      "last_reported_issue": "2026-10-11",
+      "selection": "core_7_days",
+      "retrospective_reason": null,
+      "version_relations": {},
+      "first_online_basis": "出版社首次在线日期与Crossref published-online核对；日精度、出版社时区未给。所选核心文献均不在窗口边界日。"
+    },
+    {
+      "id": "W20261011-03",
+      "doi": "10.1038/s41467-026-78106-7",
+      "title": "Quantifying parks as preventive health assets using population-scale mobility data",
+      "title_zh": "公园真实使用与模型健康收益",
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2026-10-05",
+      "focus": true,
+      "summary": "研究关涉城市居民日常活动及公园投资回报，将大东京约32万用户、179万次访问与4139座公园连接，从停留和活动信息推算步行剂量，再估计医疗成本节约。作者据此评估不同公园的健康资产价值。访问记录提供行为证据，步行剂量和健康收益经过模型转换；手机用户代表性、活动推断及外部成本系数会传递不确定性。我们的推论是灾后绿地研究可先测恢复开放后的实际使用，再研究热服务恢复；道路清障与设施状态须同步记录。它与第二篇共享空间活动重组问题，独立增量仍须来自服务恢复机制，第一篇可借鉴收益链的不确定性分层。公开代码与扰动样例入口已核实，样例压缩包已取得但尚未解包；完整轨迹受商业许可限制。最小检查是审查样例字段，并用一个公园的客流或步行观测检验活动推断。",
+      "reading_scope": "重点；接收稿全文、方法、验证与敏感性描述、数据代码声明；GitHub README及文件清单；样例压缩包仅下载未解包",
+      "topics": [
+        "公园服务",
+        "活动空间",
+        "模型健康收益",
+        "恢复阶段"
+      ],
+      "evidence_type": "实测手机位置活动＋推断步行剂量＋模型医疗成本收益；无实测临床改善",
+      "data_status": "已取得样例压缩包（29,741字节，未解包核查）；公开样例坐标经扰动；完整商业轨迹受限",
+      "code_status": "已核实GitHub及Zenodo v1.0.0；未运行代码，精确软件环境与完整复现待核",
+      "assessment": {
+        "journal_standing": "跨学科高影响",
+        "scientific_increment": "连接公园使用与经济健康收益；推断链验证决定外推强度",
+        "observability": "开放小样例可检查结构；完整轨迹受限",
+        "implementation_cost": "样例检查低；商业许可及独立行为验证成本待估"
+      },
+      "minimum_check": "解包检查样例时间、访问与停留字段；用一公园独立客流/步行数据验证推断，再评估灾后日频覆盖。",
+      "author_interpretation": "将公园视作预防性健康资产，可支持投资排序。",
+      "limitations": [
+        "移动电话样本选择",
+        "位置/停留不直接测量步数",
+        "模型收益依赖外部剂量与成本关系",
+        "单一都市环境及商业原始资料"
+      ],
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_of_record_date": null,
+      "version_status": "出版社接收稿先行在线",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-11，本轮所读出版社/全文及Crossref记录未见独立更正；不代表穷尽更正检索。",
+      "correction_checked_at": "2026-10-11",
+      "supplement_read": false,
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-026-78106-7",
+        "doi": "https://doi.org/10.1038/s41467-026-78106-7",
+        "resources": [
+          [
+            "代码和样例",
+            "https://github.com/SuH-Studio/Quantifying-parks-as-preventive-health-assets"
+          ],
+          [
+            "版本归档",
+            "https://zenodo.org/records/21903066"
+          ],
+          [
+            "商业资料申请（原文提供）",
+            "https://www.blogwatcher.co.jp/contact"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s41467-026-78106-7"
+      },
+      "first_reported_issue": "2026-10-11",
+      "last_reported_issue": "2026-10-11",
+      "selection": "core_7_days",
+      "retrospective_reason": null,
+      "version_relations": {},
+      "first_online_basis": "出版社首次在线日期与Crossref published-online核对；日精度、出版社时区未给。所选核心文献均不在窗口边界日。"
+    },
+    {
+      "id": "W20261011-04",
+      "doi": "10.1038/s43247-026-04110-w",
+      "title": "Cascading fishery collapse associated with thermal habitat degradation, marine heatwaves, and predator influx",
+      "title_zh": "乌贼渔业衰退的多重海洋压力",
+      "journal": "Communications Earth & Environment",
+      "article_type": "Article",
+      "first_online_date": "2026-10-05",
+      "summary": "作者结合多年渔获、海温与捕食者资料，将乌贼渔业衰退关联于热栖息地、热浪和捕食压力，服务于沿海生计问题。年度渔获与努力量变化限制短时生态归因。对两篇的启发是分离捕捞活动重组与资源变化；最小检查需同季努力量及独立生物调查。数据代码入口已核实，完整分卷包约2.67 GB，未下载。",
+      "reading_scope": "正文、方法、CPUE检查、机制与因果局限、数据代码声明；未运行MATLAB",
+      "topics": [
+        "海洋热浪",
+        "渔业",
+        "沿海生计"
+      ],
+      "evidence_type": "实测渔获与海洋环境资料＋统计机制关联；年度渔获不能等同短时生物量",
+      "data_status": "原文声明公开；已核实Zenodo文件目录；未取得数据样例",
+      "code_status": "已核实MATLAB R2025b数据代码归档入口；分卷合计约2.67 GB；未运行",
+      "assessment": {
+        "journal_standing": "地球环境领域高影响综合子刊",
+        "scientific_increment": "联合热环境和捕食压力的关联证据；因果链仍待验证",
+        "observability": "历史汇总资料公开；关键时段生物观测仍缺",
+        "implementation_cost": "现成资料重分析中等；补充生态调查高"
+      },
+      "minimum_check": "审查渔获、CPUE和努力量共享分子的相关风险，确认月季尺度、物种及区域匹配，再找独立生物量调查。",
+      "author_interpretation": "热栖息地退化、热浪和捕食者扩张可能形成级联压力。",
+      "limitations": [
+        "年度/季节尺度限制灾后短期推断",
+        "部分CPUE连续性不足",
+        "关联和中介分析不能独立证实因果",
+        "情景预测有模型与努力量假设"
+      ],
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_of_record_date": null,
+      "version_status": "出版社接收稿先行在线",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-11，本轮所读出版社/全文及Crossref记录未见独立更正；不代表穷尽更正检索。",
+      "correction_checked_at": "2026-10-11",
+      "supplement_read": false,
+      "links": {
+        "publisher": "https://www.nature.com/articles/s43247-026-04110-w",
+        "doi": "https://doi.org/10.1038/s43247-026-04110-w",
+        "resources": [
+          [
+            "数据与代码版本",
+            "https://zenodo.org/records/21804316"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s43247-026-04110-w"
+      },
+      "first_reported_issue": "2026-10-11",
+      "last_reported_issue": "2026-10-11",
+      "selection": "core_7_days",
+      "retrospective_reason": null,
+      "version_relations": {},
+      "first_online_basis": "出版社首次在线日期与Crossref published-online核对；日精度、出版社时区未给。所选核心文献均不在窗口边界日。"
+    },
+    {
+      "id": "W20261011-05",
+      "doi": "10.1186/s12889-026-29469-5",
+      "title": "Experiences of district health management team members during Cyclone Freddy (2023) in two districts of Malawi: a qualitative study",
+      "title_zh": "Freddy气旋后的医疗服务连续性",
+      "journal": "BMC Public Health",
+      "article_type": "Research Article",
+      "first_online_date": "2026-10-09",
+      "summary": "作者在灾后两年访谈马拉维两区15名医疗管理人员，描述道路、设施、物资和报告系统受损及外展服务应对，为居民就医障碍提供机制线索。回忆偏差和管理者视角限制代表性，未估计疾病效应。可衔接第二篇的通达性问题；最小检查为逐日设施开放、路障及转诊记录。访谈资料须向作者申请，尚未取得。",
+      "reading_scope": "接收稿全文、抽样与访谈方法、主题结果、局限及数据声明",
+      "topics": [
+        "气旋",
+        "医疗服务",
+        "道路中断",
+        "恢复"
+      ],
+      "evidence_type": "实测访谈资料及作者主题分析；未量化人口健康结局",
+      "data_status": "原文声明合理请求可获得；实际共享条件待确认；未取得样例",
+      "code_status": "所读范围未见公共代码库",
+      "assessment": {
+        "journal_standing": "公共卫生综合专业期刊",
+        "scientific_increment": "直接提供气旋服务中断与应对机制；定性与回顾性设计",
+        "observability": "独有访谈需申请；设施日志可否取得未知",
+        "implementation_cost": "公开全文阅读低；新现场合作和访谈中高"
+      },
+      "minimum_check": "以一地区一事件核查逐日道路可通、诊疗开放、物资和转诊日志，区分需求变化与记录中断。",
+      "author_interpretation": "基础设施、资源和协调能力影响灾后卫生系统韧性。",
+      "limitations": [
+        "15名目的抽样管理人员",
+        "访谈距2023事件约两年",
+        "缺患者视角",
+        "没有疾病因果效应估计"
+      ],
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_of_record_date": null,
+      "version_status": "出版社接收稿先行在线",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-11，本轮所读出版社/全文及Crossref记录未见独立更正；不代表穷尽更正检索。",
+      "correction_checked_at": "2026-10-11",
+      "supplement_read": false,
+      "links": {
+        "publisher": "https://link.springer.com/article/10.1186/s12889-026-29469-5",
+        "doi": "https://doi.org/10.1186/s12889-026-29469-5",
+        "resources": [],
+        "metadata": "https://api.crossref.org/works/10.1186/s12889-026-29469-5"
+      },
+      "first_reported_issue": "2026-10-11",
+      "last_reported_issue": "2026-10-11",
+      "selection": "core_7_days",
+      "retrospective_reason": null,
+      "version_relations": {},
+      "first_online_basis": "出版社首次在线日期与Crossref published-online核对；日精度、出版社时区未给。所选核心文献均不在窗口边界日。"
+    },
+    {
+      "id": "W20261011-06",
+      "doi": "10.1038/s43016-026-01432-y",
+      "title": "Refined crop modelling reveals intensifying impacts of droughts and heatwaves on global wheat productivity",
+      "title_zh": "极端天气下小麦减产的模型敏感性",
+      "journal": "Nature Food",
+      "article_type": "Article",
+      "first_online_date": "2026-10-08",
+      "summary": "摘要与图示显示，作者改进作物模型后重估全球小麦旱热减产，灌溉缓冲作用也随模型设定改变。现实终点是生产损失，机制和外推取决于校准验证。对第一篇排放估算的启发是检查结构误差；第三篇增量须另行建立。数据代码入口已核实，全文验证未读；最小检查是留出极端年份或区域。",
+      "reading_scope": "摘要、出版社图注及数据代码声明；全文方法与验证未读，属摘要级",
+      "topics": [
+        "复合旱热",
+        "粮食生产",
+        "模型验证"
+      ],
+      "evidence_type": "模型作物产量与观测比较；无直接食品安全或健康结局",
+      "data_status": "原文声明含公开来源及需条件确认的农业观测；已核实Figshare目录；未取得样例",
+      "code_status": "Figshare code.zip及data.zip入口已核实；专业作物模型环境未安装运行",
+      "assessment": {
+        "journal_standing": "食品系统领域高影响专业子刊",
+        "scientific_increment": "极端响应参数化与产量损失重估；验证独立性待全文核读",
+        "observability": "汇总模型资料可见；校准站点资料条件需确认",
+        "implementation_cost": "全球10公里作物模拟较高；子区域样例中等"
+      },
+      "minimum_check": "取得全文核查训练与独立验证划分，再对一个未参与校准的旱热事件检查产量残差。",
+      "author_interpretation": "改进模型揭示更强旱热影响和更弱灌溉缓冲。",
+      "limitations": [
+        "本轮仅摘要及图注阅读",
+        "独立验证及校准迁移细节待确认",
+        "模型产量不能直接替代食品安全或营养结局"
+      ],
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_of_record_date": "2026-10-08",
+      "version_status": "正式期刊论文",
+      "correction_dates": [],
+      "correction_status": "截至2026-10-11，本轮所读出版社/全文及Crossref记录未见独立更正；不代表穷尽更正检索。",
+      "correction_checked_at": "2026-10-11",
+      "supplement_read": false,
+      "links": {
+        "publisher": "https://www.nature.com/articles/s43016-026-01432-y",
+        "doi": "https://doi.org/10.1038/s43016-026-01432-y",
+        "resources": [
+          [
+            "数据与代码",
+            "https://doi.org/10.6084/m9.figshare.30846617"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s43016-026-01432-y"
+      },
+      "first_reported_issue": "2026-10-11",
+      "last_reported_issue": "2026-10-11",
+      "selection": "core_7_days",
+      "retrospective_reason": null,
+      "version_relations": {},
+      "first_online_basis": "出版社首次在线日期与Crossref published-online核对；日精度、出版社时区未给。所选核心文献均不在窗口边界日。"
+    },
+    {
+      "id": "W20261011-07",
+      "doi": "10.1038/s44284-026-00443-x",
+      "title": "Urban congestion relief experiments through routing-app interventions",
+      "title_zh": "改道实验中的网络外溢",
+      "journal": "Nature Cities",
+      "article_type": "Article",
+      "first_online_date": "2026-06-16",
+      "summary": "作者在十城利用导航改道干预评估拥堵及网络外溢，排放收益另经模型换算。商业轨迹受限，切换设计的可比性仍需检查。对第二篇最直接的启发是把受影响邻接路段纳入比较单位，第一篇需区分交通观测与排放推算。最小检查为伪事件和外溢范围。七月更正道路编号；十月研究简讯触发本次补录。",
+      "reading_scope": "出版社正文、实验与网络评估、数据代码声明；更正公告；公开代码目录，未运行",
+      "topics": [
+        "交通重组",
+        "多主体外溢",
+        "排放推算"
+      ],
+      "evidence_type": "实测交通速度/轨迹＋模型全网收益与排放；干预切换设计需审查比较假设",
+      "data_status": "原文商业个体交通数据不可公开；图2源数据声明公开，样例未取得",
+      "code_status": "已核实google-research/congestion_dispersion公开目录；未运行",
+      "assessment": {
+        "journal_standing": "城市研究领域高影响专业子刊",
+        "scientific_increment": "真实平台干预及网络外溢评估；航运迁移需独立识别逻辑",
+        "observability": "平台原始轨迹受限；代码与部分源数据可见",
+        "implementation_cost": "方法审查低；新平台干预高"
+      },
+      "minimum_check": "先按船舶/时段定义潜在受影响比较单位，审查处理外溢、天气共变和伪事件；不得直接照搬城市干预估计。",
+      "author_interpretation": "少量路线分散可产生网络效率与减排收益。",
+      "limitations": [
+        "商业原始数据受限",
+        "切换干预比较需处理时间差异",
+        "排放是模型换算",
+        "城市道路结果迁移航运须独立验证"
+      ],
+      "selection": "backfill",
+      "retrospective_reason": "10月8日Research Briefing带出6月正式研究；基线及补注未收录，对第二篇网络外溢比较单位有直接启发。",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2026-07",
+      "volume": "3",
+      "issue": "7",
+      "version_of_record_date": "2026-06-16",
+      "version_status": "正式期刊论文",
+      "correction_dates": [
+        "2026-07-06"
+      ],
+      "correction_status": "已核实2026-07-06 Author Correction，修正Atlanta道路编号。",
+      "correction_checked_at": "2026-10-11",
+      "supplement_read": false,
+      "links": {
+        "publisher": "https://www.nature.com/articles/s44284-026-00443-x",
+        "doi": "https://doi.org/10.1038/s44284-026-00443-x",
+        "resources": [
+          [
+            "代码",
+            "https://github.com/google-research/google-research/tree/master/congestion_dispersion"
+          ],
+          [
+            "更正",
+            "https://www.nature.com/articles/s44284-026-00480-6"
+          ],
+          [
+            "10月研究简讯（非新研究）",
+            "https://www.nature.com/articles/s44284-026-00539-4"
+          ]
+        ],
+        "metadata": "https://api.crossref.org/works/10.1038/s44284-026-00443-x"
+      },
+      "first_reported_issue": "2026-10-11",
+      "last_reported_issue": "2026-10-11",
+      "version_relations": {
+        "correction_doi": "10.1038/s44284-026-00480-6",
+        "research_briefing_doi": "10.1038/s44284-026-00539-4",
+        "research_briefing_online_date": "2026-10-08"
+      },
+      "first_online_basis": "出版社首次在线日期与Crossref published-online核对；日精度、出版社时区未给。所选核心文献均不在窗口边界日。"
     }
   ]
 }
