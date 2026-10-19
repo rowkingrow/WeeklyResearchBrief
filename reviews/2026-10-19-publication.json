@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "issue": "2026-10-19",
+  "status": "published_and_verified",
+  "scheduled_at": "2026-10-19T08:00:00+08:00",
+  "actual_started_at": "2026-10-19T08:01:23+08:00",
+  "cutoff_at": "2026-10-19T08:00:00+08:00",
+  "core_window": {
+    "start": "2026-10-12T08:00:00+08:00",
+    "end": "2026-10-19T08:00:00+08:00"
+  },
+  "bridge_window": {
+    "start": "2026-10-11T10:12:02+08:00",
+    "end": "2026-10-12T08:00:00+08:00",
+    "basis": "前期发布回执及AUTOMATION配置已回读"
+  },
+  "content_completed_at": "2026-10-19T00:19:39Z",
+  "content_readback_completed_at": "2026-10-19T00:20:39Z",
+  "actual_completed_at": "2026-10-19T00:21:22Z",
+  "completion_definition": "正文、元数据、索引、README、配置及检查记录全部按发布提交回读一致；可下载正文和JSON均已保存。随后追加本独立回执，不修改历史正文。",
+  "repository": "https://github.com/rowkingrow/WeeklyResearchBrief",
+  "branch": "main",
+  "previous_head": "886ed3259c3562b13031b18882e0c411946e9d41",
+  "content_commit_sha": "7d50b20de6a141fbe69446155bea9cfb2277c790",
+  "content_commit_url": "https://github.com/rowkingrow/WeeklyResearchBrief/commit/7d50b20de6a141fbe69446155bea9cfb2277c790",
+  "brief_url": "https://github.com/rowkingrow/WeeklyResearchBrief/blob/main/briefs/2026/2026-10-19.md",
+  "publication_mode": "atomic six-file commit, expected_sha guard, force=false",
+  "verification": [
+    {
+      "path": "briefs/2026/2026-10-19.md",
+      "match": true,
+      "blob_sha": "809973674776f1af09ac3c8deab5a4351f4c265c",
+      "characters": 5609
+    },
+    {
+      "path": "briefs/2026/2026-10-19.papers.json",
+      "match": true,
+      "blob_sha": "575cffff38538a94edde40e5f73d1e65e30a4c96",
+      "characters": 28539
+    },
+    {
+      "path": "index/papers.json",
+      "match": true,
+      "blob_sha": "f5f24dbbc501cc89e618572250ddf531c17087e0",
+      "characters": 76898
+    },
+    {
+      "path": "README.md",
+      "match": true,
+      "blob_sha": "3a2f757619f7d5f1e4761407e2b2712c7b36abfd",
+      "characters": 2096
+    },
+    {
+      "path": "config/AUTOMATION.md",
+      "match": true,
+      "blob_sha": "4ea46423a8b43e5b48c1fea50e219823867b02b3",
+      "characters": 2552
+    },
+    {
+      "path": "reviews/2026-10-19-checks.md",
+      "match": true,
+      "blob_sha": "705dee58d32b98443b6704139ae3fe0ced3d55d6",
+      "characters": 3243
+    }
+  ],
+  "local_git_blob_hashes_match": true,
+  "previous_22_index_objects_unchanged": true,
+  "total_index_count": 30,
+  "new_doi_count": 8,
+  "focus_count": 3,
+  "preprint_count": 0,
+  "downloadable_original_artifacts_saved": true,
+  "notes": [
+    "04/05/06首次在线日依据PubMed电子发表字段，出版社直核受限",
+    "08为10月11日日精度衔接边界补录；04为10月12日下边界日条目",
+    "原文PDF及所取样例未公开归档",
+    "未新建或修改平台任务；每周运行继续"
+  ]
+}
