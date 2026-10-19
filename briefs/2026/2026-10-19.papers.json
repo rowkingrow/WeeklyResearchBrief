@@ -1,0 +1,786 @@
+{
+  "schema_version": "1.1",
+  "issue": "2026-10-19",
+  "timing": {
+    "scheduled_at": "2026-10-19T08:00:00+08:00",
+    "actual_started_at": "2026-10-19T08:01:23+08:00",
+    "first_tool_clock_at": "2026-10-19T08:02:04+08:00",
+    "cutoff_at": "2026-10-19T08:00:00+08:00",
+    "core_window": {
+      "start": "2026-10-12T08:00:00+08:00",
+      "end": "2026-10-19T08:00:00+08:00"
+    },
+    "bridge_window": {
+      "start": "2026-10-11T10:12:02+08:00",
+      "end": "2026-10-12T08:00:00+08:00",
+      "basis": "前期发布回执及AUTOMATION配置已回读"
+    },
+    "timezone": "Asia/Singapore",
+    "content_completed_at": "2026-10-19T00:19:39Z",
+    "publication_completed_at": null,
+    "completion_receipt": "../../reviews/2026-10-19-publication.json"
+  },
+  "selection_count": 8,
+  "focus_count": 3,
+  "preprint_count": 0,
+  "coverage_note": "7篇常规候选（04下边界日精度不确定）；1篇提前运行衔接日边界补录。04/05/06在线日期依据PubMed电子发表字段，出版社直核受限。",
+  "dedup": {
+    "prior_index_count": 22,
+    "prior_head": "886ed3259c3562b13031b18882e0c411946e9d41",
+    "inputs": [
+      "index/papers.json",
+      "briefs/2026/2026-10-07-baseline-research-addendum.md",
+      "briefs/2026/2026-10-07-baseline-research-addendum.papers.json",
+      "reviews/2026-10-11-publication.json"
+    ],
+    "method": "标准化DOI、归一题名、版本关系；新增8无重复；未追踪到的预印本关系保留未知。"
+  },
+  "research_conditions": {
+    "public_supervisor_themes": [
+      "时空数据分析",
+      "卫星影像融合",
+      "环境监测",
+      "综合空间规划"
+    ],
+    "method_fit_inference": "可能适配多源时空验证与实际后果的分层研究；不等于导师已批准课题",
+    "actually_available": "用户自述HPC可用；既有AIS相关原产品共同缺口已定位。此次仅取得Hagibis示例压缩包目录，不是已具备新研究数据集。",
+    "unconfirmed": [
+      "健康资料和合作",
+      "连续气温/树损真值",
+      "养殖短时样本与实验条件",
+      "经费需可行性后申请"
+    ],
+    "ida_gate": "5/8可见时点，预设至少6；48h未知61/117；独立设计HOLD限定原样本/覆盖/比较，第二篇复用需兼容审查"
+  },
+  "papers": [
+    {
+      "id": "W20261019-01",
+      "doi": "10.1038/s41598-026-75519-8",
+      "title": "Reevaluating how tree canopy cools the air and surfaces in cities at very high resolution",
+      "title_zh": "树冠降温：空气与地表",
+      "journal": "Scientific Reports",
+      "article_type": "Article",
+      "first_online_date": "2026-10-13",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "出版社页面Published与Crossref published-online一致；日精度、时区未给。",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_status": "出版社Article in Press公开接收稿；非预印本",
+      "version_of_record_date": null,
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "core_focus",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "树冠",
+        "近地气温",
+        "地表温度",
+        "恢复阶段"
+      ],
+      "summary": "事实：11个美国城市的移动近地气温、1米土地覆盖与夏季Landsat地表温度，经广义可加模型比较，树冠对两类温度的关系明显不同。气温来自道路上单日三个时段，地表温度为夏季晴空均值；两者并非同步测量。模型以交叉验证和系统抽样减弱过拟合、空间相关。作者解释：单独使用树冠覆盖或较粗产品，可高估密集建成区的降温。限制还包括植被图年份不齐、湿度缺测，无法直接给出人体热应激或健康收益。我们的推论：第一篇应分清环境代理与后果，第二篇的可达性也需匹配真实时段；第三篇若考虑灾后树冠服务，应在道路恢复后检验服务恢复是否滞后于绿度恢复。最小检查是先找同城灾前后气温、树冠和修路时序，并排除同期天气变化。处理后[数据](https://doi.org/10.6084/m9.figshare.28485413)及[R代码](https://github.com/Alonzo-Lab/urban-temperature-analysis)入口已核实，未下载117MB数据包；新事件连续观测仍待确认。\n",
+      "reading_scope": "公开接收稿：结果、GAM/GAMM方法、交叉验证、讨论限制、数据声明；查看第3页；作者GitHub README与Figshare元数据；未运行代码",
+      "evidence_type": "环境危险：实测移动近地气温与遥感地表温度；非人体热应激，非健康结局",
+      "facts": "11城675675个移动气温样点；1米覆盖与30米产品比较；气温单日三时段，LST为同夏晴空均值；GAMM经50次2%系统子样本及k折验证。",
+      "author_interpretation": "仅使用树冠覆盖及较粗覆盖产品可能高估密集建成区降温。",
+      "limitations": [
+        "道路采样",
+        "每城单日且三时段",
+        "气温与夏季LST非同步",
+        "树冠图年份不齐",
+        "湿度不全，不能估人体热应激"
+      ],
+      "minimum_check": "先找灾前后同城连续气温、树冠与道路恢复时序；控制同期天气，检查观测频率。",
+      "data_status": "已核实入口",
+      "code_status": "已核实入口；未运行",
+      "data_detail": "原文声明公开。Figshare City air temperature data after basic processing，city_tair_data.zip.zip=117094327字节；未下载。",
+      "resources": [
+        [
+          "处理数据",
+          "https://doi.org/10.6084/m9.figshare.28485413"
+        ],
+        [
+          "代码",
+          "https://github.com/Alonzo-Lab/urban-temperature-analysis"
+        ]
+      ],
+      "dependencies": [
+        "需外部近地气温观测",
+        "灾后阶段和路网恢复信息",
+        "无需把LST直接转为健康结局"
+      ],
+      "relation_to_user": [
+        "第一篇：环境代理与实际后果分层",
+        "第二篇：时段匹配及真实服务可达性",
+        "第三篇：树冠服务恢复滞后仅待查新"
+      ],
+      "assessment": {
+        "journal_standing": "综合开放期刊；不按Nature品牌视同旗舰",
+        "scientific_increment": "厘清气温/LST和覆盖分辨率造成的推断差异",
+        "observability": "公开处理数据；新增灾后连续观测待确认",
+        "implementation_cost": "现成R复现低；新事件观测中高"
+      },
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41598-026-75519-8",
+        "doi": "https://doi.org/10.1038/s41598-026-75519-8",
+        "metadata": "https://api.crossref.org/works/10.1038/s41598-026-75519-8",
+        "resources": [
+          [
+            "处理数据",
+            "https://doi.org/10.6084/m9.figshare.28485413"
+          ],
+          [
+            "代码",
+            "https://github.com/Alonzo-Lab/urban-temperature-analysis"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "W20261019-02",
+      "doi": "10.1038/s41586-026-11115-0",
+      "title": "Evaluating space-based methane detection through a one-year blind test",
+      "title_zh": "甲烷盲测与覆盖分母",
+      "journal": "Nature",
+      "article_type": "Article",
+      "first_online_date": "2026-10-14",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "出版社页面Published与Crossref published-online一致；日精度、时区未给。",
+      "issue_date": "2026-10-15",
+      "volume": "658",
+      "issue": "8136",
+      "version_status": "正式期刊论文",
+      "version_of_record_date": "2026-10-14",
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "core_focus",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "遥感验证",
+        "排放",
+        "观测缺失"
+      ],
+      "summary": "事实：全年盲测含481次计量释放、265次空白事件，比较12颗卫星及15支团队。专用定点观测仪器检出率较高，但仍有定量误差；补充材料明确允许分析团队剔除观测，常见理由为云量，纳入被剔除事件后检出率下降。作者解释：云、风与处理方法共同影响可靠性。限制是单一主要场地、点源和特定释放范围，无法代表台风海面条件。我们的推论：第一篇可借鉴独立排放真值与误差分解，第二篇应分别报告观测缺失和真实船舶响应；甲烷结果本身不能验证船舶二氧化碳估算。最小检查是先审查覆盖分母、空白时段及天气相关缺失，再讨论跨事件推广。[地面计量、气象与复现代码](https://purl.stanford.edu/qh001qt3946)声明公开、入口已核实，未取得样例；全部原始卫星影像未随文统一开放。复现实验需要独有地面设备，方法审查成本较低。\n",
+      "reading_scope": "出版社摘要、数据代码声明；公开补充材料S1、S2.3、S3.2、S3.3、S3.7、S4相关方法；主文订阅段未读",
+      "evidence_type": "排放遥感独立实验验证：计量释放真值；非船舶排放直接验证",
+      "facts": "746事件=481次释放+265空白；12卫星、15团队；团队可过滤云遮等观测，补充结果也计算纳入过滤观测的检出表现。",
+      "author_interpretation": "仪器目的、处理方法与观测天气影响检出和定量可靠性。",
+      "limitations": [
+        "主要场地单一",
+        "点源/释放范围限制",
+        "非盲Phase0不可并入盲测",
+        "过滤影响分母",
+        "原始影像含商业依赖"
+      ],
+      "minimum_check": "检查覆盖分母、空白对照、天气相关缺失；把检出误差和排放定量误差分别记录。",
+      "data_status": "已核实入口",
+      "code_status": "原文声明公开；复现代码入口页已核实，文件未逐项取得",
+      "data_detail": "Stanford库题名Large-Scale Controlled Methane Releases for Satellite-Based Detection and Emission Quantification of Point-Sources；HTTP200，未下载样例。",
+      "resources": [
+        [
+          "地面真值及复现代码",
+          "https://purl.stanford.edu/qh001qt3946"
+        ],
+        [
+          "补充材料",
+          "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-11115-0/MediaObjects/41586_2026_11115_MOESM1_ESM.pdf"
+        ]
+      ],
+      "dependencies": [
+        "地面计量装置",
+        "部分商业影像",
+        "风与云独立观测"
+      ],
+      "relation_to_user": [
+        "第一篇：独立真值与误差传播",
+        "第二篇：观测缺失与行为响应分离；不解封Ida HOLD",
+        "不能将甲烷结论当船舶CO2验证"
+      ],
+      "assessment": {
+        "journal_standing": "综合旗舰",
+        "scientific_increment": "全年盲测、空白对照及仪器/算法比较",
+        "observability": "计量真值与气象公开；卫星影像未统一再分发",
+        "implementation_cost": "方法审查低；地面释放与卫星复测高"
+      },
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41586-026-11115-0",
+        "doi": "https://doi.org/10.1038/s41586-026-11115-0",
+        "metadata": "https://api.crossref.org/works/10.1038/s41586-026-11115-0",
+        "resources": [
+          [
+            "地面真值及复现代码",
+            "https://purl.stanford.edu/qh001qt3946"
+          ],
+          [
+            "补充材料",
+            "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-11115-0/MediaObjects/41586_2026_11115_MOESM1_ESM.pdf"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "W20261019-03",
+      "doi": "10.1038/s43247-026-04077-8",
+      "title": "Impact-based flood-damage assessment in Japan under longitudinal typhoon-track perturbations and levee-height variations during Hagibis (2019)",
+      "title_zh": "路径误差与洪灾损失",
+      "journal": "Communications Earth & Environment",
+      "article_type": "Article",
+      "first_online_date": "2026-10-13",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "出版社页面Published与Crossref published-online一致；日精度、时区未给。",
+      "issue_date": null,
+      "volume": "7",
+      "issue": "1",
+      "version_status": "正式期刊论文",
+      "version_of_record_date": "2026-10-13",
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "core_focus",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "台风",
+        "洪水",
+        "损失模型",
+        "服务中断"
+      ],
+      "summary": "事实：81个路径扰动情景连接WRF、陆面水文及建筑损失模型，并比较堤高变化；控制情景以雷达降雨、实测流量和水位验证，后两者峰值空间相关分别为0.90和0.80。作者解释：细小路径差异会改变区域受灾分布。限制是单次台风的模型情景，相关性不能保证绝对量准确，模拟财产损失也不等于实测健康或停业后果。我们的推论：第一篇可审查气象输入到排放估计的误差传递；第二篇需区分危险场、真实道路或港口关闭及交通重组。最小检查是先把一个受灾地点的真实关闭记录与模拟积水时段对齐，再确认比较单位及其他解释。[数据入口](https://github.com/Li-Xiaoyang0407/Hagibis-2019-/tree/data)已取得压缩包并检查目录，尚未检验数值；[代码入口](https://github.com/Li-Xiaoyang0407/Hagibis-2019-/tree/main)已核实。完整WRF—水文重算依赖专业配置与较大算力，现有HPC不消除观测瓶颈。\n",
+      "reading_scope": "出版社全文：WRF/ILS方法、观测验证、损失情景、讨论和数据代码声明；GitHub data/main目录与README；数据zip目录，未重算",
+      "evidence_type": "环境危险模拟＋模型经济损失；雷达/流量/水位观测验证；非实测健康或停业结局",
+      "facts": "81条经向平移路径情景；WRF4.3.3外15km内5km；ILS约1.5km，洪泛降尺度30m；控制情景峰流量/水位空间R为0.90/0.80。",
+      "author_interpretation": "路径小扰动影响地区损失，防护效益随危险情景变化。",
+      "limitations": [
+        "单事件情景依赖",
+        "相关性不等于绝对精度",
+        "建筑损失曲线与暴露假设",
+        "未提供真实设施关闭的因果验证"
+      ],
+      "minimum_check": "对齐一处真实关闭/开放记录与模拟积水时段；检查比较单位、路径偏差及修复调度竞争解释。",
+      "data_status": "已取得样例",
+      "code_status": "已核实入口；未运行",
+      "data_detail": "下载dmg.zip=923962字节，核查11个NetCDF条目（每个43574440字节）；仅查看压缩包目录，未读数值/坐标，未独立验证模拟。",
+      "resources": [
+        [
+          "数据",
+          "https://github.com/Li-Xiaoyang0407/Hagibis-2019-/tree/data"
+        ],
+        [
+          "代码",
+          "https://github.com/Li-Xiaoyang0407/Hagibis-2019-/tree/main"
+        ],
+        [
+          "JRA55",
+          "http://jra.kishou.go.jp/JRA-55/index_en.html"
+        ],
+        [
+          "河流观测",
+          "http://www1.river.go.jp/"
+        ],
+        [
+          "雷达原始入口声明",
+          "http://database.rish.kyoto-u.ac.jp/arch/jmadata/data/jma-radar/synthetic/original/"
+        ],
+        [
+          "建筑暴露声明",
+          "https://doi.org/10.5281/zenodo.15487006"
+        ]
+      ],
+      "dependencies": [
+        "专业WRF/ILS配置",
+        "较大HPC资源",
+        "建筑暴露/损失模型",
+        "另需真实服务中断观测"
+      ],
+      "relation_to_user": [
+        "第一篇：气象输入到排放的误差传递",
+        "第二篇：危险场、关闭和交通重组分层",
+        "第三篇独立增量不能仅复用81情景"
+      ],
+      "assessment": {
+        "journal_standing": "地学环境专业子刊",
+        "scientific_increment": "路径扰动与堤高耦合损失评估",
+        "observability": "部分模拟结果和代码开放；真实关闭记录另需",
+        "implementation_cost": "全WRF/ILS链高；轻量源数据核查低"
+      },
+      "links": {
+        "publisher": "https://www.nature.com/articles/s43247-026-04077-8",
+        "doi": "https://doi.org/10.1038/s43247-026-04077-8",
+        "metadata": "https://api.crossref.org/works/10.1038/s43247-026-04077-8",
+        "resources": [
+          [
+            "数据",
+            "https://github.com/Li-Xiaoyang0407/Hagibis-2019-/tree/data"
+          ],
+          [
+            "代码",
+            "https://github.com/Li-Xiaoyang0407/Hagibis-2019-/tree/main"
+          ],
+          [
+            "JRA55",
+            "http://jra.kishou.go.jp/JRA-55/index_en.html"
+          ],
+          [
+            "河流观测",
+            "http://www1.river.go.jp/"
+          ],
+          [
+            "雷达原始入口声明",
+            "http://database.rish.kyoto-u.ac.jp/arch/jmadata/data/jma-radar/synthetic/original/"
+          ],
+          [
+            "建筑暴露声明",
+            "https://doi.org/10.5281/zenodo.15487006"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "W20261019-04",
+      "doi": "10.1016/j.socscimed.2026.119932",
+      "title": "Climate resilience through residential solar energy: Reducing health risks from extreme temperatures",
+      "title_zh": "住宅太阳能与老年热死亡",
+      "journal": "Social Science & Medicine",
+      "article_type": "Journal Article",
+      "first_online_date": "2026-10-12",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "PubMed ArticleDate DateType=Electronic:2026-10-12；Crossref仅卷期2026-12。出版社直核受限，首次在线日暂依权威索引。",
+      "issue_date": "2026-12",
+      "volume": "410",
+      "issue": null,
+      "version_status": "正式期刊论文",
+      "version_of_record_date": "2026-10-12",
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "core",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "能源负担",
+        "老龄化",
+        "实测死亡资料"
+      ],
+      "summary": "事实：日本府县月度死亡与太阳能采用资料，结合震后电价变化作工具变量分析，热死亡保护关联集中于老年人。作者解释为能源可负担性改善。推论：可延伸第一篇能源后果、第二篇服务连续性，但不能据此认定断网时仍供电。最小检查工具变量排除限制及储能条件；健康原始资料和代码可得性待确认。\n",
+      "reading_scope": "PubMed完整摘要和电子发表字段；Crossref元数据；出版社页面403，未读方法全文或数据声明",
+      "evidence_type": "实测府县月度死亡资料上的工具变量估计；非户级断电供电实验",
+      "facts": "日本2009—2014府县月死亡，利用震后电价与太阳辐射差异识别太阳能采用与热死亡；65岁以上关联更强。",
+      "author_interpretation": "太阳能通过减轻能源负担保护热天健康。",
+      "limitations": [
+        "仅摘要，IV排除限制细节未核",
+        "府县生态尺度",
+        "不能认定无储能光伏在断网时可供电",
+        "原始健康资料可得性未知"
+      ],
+      "minimum_check": "查IV第一阶段、排除限制、灾后其他政策与人口变动，并核对储能/孤岛运行条件。",
+      "data_status": "待确认",
+      "code_status": "待确认：未读数据代码声明",
+      "data_detail": "不将官方统计来源可能公开等同作者分析数据已取得。",
+      "resources": [
+        [
+          "PubMed摘要及电子日期",
+          "https://pubmed.ncbi.nlm.nih.gov/42887376/"
+        ]
+      ],
+      "date_basis": "PubMed ArticleDate DateType=Electronic:2026-10-12；Crossref仅卷期2026-12。出版社直核受限，首次在线日暂依权威索引。",
+      "boundary_note": "10月12日日精度，出版社时区未知，无法区分常规起点前后；落在合并覆盖区间。",
+      "dependencies": [
+        "实际死亡资料访问",
+        "光伏采用和电价资料",
+        "识别假设"
+      ],
+      "relation_to_user": [
+        "第一篇能源后果扩展线索",
+        "第二篇服务连续性与群体差异线索"
+      ],
+      "assessment": {
+        "journal_standing": "健康社会科学领域主流期刊",
+        "scientific_increment": "能源价格冲击下适应与健康联系",
+        "observability": "死亡/光伏原始资料与合作待核",
+        "implementation_cost": "中高；含数据可得与识别审查"
+      },
+      "links": {
+        "publisher": "https://www.sciencedirect.com/science/article/pii/S0277953626010105",
+        "doi": "https://doi.org/10.1016/j.socscimed.2026.119932",
+        "metadata": "https://api.crossref.org/works/10.1016/j.socscimed.2026.119932",
+        "resources": [
+          [
+            "PubMed摘要及电子日期",
+            "https://pubmed.ncbi.nlm.nih.gov/42887376/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "W20261019-05",
+      "doi": "10.1016/j.marenvres.2026.108467",
+      "title": "Cumulative effects of successive marine heatwaves impair physiological resilience in the clam Ruditapes philippinarum",
+      "title_zh": "连续热浪与贝类易感性",
+      "journal": "Marine Environmental Research",
+      "article_type": "Journal Article",
+      "first_online_date": "2026-10-13",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "PubMed ArticleDate Electronic=2026-10-13；Crossref卷期2026-11，未提供published-online；出版社直核受限。",
+      "issue_date": "2026-11",
+      "volume": "222",
+      "issue": null,
+      "version_status": "正式期刊论文",
+      "version_of_record_date": "2026-10-13",
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "core",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "海洋热浪",
+        "养殖生计",
+        "连续事件"
+      ],
+      "summary": "事实：蛤蜊经历四轮热浪后生理储备下降，随后病原挑战出现高死亡。作者解释为累积损伤。推论：给两篇之外的沿海生产研究提供“恢复间隔”机制，年度渔获无法验证短期生物响应；贝类病原结果也不等于人类食品疾病。最小检查水槽独立重复和野外连续样本；数据代码待确认，实验设施与合作尚不具备已确认条件。\n",
+      "reading_scope": "PubMed完整摘要及电子发表字段；Crossref元数据；出版社页面受限，未读全文及数据声明",
+      "evidence_type": "实验贝类生理、行为及病原挑战死亡；不是人类健康结局",
+      "facts": "蛤蜊四轮当前/未来热浪；热浪阶段未直接致死，后续Vibrio tapetis挑战显示累积损伤与高死亡。",
+      "author_interpretation": "重复热浪可削弱生理恢复和抗病能力，未来升温放大影响。",
+      "limitations": [
+        "水槽独立重复未核",
+        "实验到真实养殖场外推待验证",
+        "贝类病原不等于人类食源风险",
+        "年度渔获不是短时生物量"
+      ],
+      "minimum_check": "核查实验独立重复/随机化及野外日周尺度生理或死亡记录，排除病原与作业变化。",
+      "data_status": "待确认",
+      "code_status": "待确认：未读数据代码声明",
+      "resources": [
+        [
+          "PubMed摘要及电子日期",
+          "https://pubmed.ncbi.nlm.nih.gov/42880065/"
+        ]
+      ],
+      "date_basis": "PubMed ArticleDate Electronic=2026-10-13；Crossref卷期2026-11，未提供published-online；出版社直核受限。",
+      "dependencies": [
+        "养殖生物观测",
+        "病原挑战与实验条件",
+        "合作未确认"
+      ],
+      "relation_to_user": [
+        "与第一篇/第二篇共享极端事件生产后果主线，但终点与机制独立",
+        "不自动延伸成新海洋计算任务"
+      ],
+      "assessment": {
+        "journal_standing": "海洋环境专业期刊",
+        "scientific_increment": "重复热浪后病原挑战的累积机制",
+        "observability": "实验终点直接；野外连续序列待确认",
+        "implementation_cost": "重现实验高；公开资料可行性待核"
+      },
+      "links": {
+        "publisher": "https://www.sciencedirect.com/science/article/pii/S0141113626006367",
+        "doi": "https://doi.org/10.1016/j.marenvres.2026.108467",
+        "metadata": "https://api.crossref.org/works/10.1016/j.marenvres.2026.108467",
+        "resources": [
+          [
+            "PubMed摘要及电子日期",
+            "https://pubmed.ncbi.nlm.nih.gov/42880065/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "W20261019-06",
+      "doi": "10.1126/sciadv.aea9749",
+      "title": "Rising global population coexposure to heatwaves and landscape fire-sourced air pollution",
+      "title_zh": "热浪与烟霾共同暴露",
+      "journal": "Science Advances",
+      "article_type": "Journal Article",
+      "first_online_date": "2026-10-14",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "PubMed ArticleDate Electronic=2026-10-14；Crossref卷期2026-10-16；出版社直核受限。",
+      "issue_date": "2026-10-16",
+      "volume": "12",
+      "issue": "42",
+      "version_status": "正式期刊论文",
+      "version_of_record_date": "2026-10-14",
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "core",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "复合灾害",
+        "人口暴露",
+        "野火污染"
+      ],
+      "summary": "事实：全球2000—2019年人口与环境场估算显示共同暴露上升；作者分解环境强度和人口贡献。推论：第一篇可借鉴排放与接触人群的分层，第二篇可检查事件重叠时段。终点是人口暴露，尚非实测健康结局。最小检查污染场验证、热浪阈值与时间对齐；数据代码声明未读，完整环境重建成本待评。\n",
+      "reading_scope": "PubMed完整摘要、电子发表字段及Crossref元数据；出版社403，PMC网页验证墙，未读全文及数据声明",
+      "evidence_type": "人口暴露：热浪和火源污染估算场叠加；非临床健康结局",
+      "facts": "评估2000—2019年全球共同暴露，分解环境强度和人口变化贡献。",
+      "author_interpretation": "极端热与火源污染共同暴露上升，需要复合适应。",
+      "limitations": [
+        "环境场验证未读",
+        "阈值敏感性未读",
+        "不能由共暴露推断协同健康因果"
+      ],
+      "minimum_check": "先查污染场独立验证、热浪阈值和同时性定义，再查公开数据代码。",
+      "data_status": "待确认",
+      "code_status": "待确认：未读声明",
+      "resources": [
+        [
+          "PubMed摘要及电子日期",
+          "https://pubmed.ncbi.nlm.nih.gov/42873846/"
+        ],
+        [
+          "PMC入口，页面受限",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC13666011/"
+        ]
+      ],
+      "date_basis": "PubMed ArticleDate Electronic=2026-10-14；Crossref卷期2026-10-16；出版社直核受限。",
+      "dependencies": [
+        "环境模型/再分析",
+        "独立地面验证",
+        "非健康合作替代"
+      ],
+      "relation_to_user": [
+        "第一篇排放与人群接触分层",
+        "第二篇事件重叠时段与共同冲击检查"
+      ],
+      "assessment": {
+        "journal_standing": "综合高影响期刊",
+        "scientific_increment": "全球共同暴露及贡献分解",
+        "observability": "环境与人口场估计；真值验证待核",
+        "implementation_cost": "中高；取决于原始火源场可得性"
+      },
+      "links": {
+        "publisher": "https://www.science.org/doi/10.1126/sciadv.aea9749",
+        "doi": "https://doi.org/10.1126/sciadv.aea9749",
+        "metadata": "https://api.crossref.org/works/10.1126/sciadv.aea9749",
+        "resources": [
+          [
+            "PubMed摘要及电子日期",
+            "https://pubmed.ncbi.nlm.nih.gov/42873846/"
+          ],
+          [
+            "PMC入口，页面受限",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC13666011/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "W20261019-07",
+      "doi": "10.1038/s44360-026-00209-8",
+      "title": "Heat-related urban mortality attributable to human-induced climate change in Europe from 2000 to 2025",
+      "title_zh": "欧洲长期热死亡归因",
+      "journal": "Nature Health",
+      "article_type": "Article",
+      "first_online_date": "2026-10-14",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "出版社页面Published与Crossref published-online一致；日精度、时区未给。",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_status": "正式期刊论文",
+      "version_of_record_date": "2026-10-14",
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "core",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "模型健康负担",
+        "归因",
+        "老龄化"
+      ],
+      "summary": "事实：854城气温反事实结合既有暴露反应函数，作者估算变暖相关热死亡负担增加。结局为模型健康负担，人口、基线死亡与适应假设限制解释。推论：可帮助两篇划清观测量和模型后果；最小检查响应函数迁移及固定参数敏感性。[数据与笔记本](https://doi.org/10.5281/zenodo.22228326)入口已核实，原始健康资料取得条件仍需另核。\n",
+      "reading_scope": "出版社正文、事实/反事实设计、方法、固定参数假设、数据代码声明；Zenodo API文件列表；未重算",
+      "evidence_type": "模型健康负担：非逐例观测的归因死亡人数",
+      "facts": "854城，2000—2025；事实/反事实气温与既有城市年龄暴露反应函数。模型保持人口、基线死亡率与反应函数设定。",
+      "author_interpretation": "人类活动变暖提高预期热死亡负担，需针对性适应。",
+      "limitations": [
+        "固定适应和人口/基线设定",
+        "响应函数空间迁移",
+        "反事实气候不确定性",
+        "归因量为模型估算"
+      ],
+      "minimum_check": "检查响应函数是否可迁移、气温数据产品替换及固定参数敏感性，不直接套用于台风。",
+      "data_status": "已核实入口",
+      "code_status": "已核实入口：Zenodo笔记本列表；未运行",
+      "data_detail": "原文concept DOI22228326，本次API重定向到版本22228327；列出8文件。未下载样例。",
+      "resources": [
+        [
+          "支持数据和笔记本",
+          "https://doi.org/10.5281/zenodo.22228326"
+        ],
+        [
+          "本次核实版本",
+          "https://doi.org/10.5281/zenodo.22228327"
+        ],
+        [
+          "暴露反应函数声明",
+          "https://doi.org/10.5281/zenodo.7672107"
+        ],
+        [
+          "健康影响方法代码声明",
+          "https://github.com/PierreMasselot/Paper--2023--LancetPH--EUcityTRM"
+        ]
+      ],
+      "dependencies": [
+        "既有健康暴露反应函数",
+        "气候反事实",
+        "固定适应假设"
+      ],
+      "relation_to_user": [
+        "两篇都应区分观测量与模型后果",
+        "与基线B07相关但DOI和长期研究结果为新增"
+      ],
+      "assessment": {
+        "journal_standing": "新健康专业子刊；不据尚不稳定的指标排名",
+        "scientific_increment": "跨多年城市温度归因与既有健康响应整合",
+        "observability": "模型输入部分公开；原始健康资料单独核查",
+        "implementation_cost": "中，含反事实和健康响应不确定性传播"
+      },
+      "links": {
+        "publisher": "https://www.nature.com/articles/s44360-026-00209-8",
+        "doi": "https://doi.org/10.1038/s44360-026-00209-8",
+        "metadata": "https://api.crossref.org/works/10.1038/s44360-026-00209-8",
+        "resources": [
+          [
+            "支持数据和笔记本",
+            "https://doi.org/10.5281/zenodo.22228326"
+          ],
+          [
+            "本次核实版本",
+            "https://doi.org/10.5281/zenodo.22228327"
+          ],
+          [
+            "暴露反应函数声明",
+            "https://doi.org/10.5281/zenodo.7672107"
+          ],
+          [
+            "健康影响方法代码声明",
+            "https://github.com/PierreMasselot/Paper--2023--LancetPH--EUcityTRM"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "W20261019-08",
+      "doi": "10.1038/s43247-026-04137-z",
+      "title": "Social vulnerability amplifies global inequality in urban heat risk",
+      "title_zh": "社会脆弱性与热风险",
+      "journal": "Communications Earth & Environment",
+      "article_type": "Article",
+      "first_online_date": "2026-10-11",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "first_online_basis": "出版社页面Published与Crossref published-online一致；日精度、时区未给。",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_status": "出版社Article in Press公开接收稿；非预印本",
+      "version_of_record_date": null,
+      "version_relations": {
+        "crossref_relation": "本次Crossref relation为空；不据此证明无预印本",
+        "preprint_doi": null
+      },
+      "correction_dates": [],
+      "correction_status": "本轮所读出版社页面/接收稿、Crossref update-to及relation、PubMed记录范围未见更正；不是穷尽Crossmark审计",
+      "correction_checked_at": "2026-10-19",
+      "selection": "bridge_boundary",
+      "first_reported_issue": "2026-10-19",
+      "last_reported_issue": "2026-10-19",
+      "topics": [
+        "风险指标",
+        "不平等",
+        "衔接补录"
+      ],
+      "summary": "事实：1029城热浪、人口和八项脆弱性指标整合后，南北差距扩大；作者归因为忽略适应能力的偏差。结果属风险指标，权重及粗分辨率限制街区解释。推论：两篇之外可关注受影响群体；最小检查权重敏感性与独立结局验证。[数据代码](https://doi.org/10.5281/zenodo.21502576)入口已核实。发布日期仅到日，无法确定是否晚于11日10:12截止。\n",
+      "reading_scope": "公开接收稿正文、风险构建、数据代码声明；Zenodo API数据及代码列表；未重算，未读全部补充验证",
+      "evidence_type": "风险指标：ERA5-Land近地2米气温＋人口＋社会脆弱性；非实测健康负担",
+      "facts": "1029城2000—2019，八项脆弱性指标；比较异质脆弱性和同质假设下的不平等。",
+      "author_interpretation": "忽略脆弱性会低估南北城市热风险差异。",
+      "limitations": [
+        "综合指标权重",
+        "气温约0.1度难表征街区",
+        "部分输入时间分辨率",
+        "关联验证不能把指标转成实际死亡"
+      ],
+      "minimum_check": "检查八指标权重敏感性、再分析站点验证及独立真实服务/健康后果。",
+      "data_status": "已核实入口",
+      "code_status": "已核实入口：两个py及notebook列表，未运行",
+      "resources": [
+        [
+          "数据和代码",
+          "https://doi.org/10.5281/zenodo.21502576"
+        ]
+      ],
+      "boundary_note": "首次在线2026-10-11仅到日，时区未给；无法确定在前期10:12:02截止之后。按提前运行衔接边界补录避免遗漏，不断言精确属于桥接窗。",
+      "dependencies": [
+        "风险指标代理验证",
+        "粗分辨率气温",
+        "社会数据时间一致性"
+      ],
+      "relation_to_user": [
+        "两篇之外的受影响群体分配问题",
+        "不将风险图当实测健康结局"
+      ],
+      "assessment": {
+        "journal_standing": "地学环境专业子刊",
+        "scientific_increment": "量化同质脆弱性假设的分配偏差",
+        "observability": "公开风险输入；街区和灾后真值不足",
+        "implementation_cost": "低中，独立后果验证另需数据"
+      },
+      "links": {
+        "publisher": "https://www.nature.com/articles/s43247-026-04137-z",
+        "doi": "https://doi.org/10.1038/s43247-026-04137-z",
+        "metadata": "https://api.crossref.org/works/10.1038/s43247-026-04137-z",
+        "resources": [
+          [
+            "数据和代码",
+            "https://doi.org/10.5281/zenodo.21502576"
+          ]
+        ]
+      }
+    }
+  ]
+}
