@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-19",
-  "dedup_scope": "保留2026-10-07基线15条；本期与main最新索引、基线研究补注及其papers.json按标准化DOI、归一题名和版本关系去重。补注已知先例不重复作为新增。2026-10-11新增6篇窗口内及1篇补录。 2026-10-19读取main最新22条及首期补注，新增8个DOI（7条常规候选含1个起点边界日条目，1条提前运行衔接边界补录）；先前22条原对象保持不变。",
+  "updated_at": "2026-10-26",
+  "dedup_scope": "保留2026-10-07基线15条；本期与main最新索引、基线研究补注及其papers.json按标准化DOI、归一题名和版本关系去重。补注已知先例不重复作为新增。2026-10-11新增6篇窗口内及1篇补录。 2026-10-19读取main最新22条及首期补注，新增8个DOI（7条常规候选含1个起点边界日条目，1条提前运行衔接边界补录）；先前22条原对象保持不变。 2026-10-26读取公开30条与私有ResearchMap P0001-P0034，新增4个正式论文DOI；无预印本或历史补读。",
   "papers": [
     {
       "id": "B01",
@@ -2010,6 +2010,168 @@
             "https://doi.org/10.5281/zenodo.21502576"
           ]
         ]
+      }
+    },
+    {
+      "id": "W20261026-01",
+      "doi": "10.1177/03611981261491700",
+      "title": "Interpretable Machine-Learning Warning of Tropical-Cyclone-Induced Port Service Disruption Using Automatic Identification System and Forecast Advisories",
+      "title_zh": "气旋下港口服务中断预警",
+      "journal": "Transportation Research Record: Journal of the Transportation Research Board",
+      "article_type": "Research article; OnlineFirst",
+      "first_online_date": "2026-10-22",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_status": "version of record, restricted full text",
+      "correction_status": "publisher page and Crossref record checked 2026-10-26; no correction relation observed in this scope",
+      "reading_scope": "publisher abstract, data statement, authors, affiliations, contributions and supplement metadata; full text restricted",
+      "selection": "focus_abstract_level",
+      "first_reported_issue": "2026-10-26",
+      "last_reported_issue": "2026-10-26",
+      "branches": [
+        "Q01",
+        "Q05"
+      ],
+      "topics": [
+        "tropical cyclone",
+        "port disruption",
+        "AIS",
+        "advisory-time warning"
+      ],
+      "evidence_type": "AIS-based service-loss proxy; calibrated prediction; event-level transfer validation",
+      "data_status": "public source datasets identified; processed panel and scripts available on reasonable request; raw AIS not redistributed",
+      "code_status": "reconstruction scripts declared in local reproducibility package; public repository not available",
+      "open_paper": false,
+      "open_software": false,
+      "open_raw_data": "source-dependent; manifests public, AIS redistribution constrained",
+      "minimum_check": "reconstruct one event label and baseline, then repeat leave-one-event-out ablation for exposure, recent port state and network substitutability",
+      "links": {
+        "publisher": "https://journals.sagepub.com/doi/10.1177/03611981261491700",
+        "doi": "https://doi.org/10.1177/03611981261491700",
+        "supplement": "https://journals.sagepub.com/doi/suppl/10.1177/03611981261491700"
+      }
+    },
+    {
+      "id": "W20261026-02",
+      "doi": "10.3390/jmse14201979",
+      "title": "A Risk-Contour-Based Ship Domain Model Using Riemann-Sphere Projection and AIS Validation",
+      "title_zh": "风险等值船域",
+      "journal": "Journal of Marine Science and Engineering",
+      "article_type": "Article",
+      "first_online_date": "2026-10-21",
+      "issue_date": "2026-10",
+      "volume": "14",
+      "issue": "20",
+      "article_number": "1979",
+      "version_status": "version of record; HTML updated 2026-10-22 10:38 CEST, original-file note",
+      "correction_status": "version-notes page checked; no separate correction identified",
+      "reading_scope": "publisher HTML full text, equations, parameter table, validation, limitations and data statement; no code execution",
+      "selection": "focus_full_text",
+      "first_reported_issue": "2026-10-26",
+      "last_reported_issue": "2026-10-26",
+      "branches": [
+        "Q03"
+      ],
+      "topics": [
+        "ship domain",
+        "encounter risk",
+        "AIS validation",
+        "multi-vessel transfer"
+      ],
+      "evidence_type": "model-based risk indicator and warning contour; AIS kinematic evaluation; not collision truth",
+      "equation_scope": [
+        "HTML section 3.2, equations 16, 18-19, 21-22, 25",
+        "HTML has stable equation numbers but no stable PDF page used"
+      ],
+      "data_status": "AIS available on request due to privacy restrictions",
+      "code_status": "no source repository or executable sample found in publisher full text",
+      "open_paper": true,
+      "license": "CC BY 4.0",
+      "open_software": false,
+      "open_raw_data": false,
+      "minimum_check": "reconstruct the contour from equations 16/18/21/25; test vessel-length strata and a later-period holdout before multi-ship use",
+      "links": {
+        "publisher": "https://www.mdpi.com/2077-1312/14/20/1979",
+        "doi": "https://doi.org/10.3390/jmse14201979",
+        "version_notes": "https://www.mdpi.com/2077-1312/14/20/1979/notes",
+        "review_reports": "https://www.mdpi.com/2077-1312/14/20/1979/review_report"
+      }
+    },
+    {
+      "id": "W20261026-03",
+      "doi": "10.1021/acs.est.6c08667",
+      "title": "Atmospheric Observations Reveal the Spatial Influence of Inland Shipping Channels and Enhanced Emission Signals from AIS-Unmatched Vessels",
+      "title_zh": "独立大气观测揭示AIS漏船",
+      "journal": "Environmental Science & Technology",
+      "article_type": "Article",
+      "first_online_date": "2026-10-21",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_status": "publisher article; supporting information posted 2026-10-21 05:04",
+      "correction_status": "Crossref and ACS Figshare checked; no correction relation observed in this scope",
+      "reading_scope": "publisher metadata and abstract reproduced on ACS Figshare supporting-material record; article full text not read",
+      "selection": "selected_abstract_level",
+      "first_reported_issue": "2026-10-26",
+      "last_reported_issue": "2026-10-26",
+      "branches": [
+        "Q04"
+      ],
+      "topics": [
+        "shipping emissions",
+        "AIS coverage",
+        "DOAS",
+        "independent validation"
+      ],
+      "evidence_type": "measured pollutant concentration and plume events; not emission mass flow",
+      "data_status": "supporting-information package entry verified; raw observations and processed tables not verified",
+      "code_status": "not confirmed",
+      "open_paper": "not confirmed from accessible publisher record",
+      "open_software": false,
+      "open_raw_data": false,
+      "minimum_check": "align plume events, AIS visibility and wind sectors at 15-minute scale before attributing unmatched signals to missing vessels",
+      "links": {
+        "publisher": "https://pubs.acs.org/doi/10.1021/acs.est.6c08667",
+        "doi": "https://doi.org/10.1021/acs.est.6c08667",
+        "supporting_information": "https://acs.figshare.com/articles/journal_contribution/Atmospheric_Observations_Reveal_the_Spatial_Influence_of_Inland_Shipping_Channels_and_Enhanced_Emission_Signals_from_AIS-Unmatched_Vessels/34724514"
+      }
+    },
+    {
+      "id": "W20261026-04",
+      "doi": "10.1002/aepp.70133",
+      "title": "Assessing the Day Delay Effect of Port Congestion on US Agricultural Exports",
+      "title_zh": "拥堵一天的农业出口代价",
+      "journal": "Applied Economic Perspectives and Policy",
+      "article_type": "Early View submitted article",
+      "first_online_date": "2026-10-21",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "version_status": "Online Version of Record before issue assignment",
+      "correction_status": "Wiley and Crossref checked; no correction relation observed in this scope",
+      "reading_scope": "publisher abstract, author affiliations, data statement and references; full methods not read",
+      "selection": "selected_abstract_level",
+      "first_reported_issue": "2026-10-26",
+      "last_reported_issue": "2026-10-26",
+      "branches": [
+        "Q04"
+      ],
+      "topics": [
+        "port congestion",
+        "trade cost",
+        "agricultural exports"
+      ],
+      "evidence_type": "monthly econometric association between average port days and export quantity/value; not event-specific causal truth",
+      "data_status": "available from corresponding author on reasonable request",
+      "code_status": "not confirmed",
+      "open_paper": false,
+      "open_software": false,
+      "open_raw_data": false,
+      "minimum_check": "recover the model specification, port weights, controls and robustness tests; assess event-day to monthly-export time aggregation",
+      "links": {
+        "publisher": "https://onlinelibrary.wiley.com/doi/10.1002/aepp.70133",
+        "doi": "https://doi.org/10.1002/aepp.70133"
       }
     }
   ]
