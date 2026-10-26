@@ -4,7 +4,7 @@
 
 ## 最新简报
 
-[2026-10-26｜4篇研究、2篇重点](briefs/2026/2026-10-26.md) · [配套元数据](briefs/2026/2026-10-26.papers.json) · [核验记录](reviews/2026-10-26-checks.md)
+[2026-10-26｜4篇研究、2篇重点](briefs/2026/2026-10-26.md) · [配套元数据](briefs/2026/2026-10-26.papers.json) · [核验记录](reviews/2026-10-26-checks.md) · [发布回执](reviews/2026-10-26-publication.json)
 
 [2026-10-19｜8篇研究、3篇重点，含1篇衔接边界补录](briefs/2026/2026-10-19.md) · [配套元数据](briefs/2026/2026-10-19.papers.json) · [核验记录](reviews/2026-10-19-checks.md) · [发布回执](reviews/2026-10-19-publication.json)
 

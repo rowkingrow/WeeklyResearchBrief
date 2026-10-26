@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "issue": "2026-10-26",
+  "planned_time": "2026-10-26T08:00:00+08:00",
+  "actual_start": "2026-10-26T07:56:17+08:00",
+  "cutoff": "2026-10-26T08:00:00+08:00",
+  "content_and_map_readback_completed_at": "2026-10-26T08:12:35+08:00",
+  "public_content_commit": "ff7d22aed765497e4ef9ba06f4d9ab9520e91ffc",
+  "private_map_commit": "f5c30609e1bd37374bbc62476ed4f96822dc3012",
+  "branch": "main",
+  "force_update": false,
+  "public_readback": {
+    "files": 5,
+    "bytes": 138746,
+    "index_paper_count": 34,
+    "new_ids": ["W20261026-01", "W20261026-02", "W20261026-03", "W20261026-04"],
+    "doi_unique": true,
+    "visual": "GitHub rendered preview checked for the full brief: title, headings, two focus entries, two selected entries, links, numeric text, ordered novelty questions and three recall questions were visible."
+  },
+  "private_readback": {
+    "files": 17,
+    "bytes": 163059,
+    "index_paper_count": 38,
+    "new_ids": ["P0035", "P0036", "P0037", "P0038"],
+    "doi_unique": true,
+    "affiliation_records": 24,
+    "first_institutions": 19,
+    "visual": "All 17 changed UTF-8 sources were fetched at the fixed commit and structural markers were inspected; no authenticated browser-rendered private pages were opened."
+  },
+  "content_scope": "Public: brief, issue metadata, checks, index and README. Private: four cards, source/review records, catalog, affiliation index, atlas, team page, T01/T02, M01/M02/M03 and access matrix.",
+  "binary_assets_added": 0,
+  "status": "published_and_map_synced"
+}
+
