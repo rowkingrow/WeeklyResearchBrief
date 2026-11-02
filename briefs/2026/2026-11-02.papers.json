@@ -1,0 +1,487 @@
+{
+  "schema_version": "1.2",
+  "issue": "2026-11-02",
+  "planned_cutoff": "2026-11-02T08:00:00+08:00",
+  "window_start": "2026-10-26T08:00:00+08:00",
+  "window_end": "2026-11-02T08:00:00+08:00",
+  "actual_start_observed": "2026-11-02T08:00:00+08:00",
+  "search_sources": [
+    "Cambridge Core",
+    "ScienceDirect",
+    "TRID",
+    "Dokuz Eylül University AVESİS",
+    "Recep Tayyip Erdoğan University AVESİS",
+    "Cross-publisher web search",
+    "WeeklyResearchBrief index at 2de241d586403e8ff59a3dea051597fbb7c17851",
+    "ResearchMap read-only index at c99522fc61550be20641dc51889320195a35032d"
+  ],
+  "search_scope": [
+    "tropical cyclone/extreme weather + vessel/AIS/port",
+    "multi-ship encounter/traffic complexity/trajectory prediction",
+    "ship fuel/emissions/port turnaround",
+    "port disruption/recovery/network/cost/trade",
+    "recent articles in Ocean Engineering, Journal of Navigation, Springer maritime titles, MDPI JMSE, Frontiers Marine Science, Taylor & Francis maritime journals, arXiv"
+  ],
+  "dedup_basis": "Normalized DOI, normalized title and version relation against 34 WeeklyResearchBrief records and 99 ResearchMap records; all four candidates are new in both indices as of the fixed heads. ResearchMap remained read-only; no P IDs allocated.",
+  "search_negative_result": "No sufficiently direct new paper on tropical-cyclone-induced ship behavior, AIS traffic reorganization or event-specific energy/emission consequences was verified inside the exact seven-day window. The issue therefore keeps four method/operations neighbors and states transfer limits.",
+  "historical_supplements": [],
+  "preprints": [],
+  "papers": [
+    {
+      "id": "W20261102-01",
+      "doi": "10.1017/S0373463326101817",
+      "title": "Algorithms for determining deadlines and COLREG-compliant manoeuvres for safe navigation in multi-ship scenarios using velocity areas",
+      "title_zh": "多船会遇的决策期限与COLREG合规操纵",
+      "authors": [
+        "Reyes Poo Argüelles",
+        "Jesús Angel García Maza"
+      ],
+      "journal": "The Journal of Navigation",
+      "article_type": "Research Article; First View",
+      "first_online_date": "2026-10-26",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "boundary_note": "出版社仅给2026-10-26日精度，无法证明在线时刻晚于本期窗口起点2026-10-26 08:00 Asia/Singapore；作为边界日新增收录，上一期未见。",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "pages": "1-24",
+      "version_status": "version of record; open-access First View",
+      "correction_status": "Cambridge article page checked 2026-11-02; this review scope found no separate correction or retraction notice",
+      "reading_scope": "full_html_sections: abstract, introduction, Sections 2-9, equations/pseudocode, Tables 1/3-7 descriptions, Figures 4-15 descriptions, conclusions, references; PDF not downloaded; code not run",
+      "selection": "focus_full_html_sections",
+      "first_reported_issue": "2026-11-02",
+      "last_reported_issue": "2026-11-02",
+      "branches": [
+        "Q03"
+      ],
+      "topics": [
+        "multi-ship encounter",
+        "COLREGs",
+        "velocity obstacle",
+        "decision deadline",
+        "AIS"
+      ],
+      "research_question": "Can a multi-ship risk field be converted into an explicit deadline and a feasible speed-heading manoeuvre that is consistent with COLREGs?",
+      "sample_clock_inclusion": "Deterministic simulated scenarios with one own ship and multiple target ships; targets inside LRS enter analysis. Risk state is updated from instantaneous AIS-derived kinematics and forward constant-velocity calculations. No observed voyage sample, event window or train-test split.",
+      "core_method": "For each candidate own-ship speed-heading cell and target, mark CPA<CPASafe in a 3-D Boolean polar matrix; union across targets gives the forbidden surface and the free-cell share. A real-valued matrix scores CPA/TCPA, heading and speed changes, and COLREG constraints; the target-wise maximum is minimized subject to path-slope and waypoint-deviation rules.",
+      "evidence_anchors": [
+        "Section 4 equations (3)-(4), free-area matrix and 13-minute example",
+        "Section 6 equation (5), target-wise maximum manoeuvre matrix",
+        "Sections 7-8 COLREG weighting and route-return state logic",
+        "Section 9 conclusion and simulation-only validation statement"
+      ],
+      "principal_results": "In the worked three-target scenario, free area is 60% at the initial state and falls to 35.4% after 13 minutes under unchanged motion. The example manoeuvre surface selects H=-9 degrees and S=19 kn; a pre-alert variant selects H=-25 degrees and S=18 kn. These are scenario outputs, not population performance estimates.",
+      "author_claim": "The algorithms can identify risk-free sectors, estimate the remaining decision window and select COLREG-consistent manoeuvres suitable for watchkeeping support or future autonomous integration.",
+      "independent_check": "The paper closes an operational gap between encounter-risk representation and an explicit action surface, but effectiveness is demonstrated only on simulated ships with trial thresholds and weights. No real AIS replay, navigator study, nonlinear manoeuvring validation or collision outcome is reported.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Argüelles, Maza & Martín (2019), Specification and Design of Safety Functions for the Prevention of Ship-to-Ship Collisions on the High Seas",
+          "doi": "10.1017/S0373463318000553",
+          "relation": "same-team safety-function specification"
+        },
+        {
+          "citation": "Argüelles et al. (2021), Ship-to-Ship Dialogues and Agreements for Collision Risk Reduction",
+          "doi": "10.1017/S0373463321000448",
+          "relation": "same-team COLREG/risk-state foundation"
+        },
+        {
+          "citation": "Dong, Zhen & Gu (2024), A Novel Collaborative Collision Avoidance Decision Method for Multi-Ship Encounters in Complex Waterways",
+          "doi": "10.1016/j.oceaneng.2024.119512",
+          "relation": "velocity-obstacle multi-ship collaborative comparator"
+        },
+        {
+          "citation": "Sánchez-González et al. (2025), Reliability of Maritime Collision Avoidance Systems Algorithms in the Implementation of COLREGs",
+          "doi": "10.1016/j.ress.2025.111840",
+          "relation": "direct COLREG reliability problem"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0036",
+          "relation": "risk-contour ship domain; warning boundary rather than manoeuvre decision"
+        },
+        {
+          "id": "P0014",
+          "relation": "dynamic multi-ship scene identification; scene label rather than COLREG action"
+        },
+        {
+          "id": "P0019",
+          "relation": "predicted multi-ship pressure; pressure state rather than feasible manoeuvre"
+        },
+        {
+          "id": "P0020",
+          "relation": "multi-source traffic complexity; supervision indicator rather than ship-level action"
+        }
+      ],
+      "input_data": "Own-ship and target AIS/derived latitude, longitude, heading, speed, distance, bearing, relative course/speed, CPA and TCPA; vessel/navigation status; VIS, LRS, CPASafe, TCPASafe, dPrealert and dAlert; waypoint and manoeuvrability-dependent weights.",
+      "output_data": "Forbidden/risk-free speed-heading cells, free-area percentage, time-to-threshold, manoeuvre cost surface, selected speed-heading action and return-to-route state.",
+      "data_status": "No empirical dataset is used. Worked scenario values are visible in the open HTML tables and figure descriptions.",
+      "code_status": "The referenced NAvigation Officer Support software is proprietary (University of Oviedo internal ref. PII-2025-0002); no public source repository or executable sample was found; not run.",
+      "open_paper": true,
+      "license": "CC BY 4.0",
+      "open_software": false,
+      "open_raw_data": "not applicable; simulated worked examples only",
+      "claim_boundary": "Rule compliance in a discretized constant-velocity scenario is not evidence of collision reduction, navigator acceptance or robustness under wind, waves, sensor gaps and interacting manoeuvres.",
+      "relation_to_user": "Direct Q03 method neighbor. It supplies an auditable action layer for multi-ship encounter fields, but must be coupled to observed behavior and environmental constraints before use in extreme-weather traffic reorganization.",
+      "priority": "high",
+      "minimum_check": "Reimplement equations (3)-(5) for one published scenario; then replay one real dense AIS encounter with ship-specific manoeuvring limits and compare the chosen action against observed manoeuvres and a nonlinear simulator.",
+      "links": {
+        "publisher": "https://www.cambridge.org/core/journals/journal-of-navigation/article/algorithms-for-determining-deadlines-and-colregcompliant-manoeuvres-for-safe-navigation-in-multiship-scenarios-using-velocity-areas/0FE6421413AFB4D639CB1721D44E1708",
+        "doi": "https://doi.org/10.1017/S0373463326101817"
+      }
+    },
+    {
+      "id": "W20261102-02",
+      "doi": "10.1016/j.oceaneng.2026.127938",
+      "title": "RIST-Net: A risk-aware spatiotemporal interaction and risk-guided multi-scale trend decoding network for vessel trajectory prediction",
+      "title_zh": "风险感知的多船轨迹预测",
+      "authors": [
+        "Yang Yu",
+        "Hao Lin",
+        "Shuyang Dai"
+      ],
+      "journal": "Ocean Engineering",
+      "article_type": "Research article",
+      "first_online_date": "2026-10-30",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2026-10-30",
+      "volume": "367",
+      "issue": "Part 2",
+      "article_number": "127938",
+      "version_status": "publisher version of record in volume 367 Part 2; full text restricted",
+      "correction_status": "ScienceDirect record and DOI/title search checked 2026-11-02; no separate correction relation observed in this scope",
+      "reading_scope": "abstract_only: publisher title, highlights, extended abstract/contribution preview and bibliographic metadata; full methods/tables/supplement not read; code not run",
+      "selection": "selected_abstract_only",
+      "first_reported_issue": "2026-11-02",
+      "last_reported_issue": "2026-11-02",
+      "branches": [
+        "Q03"
+      ],
+      "topics": [
+        "multi-vessel trajectory prediction",
+        "risk-aware graph attention",
+        "AIS",
+        "multi-scale decoding"
+      ],
+      "research_question": "Does explicitly injecting pairwise encounter-risk history into both interaction aggregation and horizon-specific decoding improve multi-vessel trajectory prediction?",
+      "sample_clock_inclusion": "Three real AIS datasets from Tianjin Port, Shanghai and Danish waters; five repeated runs. Accessible material does not disclose observation/prediction horizons, dates, vessel counts, filtering, split clock or leakage controls.",
+      "core_method": "Node temporal encoders represent vessel motion; an edge temporal encoder combines pairwise relation features with historical risk sequences; graph attention adds an explicit risk bias. A risk-conditioned decoder divides the future horizon into short-, medium- and long-term branches, concatenates them, then applies a fusion GRU and correction head.",
+      "evidence_anchors": [
+        "publisher highlights and abstract",
+        "contribution preview items (1)-(4)",
+        "three-waterway five-run metric summary"
+      ],
+      "principal_results": "Against the strongest reported comparator for each metric/dataset, mean reductions are 4.73% MAE, 7.44% RMSE, 4.15% ADE, 5.01% FDE and 4.82% FD. The authors report larger average advantages in Extreme-risk scenes.",
+      "author_claim": "Explicit historical risk improves neighbor weighting and stage-specific long-horizon prediction in complex multi-vessel traffic.",
+      "independent_check": "The increment is more specific than proximity-only or implicit-attention interaction models, but accessible evidence does not reveal split independence, risk-label construction, baseline identities or absolute errors. Prediction accuracy is not collision-risk calibration or proof of actual avoidance intent.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Yin et al. (2026), AIS-based risk-aware multi-graph vessel trajectory prediction with conditional intention modeling",
+          "doi": "10.1016/j.oceaneng.2026.126755",
+          "relation": "direct risk-aware multi-graph/conditional-intention predecessor"
+        },
+        {
+          "citation": "Jiang et al. (2026), Multi-modal graph convolutional network for vessel trajectory prediction based on cooperative intention enhance using conditional variational autoencoder",
+          "doi": "10.1016/j.ress.2025.111885",
+          "relation": "conditional multi-vessel interaction and generative prediction comparator"
+        },
+        {
+          "citation": "Qiang et al. (2026), SailFormer: Scene-aware interaction-learned transformer for maritime ship trajectory prediction",
+          "doi": "10.1016/j.oceaneng.2026.128046",
+          "relation": "scene-aware interaction and multi-future neighbor"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0017",
+          "relation": "direct risk-aware multi-graph and conditional intention"
+        },
+        {
+          "id": "P0085",
+          "relation": "cooperative-intention graph/CVAE prediction"
+        },
+        {
+          "id": "P0071",
+          "relation": "scene-aware interaction and multi-future prediction"
+        },
+        {
+          "id": "P0020",
+          "relation": "multi-source interaction/complexity evaluation, different output target"
+        }
+      ],
+      "input_data": "Historical multi-vessel AIS motion states, pairwise relation features and historical interaction-risk sequences.",
+      "output_data": "Future target-vessel trajectories over three horizon stages and standard point/trajectory error metrics.",
+      "data_status": "Dataset regions are stated; public download/processed split manifests were not confirmed in accessible material.",
+      "code_status": "No public source repository or executable artifact was found in the accessible publisher record or DOI/title searches; not run.",
+      "open_paper": false,
+      "open_software": false,
+      "open_raw_data": "not confirmed",
+      "claim_boundary": "No extreme-weather conditioning is reported; the model predicts kinematics, not collision outcomes, COLREG compliance or causal behavior response.",
+      "relation_to_user": "Direct Q03 comparator for whether risk-weighted neighbors add value beyond generic interaction attention. It is method-near but not event-near to extreme-weather traffic reorganization.",
+      "priority": "medium-high",
+      "minimum_check": "Obtain the split and risk-feature definitions; reproduce one waterway with time-blocked and event-blocked holdouts, proximity-only attention and risk-feature ablations, then test calibration by encounter class.",
+      "links": {
+        "publisher": "https://www.sciencedirect.com/science/article/pii/S0029801826037728",
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.127938"
+      }
+    },
+    {
+      "id": "W20261102-03",
+      "doi": "10.1016/j.oceaneng.2026.128069",
+      "title": "Data-driven Bayesian analysis of port-call bottlenecks and turnaround time at the ship–shore interface in crude oil tanker operations",
+      "title_zh": "油轮港口周转的微时钟瓶颈",
+      "authors": [
+        "Mehmet Doymuş",
+        "Mehmet Kaptan"
+      ],
+      "journal": "Ocean Engineering",
+      "article_type": "Research article",
+      "first_online_date": "2026-10-30",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2026-10-30",
+      "volume": "367",
+      "issue": "Part 2",
+      "article_number": "128069",
+      "version_status": "publisher version of record in volume 367 Part 2; full text restricted",
+      "correction_status": "ScienceDirect and two author-institution records checked 2026-11-02; no separate correction relation observed in this scope",
+      "reading_scope": "abstract_only: publisher highlights/abstract plus Dokuz Eylül and Recep Tayyip Erdoğan University publication records; full methods/tables not read; code not run",
+      "selection": "selected_abstract_only",
+      "first_reported_issue": "2026-11-02",
+      "last_reported_issue": "2026-11-02",
+      "branches": [
+        "Q04",
+        "Q05"
+      ],
+      "topics": [
+        "port call",
+        "turnaround time",
+        "tanker",
+        "Bayesian network",
+        "energy-efficiency proxy"
+      ],
+      "research_question": "Which micro-intervals in a tanker port call dominate non-productive time, and how should they be prioritized for port-call coordination?",
+      "sample_clock_inclusion": "Five years of real crude-oil-carrier Statement of Facts covering onshore and offshore operations. Accessible material does not state exact years, call count, ports, vessel inclusion/exclusion, missing-event rules or holdout design.",
+      "core_method": "Operational event intervals from arrival/NOR through All Fast, cargo handling and sea-passage start are clustered, then modeled with a Tree Augmented Naive Bayes network. Mutual information and variance-of-beliefs are used to rank influence on total port stay. Exact discretization, graph constraints and validation details are unavailable at abstract level.",
+      "evidence_anchors": [
+        "publisher highlights",
+        "publisher and institutional abstracts",
+        "explicit statement that fuel-based EEOI/CII is not directly measured"
+      ],
+      "principal_results": "NOR Tender-to-All Fast is the dominant bottleneck, contributing 32.2% mutual information with total port stay. Authors report that pre-berthing delay matters more for the analyzed carbon-intensity proxy than cargo-handling throughput.",
+      "author_claim": "A micro-sequence Bayesian analysis can identify the ship-shore bottlenecks that port, ship and charterer coordination should target.",
+      "independent_check": "This is a useful operational clock decomposition, but Statement of Facts measure event time rather than fuel or emissions. The paper explicitly distinguishes turnaround indicators from fuel-based EEOI/CII; therefore the result cannot be read as a measured emission reduction.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Park et al. (2026), Time-series approach to vessel turnaround time forecasting using queuing-based operation indicators",
+          "doi": "10.1016/j.aei.2025.103974",
+          "relation": "direct service-queue/turnaround forecasting neighbor"
+        },
+        {
+          "citation": "Rhodes et al. (2025), Investigation of a port queuing system on CO2 emissions from container shipping",
+          "doi": "10.1016/j.marpolbul.2025.118151",
+          "relation": "queue-to-emission consequence neighbor"
+        },
+        {
+          "citation": "Nguyen et al. (2026), AI-driven Just-In-Time coordination between port and ships: Advancing maritime decarbonization",
+          "doi": "10.1016/j.tre.2025.104569",
+          "relation": "decision/coordination neighbor"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0099",
+          "relation": "queue-based turnaround forecasting; forecast output versus Bayesian bottleneck attribution"
+        },
+        {
+          "id": "P0008",
+          "relation": "port queue and CO2 consequences; different vessel class and evidence layer"
+        },
+        {
+          "id": "P0007",
+          "relation": "JIT port-ship coordination and decarbonization decision layer"
+        },
+        {
+          "id": "P0038",
+          "relation": "congestion-day trade consequence; month-scale downstream outcome"
+        }
+      ],
+      "input_data": "Statement of Facts event timestamps and derived port-call intervals for crude-oil tankers, including NOR Tender-to-All Fast and cargo-handling stages.",
+      "output_data": "Clustered operational states, TAN dependencies, mutual-information/variance-of-beliefs rankings and turnaround/energy-efficiency proxy interpretation.",
+      "data_status": "Real operational SOF data are described; no public dataset, sample table or request condition was confirmed in accessible sources.",
+      "code_status": "No public code repository or executable sample was found; not run.",
+      "open_paper": false,
+      "open_software": false,
+      "open_raw_data": false,
+      "claim_boundary": "Turnaround time is an operational proxy. Without fuel-flow, auxiliary-engine load or emission-factor linkage, the study does not quantify energy use or carbon mass.",
+      "relation_to_user": "Q04/Q05 neighbor for defining port recovery at the correct micro-event clock before connecting AIS delays to fuel, emissions or trade.",
+      "priority": "medium-high",
+      "minimum_check": "Recover the SOF interval definitions and sample composition; test out-of-time port-call validation and link one subset to measured auxiliary/main-engine fuel or a transparent fuel model.",
+      "links": {
+        "publisher": "https://www.sciencedirect.com/science/article/pii/S002980182603903X",
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.128069",
+        "institution": "https://avesis.deu.edu.tr/yayin/b2fb6d00-b648-44aa-b135-170f5ffd5b3e/data-driven-bayesian-analysis-of-port-call-bottlenecks-and-turnaround-time-at-the-ship-shore-interface-in-crude-oil-tanker-operations"
+      }
+    },
+    {
+      "id": "W20261102-04",
+      "doi": "10.1016/j.oceaneng.2026.128037",
+      "title": "Extending the numerical ship maneuvering models in irregular long-crested waves to low-speed applications",
+      "title_zh": "不规则波中的低速船舶操纵",
+      "authors": [
+        "Maria Acanfora",
+        "Silvia Pennino"
+      ],
+      "journal": "Ocean Engineering",
+      "article_type": "Research article",
+      "first_online_date": "2026-10-30",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "issue_date": "2026-10-30",
+      "volume": "367",
+      "issue": "Part 2",
+      "article_number": "128037",
+      "version_status": "publisher version of record; publisher marks open access under a Creative Commons license",
+      "correction_status": "ScienceDirect, TRID and two institutional records checked 2026-11-02; no separate correction relation observed in this scope",
+      "reading_scope": "abstract_only: publisher highlights/abstract, TRID bibliographic record and institutional metadata; full equations/tables/supplement not read; code not run",
+      "selection": "selected_abstract_only",
+      "first_reported_issue": "2026-11-02",
+      "last_reported_issue": "2026-11-02",
+      "branches": [
+        "Q01",
+        "Q02"
+      ],
+      "topics": [
+        "ship manoeuvring",
+        "irregular waves",
+        "low speed",
+        "KVLCC2",
+        "6-DOF"
+      ],
+      "research_question": "Can a previously calibrated manoeuvring-in-waves model remain valid in the low-speed regime where storm avoidance, waiting or recovery operations reduce control authority?",
+      "sample_clock_inclusion": "KVLCC2 tanker model; turning-circle simulations in irregular long-crested seas and low-speed course-keeping across wave headings, including Sea State 6 validation. Accessible material does not give run counts, speed grid, wave spectra, record length or exclusion rules.",
+      "core_method": "A time-domain six-degree-of-freedom direct-superposition framework couples an MMG calm-water manoeuvring model with a blended nonlinear seakeeping model, then compares turning indices and low-speed course keeping with experiments.",
+      "evidence_anchors": [
+        "publisher highlights and abstract",
+        "TRID abstract/bibliographic record",
+        "named 2025 same-team model predecessor"
+      ],
+      "principal_results": "Authors report that, after calm-water calibration, prediction accuracy remains consistent across speed regimes; low-speed course keeping in Sea State 6 and rudder response for obstacle avoidance agree with experimental evidence within the reported qualitative summary. Exact error values are not visible at abstract level.",
+      "author_claim": "The direct-superposition framework extends reliably to reduced-speed manoeuvring in irregular waves.",
+      "independent_check": "The study adds the low-speed/wave feasibility layer absent from kinematic AIS models, but one benchmark hull and inaccessible error tables limit transfer to heterogeneous merchant fleets and real typhoon manoeuvres.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Acanfora, Altosole & Pennino (2025), A numerical model of ship manoeuvring for the KVLCC2 hull, in regular and long-crested irregular waves",
+          "doi": "10.1016/j.oceaneng.2025.121579",
+          "relation": "same-team direct model predecessor extended to low speed"
+        },
+        {
+          "citation": "Sun, Yin & Liu (2026), AIS-data-guided trajectory planning and control for ship autonomous berthing",
+          "doi": "10.1016/j.oceaneng.2026.124270",
+          "relation": "low-speed control/trajectory planning neighbor with different environmental treatment"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0029",
+          "relation": "typhoon evolution and navigation response; observed/event layer versus physical manoeuvring layer"
+        },
+        {
+          "id": "P0078",
+          "relation": "real moored-ship six-DOF response and whole-vessel holdout"
+        },
+        {
+          "id": "P0042",
+          "relation": "wind-wave/mooring and typhoon-shelter capacity constraints"
+        },
+        {
+          "id": "P0041",
+          "relation": "storm-area evacuation timing; operational decision clock rather than hydrodynamic feasibility"
+        }
+      ],
+      "input_data": "Calm-water MMG coefficients, hull/propeller/rudder parameters, irregular long-crested wave conditions, wave heading, speed and control inputs for KVLCC2.",
+      "output_data": "Six-DOF manoeuvring response, turning indices, course-keeping and rudder-response predictions across speed and wave conditions.",
+      "data_status": "Experimental comparison is stated, but no public input dataset or repository was confirmed in accessible sources.",
+      "code_status": "No public implementation or executable example was confirmed; not run.",
+      "open_paper": true,
+      "license": "Creative Commons license indicated by publisher; exact variant not captured in accessible record",
+      "open_software": false,
+      "open_raw_data": "not confirmed",
+      "claim_boundary": "Hydrodynamic benchmark agreement for KVLCC2 is not observed behavioral response under a tropical cyclone and does not by itself identify when ships slow, wait or reroute.",
+      "relation_to_user": "Q01/Q02 physical-feasibility neighbor: useful for separating weather-constrained manoeuvrability from AIS-observed behavioral choice.",
+      "priority": "medium",
+      "minimum_check": "Obtain the open full text and error tables; reproduce one Sea State 6 low-speed case, then stress-test other hull forms and feed the feasible response envelope into an AIS event study.",
+      "links": {
+        "publisher": "https://www.sciencedirect.com/science/article/pii/S0029801826038710",
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.128037",
+        "trid": "https://trid.trb.org/View/2776710"
+      }
+    }
+  ],
+  "map_update_suggestions": [
+    {
+      "doi": "10.1017/S0373463326101817",
+      "primary_branch": "Q03",
+      "nearest": [
+        "P0036",
+        "P0014",
+        "P0019",
+        "P0020"
+      ],
+      "status": "suggestion_only_researchmap_read_only"
+    },
+    {
+      "doi": "10.1016/j.oceaneng.2026.127938",
+      "primary_branch": "Q03",
+      "nearest": [
+        "P0017",
+        "P0085",
+        "P0071",
+        "P0020"
+      ],
+      "status": "suggestion_only_researchmap_read_only"
+    },
+    {
+      "doi": "10.1016/j.oceaneng.2026.128069",
+      "primary_branch": "Q04/Q05",
+      "nearest": [
+        "P0099",
+        "P0008",
+        "P0007",
+        "P0038"
+      ],
+      "status": "suggestion_only_researchmap_read_only"
+    },
+    {
+      "doi": "10.1016/j.oceaneng.2026.128037",
+      "primary_branch": "Q01/Q02",
+      "nearest": [
+        "P0029",
+        "P0078",
+        "P0042",
+        "P0041"
+      ],
+      "status": "suggestion_only_researchmap_read_only"
+    }
+  ],
+  "team_trend_evidence": {
+    "team": "University of Oviedo: Reyes Poo Argüelles / Jesús Angel García Maza line",
+    "evidence": [
+      "2019 safety-function specification (10.1017/S0373463318000553)",
+      "2021 ship-to-ship dialogue and agreement layer (10.1017/S0373463321000448)",
+      "2025 proprietary watchkeeping/manoeuvring support software (internal ref. PII-2025-0002)",
+      "2026 decision-deadline and COLREG-constrained action-surface algorithms (10.1017/S0373463326101817)"
+    ],
+    "inference": "The observable sequence moves from specification and coordination rules to an operational interface and then to explicit decision timing/action selection. This is a publication-chain inference, not a claim about the team's unpublished strategy."
+  },
+  "researchmap_sync": {
+    "status": "not_attempted_by_instruction",
+    "reason": "Discover scope is read-only for ResearchMap; file creation/modification/deletion, P-ID allocation, commits and Issue/PR operations are disabled."
+  },
+  "drive_actions": {
+    "status": "not_attempted_by_instruction",
+    "reason": "Original upload, rename, move and archival are disabled in Discover."
+  }
+}
