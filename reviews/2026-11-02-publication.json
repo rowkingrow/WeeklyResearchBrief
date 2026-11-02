@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.1",
+  "issue": "2026-11-02",
+  "planned_time": "2026-11-02T08:00:00+08:00",
+  "actual_start": "2026-11-02T08:00:00+08:00",
+  "cutoff": "2026-11-02T08:00:00+08:00",
+  "search_window_start": "2026-10-26T08:00:00+08:00",
+  "content_readback_completed_at": "2026-11-02T08:05:59+08:00",
+  "public_content_commit": "6eb34777c4d3192cf0eaa728a1f19ab52a859800",
+  "researchmap_reference_commit": "c99522fc61550be20641dc51889320195a35032d",
+  "branch": "main",
+  "force_update": false,
+  "public_readback": {
+    "files": 5,
+    "bytes": 192825,
+    "index_paper_count": 38,
+    "new_ids": [
+      "W20261102-01",
+      "W20261102-02",
+      "W20261102-03",
+      "W20261102-04"
+    ],
+    "doi_unique": true,
+    "exact_content_match": true,
+    "visual": "Markdown source structure, headings, links, formula text and JSON structure were checked at the fixed commit; no browser-rendered preview was opened."
+  },
+  "permission_boundaries": {
+    "weeklyresearchbrief": "written to the existing authorized main branch; no new branch or PR",
+    "researchmap": "read-only reference and deduplication only; no file, ID, commit, issue or PR changes",
+    "google_drive": "disabled; no upload, rename, move or archive action"
+  },
+  "content_scope": "Public: brief, issue metadata, checks, index, README and publication receipt. No private paper originals, user notes or internal research records.",
+  "binary_assets_added": 0,
+  "code_execution": "No paper code was obtained or run; code availability and run status are recorded separately per paper.",
+  "status": "published_discover_only_no_researchmap_write"
+}
