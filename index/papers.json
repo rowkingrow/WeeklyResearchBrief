@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-02T08:00:00+08:00",
-  "dedup_scope": "34 previous public records plus ResearchMap read-only 99-record index at c99522fc61550be20641dc51889320195a35032d; DOI, normalized title and version relation checked",
+  "updated_at": "2026-11-09T08:00:00+08:00",
+  "dedup_scope": "38 previous WeeklyResearchBrief records plus 166 ResearchMap records read-only at 75e7d801c09dff54eea1ada4833b1a901e98b8b6; DOI, normalized title and version checked",
   "papers": [
     {
       "id": "B01",
@@ -2564,6 +2564,385 @@
         "publisher": "https://www.sciencedirect.com/science/article/pii/S0029801826038710",
         "doi": "https://doi.org/10.1016/j.oceaneng.2026.128037",
         "trid": "https://trid.trb.org/View/2776710"
+      }
+    },
+    {
+      "id": "W20261109-01",
+      "doi": "10.1186/s41072-026-00263-1",
+      "title": "Learning-informed uncertainty sets for maritime rerouting under strategic chokepoint disruptions",
+      "title_zh": "战略咽喉中断下的学习型不确定集与海运改道",
+      "authors": [
+        "Islam El-Nakib"
+      ],
+      "journal": "Journal of Shipping and Trade",
+      "article_type": "Research article; publisher early-access version",
+      "first_online_date": "2026-11-02",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "boundary_note": "Publisher exposes only the calendar date. The window starts at 2026-11-02 08:00 Asia/Singapore, so this is a boundary-day item: exact inclusion cannot be certified without a publication timestamp.",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "article_number": null,
+      "version_status": "Citable early peer-reviewed version; publisher states it may receive further edits before replacement by the final Version of Record.",
+      "correction_status": "Publisher record checked 2026-11-09; no separate correction or retraction relation observed.",
+      "reading_scope": "full_html_sections: publisher abstract, appendices, bibliographic/version/licence information and supplementary-file description; full equation layout and downloadable supplement were not independently downloaded; code not run.",
+      "selection": "focus_boundary_day",
+      "first_reported_issue": "2026-11-09",
+      "last_reported_issue": "2026-11-09",
+      "branches": [
+        "Q03",
+        "Q04"
+      ],
+      "topics": [
+        "maritime rerouting",
+        "chokepoint disruption",
+        "robust optimization",
+        "predict-then-optimize",
+        "uncertainty calibration"
+      ],
+      "research_question": "When route-condition forecasts feed cargo allocation and reserve decisions, do learned one-sided uncertainty widths improve disruption performance after holding the point forecast fixed?",
+      "sample_clock_inclusion": "Documented generated experiment with 396 route-quarter records for 18 generic alternatives in six corridor groups. Chronological blocks: 252 development, 72 calibration, 72 final evaluation; seven policies, six scenario transformations and four final quarters. Current outcomes are excluded from forecast features; advance signal is available one day before origin and lagged outcomes after the preceding quarter.",
+      "core_method": "For each adverse target k (delay, cost shock, capacity loss), construct an upper planning bound U^(k) = y_hat^(k) + w^(k), where the point forecast is shared and w is uniform, corridor-pattern or learned. Feed these bounds into a cargo-allocation/reserve-capacity optimization that minimizes evaluated generalized cost under fixed decisions and common realized scenarios.",
+      "evidence_anchors": [
+        "publisher abstract with complete sample split and policy comparison",
+        "Appendix Tables 16–23: information timing, scenarios, chronological folds, marginal coverage and widths",
+        "Appendix Tables 24–25: seven cost components and file-to-stage joins"
+      ],
+      "principal_results": "Relative to nominal optimization using the same learned point forecasts, learned widths reduce mean evaluated generalized cost by 30.67%. They nevertheless cost 3.54% more than uniform widths and 4.68% more than corridor-pattern widths. Final marginal coverage is 88.89% for delay, 81.94% for cost shock and 77.78% for capacity loss; fulfilled cargo is 97.28%, while only 30.72% is delivered within stated service thresholds.",
+      "author_claim": "Learned uncertainty can improve decisions relative to nominal planning, but need not beat simpler calibrated protection rules.",
+      "independent_check": "The strongest design feature is the controlled comparison: point forecasts and realizations are held common, isolating uncertainty-width construction. The evidence is still entirely generated, the nominal 90% target is missed for all three physical outcomes, and no observed shipping-market benefit is estimated.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Verschuur et al. (2025), Systemic impacts of disruptions at maritime chokepoints",
+          "doi": "10.1038/s41467-025-65403-w",
+          "relation": "network consequence neighbor; observed systemic disruption scope rather than decision-calibration experiment"
+        },
+        {
+          "citation": "Unrevealing the adaptivity of container shipping network during disruption events by AIS trajectory data (2025)",
+          "doi": "10.1016/j.ocecoaman.2025.107862",
+          "relation": "AIS-observed network adaptation neighbor; no controlled uncertainty-set comparison"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0131",
+          "relation": "systemic chokepoint consequences; supplies the empirical/network target that the new decision model abstracts"
+        },
+        {
+          "id": "P0148",
+          "relation": "AIS-observed container-network adaptivity; observed rerouting versus generated route-quarter alternatives"
+        },
+        {
+          "id": "P0009",
+          "relation": "environmental and economic costs of rerouting; outcome accounting neighbor"
+        }
+      ],
+      "input_data": "Generated route descriptors, calendar transforms, one-day-ahead signal, lagged outcomes, cargo demand/priority/service thresholds and scenario-specific delay, cost-shock and capacity-loss increments.",
+      "output_data": "Point forecasts, adverse widths, cargo allocations, reserve decisions, coverage rates, service fulfilment and decomposed generalized-cost components.",
+      "data_status": "Publisher states complete inputs, fitted models, bounds, decisions, outcome denominators and solver logs accompany the results; supplementary DOCX is linked. No separate durable data DOI was found in the checked scope.",
+      "code_status": "No public source-code repository or explicit software licence was found in the checked publisher record; code not obtained and not run.",
+      "open_paper": true,
+      "license": "CC BY-NC-ND 4.0",
+      "open_software": false,
+      "open_raw_data": "generated evidence accompanies article; separate repository not confirmed",
+      "claim_boundary": "Generated corridor records and declared scenario transformations test internal decision logic; they do not establish real-world chokepoint forecasts, behavioral rerouting or market welfare effects.",
+      "relation_to_user": "Useful methodological negative control for any cyclone-driven rerouting model: learned uncertainty should be compared with simple calibrated widths under identical point forecasts and realizations.",
+      "priority": "high_method",
+      "minimum_check": "Download the supplement, reconstruct one final-quarter allocation and verify Tables 23–25; then replace generated targets with an observed AIS/cyclone event while preserving the equal-point-forecast comparison.",
+      "links": {
+        "publisher": "https://link.springer.com/article/10.1186/s41072-026-00263-1",
+        "doi": "https://doi.org/10.1186/s41072-026-00263-1"
+      }
+    },
+    {
+      "id": "W20261109-02",
+      "doi": "10.1186/s40562-026-00522-w",
+      "title": "RAFT-ports: an application for risk assessment for tsunamis in ports demonstrated at Tanjung Gerem Port, Indonesia",
+      "title_zh": "RAFT-Ports：港口海啸损伤、损失与恢复评估工具",
+      "authors": [
+        "Raquel Felix",
+        "Constance Ting Chua",
+        "Anawat Suppasri",
+        "Ignatius Ryan Pranantyo",
+        "Endra Gunawan",
+        "Mohammad Heidarzadeh"
+      ],
+      "journal": "Geoscience Letters",
+      "article_type": "Research article",
+      "first_online_date": "2026-11-07",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "boundary_note": null,
+      "issue_date": "2026-11-07",
+      "volume": "13",
+      "issue": null,
+      "article_number": "74",
+      "version_status": "Version of Record",
+      "correction_status": "Publisher record checked 2026-11-09; no correction or retraction relation observed.",
+      "reading_scope": "full_html_sections: complete publisher HTML methods, results, limitations, data/code availability, Figures 2–7 descriptions and Table 1 summary; PDF not downloaded; repository endpoint was tested but returned 404; code not run.",
+      "selection": "focus",
+      "first_reported_issue": "2026-11-09",
+      "last_reported_issue": "2026-11-09",
+      "branches": [
+        "Q01",
+        "Q05"
+      ],
+      "topics": [
+        "port resilience",
+        "tsunami",
+        "fragility curves",
+        "recovery",
+        "open-source tool",
+        "coastal hazard"
+      ],
+      "research_question": "Can published depth-based fragility, loss and production-recovery functions be converted into an operational, reproducible port-level assessment workflow?",
+      "sample_clock_inclusion": "Tanjung Gerem Port, Indonesia; 430 buildings (346 chemical, 84 petrochemical) selected for multiple industry types, visible footprints, coastal proximity and prior inundation evidence. Three hypothetical Sunda Megathrust magnitudes (Mw 8.5, 8.7, 8.9), 100 stochastic slip realizations each; only the largest nearshore-amplitude realization per magnitude is carried into the detailed 5-hour, 5-m-grid demonstration.",
+      "core_method": "FUNWAVE–TVD propagates each selected tsunami through nested grids. For building b with representative inundation depth h_b, RAFT maps h_b to a 0.5-m depth bin and evaluates P(DS≥d | h_b), expected loss ratio E[L | h_b], and P(full production recovery by t | h_b). A user threshold τ (default 0.70) determines reported exceedances.",
+      "evidence_anchors": [
+        "Methods: 300 slip models, five nested grids, 430-building inventory and independent QGIS/Excel replication",
+        "Table 1 and Results: thresholded damage, loss and recovery proportions",
+        "Scope and applicability: depth-only surrogate, topography resolution and transferability limitations",
+        "Code and Data Availability: claimed installers, source, samples and manual"
+      ],
+      "principal_results": "At τ=0.70, 73%, 13% and 0% of structures in the Mw 8.9, 8.7 and 8.5 scenarios have at least a 70% probability of Minor-or-worse damage; 31%, 20% and 0% exceed the 70% expected-loss threshold. Some structures reach the selected recovery probability after about 2–2.5 months and all by 5–5.5 months. Independent replication gives identical probability calculations and ≤2.3% differences in depth-bin assignment.",
+      "author_claim": "RAFT-Ports operationalizes editable fragility and vulnerability functions for rapid scenario-based port impact and recovery assessment.",
+      "independent_check": "The innovation is implementation and traceability, not a new causal recovery model. Choosing the worst of 100 sources and using upper-bin depth is conservative locally, while coarse/raw terrain and transferring Tohoku-derived fragilities to Indonesia can bias in the opposite direction. The paper itself frames results as scenario impacts, not annualized risk.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Chua et al. (2021), Tsunami damage to ports: cataloguing damage to create fragility functions from the 2011 Tohoku event",
+          "doi": "10.5194/nhess-21-1887-2021",
+          "relation": "structural-damage fragility functions operationalized by RAFT"
+        },
+        {
+          "citation": "Suppasri et al. (2022), Quantifying tsunami impact on industrial facilities and production capacity in ports",
+          "doi": "10.1016/j.ijdrr.2022.103141",
+          "relation": "production-capacity recovery functions operationalized by RAFT"
+        },
+        {
+          "citation": "A flow-based commodity-independent port capacity model for resilience assessment of intermodal freight networks subjected to coastal hazards",
+          "doi": "10.1016/j.ress.2024.110280",
+          "relation": "downstream network-capacity neighbor absent from RAFT v1"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0141",
+          "relation": "cyclone-hazard seaport simulation; closest hazard-to-port-resilience analogue"
+        },
+        {
+          "id": "P0045",
+          "relation": "turns coastal-hazard loss into network capacity; natural downstream extension"
+        },
+        {
+          "id": "P0047",
+          "relation": "multi-hazard global port exposure and trade loss; broader scale but less operational detail"
+        }
+      ],
+      "input_data": "GeoTIFF inundation raster, building-footprint shapefile with industry type, editable fragility/vulnerability/recovery curves, threshold and map settings; source modelling uses GEBCO, BATNAS, coastal topography, FABDEM and OpenStreetMap/verified footprints.",
+      "output_data": "Building-level depth bins, damage exceedance probabilities, expected loss ratios, recovery probabilities, threshold summaries, maps, PNGs, CSVs and updated footprint tables.",
+      "data_status": "Paper states supplementary information and associated resources are available through the authors’ GitHub; sample inputs/outputs and manual are claimed.",
+      "code_status": "Publisher supplies a GitHub link for installers and source, but the resolved repository endpoint returned 404 during this run. Availability is therefore claimed_by_paper_but_not_retrieved; no execution attempted.",
+      "open_paper": true,
+      "license": "CC BY 4.0",
+      "open_software": "claimed; current retrieval failed",
+      "open_raw_data": "sample data claimed; current retrieval failed",
+      "claim_boundary": "This is a physical port-structure scenario tool. It does not model AIS vessel response, terminal operations, network cascades, realized downtime or tropical-cyclone behavior.",
+      "relation_to_user": "Transferable architecture for separating hazard field → asset damage/loss → recovery before connecting to AIS traffic reorganization; the clean input/output contract is especially useful.",
+      "priority": "high",
+      "minimum_check": "Resolve the repository link, run the sample case, compare one building against the manual QGIS/Excel calculation, then test a cyclone-compatible multivariate fragility layer rather than directly reusing tsunami depth functions.",
+      "links": {
+        "publisher": "https://link.springer.com/article/10.1186/s40562-026-00522-w",
+        "doi": "https://doi.org/10.1186/s40562-026-00522-w",
+        "claimed_code": "https://github.com/RAFT-Ports"
+      }
+    },
+    {
+      "id": "W20261109-03",
+      "doi": "10.1038/s41467-026-78710-7",
+      "title": "Mapping Future Energy Journeys Through Modeling the Global Transport of Synthetic Energy Carriers",
+      "title_zh": "全球合成能源载体运输路径与基础设施选择",
+      "authors": [
+        "Uwe Langenmayr",
+        "Julia Schuler",
+        "Viktor Slednev",
+        "Wolf Fichtner"
+      ],
+      "journal": "Nature Communications",
+      "article_type": "Article",
+      "first_online_date": "2026-11-07",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "boundary_note": null,
+      "issue_date": "2026-11-07",
+      "volume": "17",
+      "issue": null,
+      "article_number": "11500",
+      "version_status": "Version of Record",
+      "correction_status": "Publisher record checked 2026-11-09; no correction or retraction relation observed.",
+      "reading_scope": "full_html_sections: publisher abstract, introduction, methods, discussion/limitations, data and code availability and bibliographic record; source repository README/licence checked; model not run.",
+      "selection": "selected",
+      "first_reported_issue": "2026-11-09",
+      "last_reported_issue": "2026-11-09",
+      "branches": [
+        "Q03",
+        "Q04"
+      ],
+      "topics": [
+        "shipping routes",
+        "ports",
+        "hydrogen",
+        "synthetic fuels",
+        "multimodal network",
+        "cost optimization"
+      ],
+      "research_question": "Which combinations of production location, conversion chain and port/pipeline/shipping infrastructure minimize delivered costs for future synthetic energy carriers?",
+      "sample_clock_inclusion": "10,883 production locations; destination countries Germany, Japan, China, India and the United States; seven Germany-focused scenarios in the main analysis; seven carriers and four transport modes; forward-looking 2030 techno-economic snapshot rather than observed trade flows.",
+      "core_method": "HERMES represents production, conversion and transport as a multi-commodity, multi-mode network. An iterative branching heuristic approximates a mixed-integer problem, minimizing delivered cost over eligible destination nodes, commodities, conversions and modes while pruning branches that violate benchmarks.",
+      "evidence_anchors": [
+        "Figures/scenarios comparing retrofit, heat and commodity-value assumptions",
+        "Methods Eqs. 1–9 and iterative branch processing",
+        "Data/Code Availability: Zenodo data, source data, HERMES v1.0.0 and archived code",
+        "Discussion limitations: no port/ship capacity, congestion, loading, temporal operation or GHG accounting"
+      ],
+      "principal_results": "Retrofit-ready pipelines keep moderate-renewable regions competitive; remote exporters depend strongly on ports and coastal pipeline access. Gaseous hydrogen dominates short pipeline paths, ammonia maritime paths, and methanol/methane longer multimodal chains. Low-cost heat is required for competitive LOHC routes. Results are scenario-dependent cost pathways, not observed trade forecasts.",
+      "author_claim": "Fine-resolution infrastructure and conversion representation changes which production regions and carriers appear cost-competitive.",
+      "independent_check": "The open model/data make the routing layer unusually auditable, but omission of port/ship capacities, fees, congestion and temporal occupancy means it cannot yet estimate operational disruption, AIS reorganization or emissions. It is a strong network-cost substrate, not a direct extreme-weather paper.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Pathways and geographical patterns of international shipping CO2 emissions in the future",
+          "doi": "10.1016/j.scib.2026.03.004",
+          "relation": "future shipping geography/emissions neighbor; HERMES resolves fuel-conversion and infrastructure choices instead"
+        },
+        {
+          "citation": "Systemic impacts of disruptions at maritime chokepoints",
+          "doi": "10.1038/s41467-025-65403-w",
+          "relation": "network chokepoint consequence neighbor; HERMES is static cost-path optimization"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0115",
+          "relation": "future shipping pathways and CO2 geography; closest transition-outcome neighbor"
+        },
+        {
+          "id": "P0131",
+          "relation": "chokepoint disruption and network consequences; missing stress layer for HERMES"
+        },
+        {
+          "id": "P0158",
+          "relation": "climate disasters and shipping carbon emissions; highlights the environmental layer HERMES omits"
+        }
+      ],
+      "input_data": "Hydrogen/electricity production cost and potential grids, techno-economic conversion parameters, port and oil/gas pipeline infrastructure, shipping/road/pipeline routes and carrier properties.",
+      "output_data": "Cost-minimizing routes, chosen carriers/conversions/modes, supply costs and potentials, maps, supply curves and processed route results.",
+      "data_status": "All generated/used data deposited in Zenodo; figure source data and supplementary data supplied; publisher states no private/restricted data were used.",
+      "code_status": "HERMES v1.0.0 is public at github.com/ulicious/hermes with archived version and configuration/minimal example. Repository is public and licence was independently checked as GPL-3.0; code not run.",
+      "open_paper": true,
+      "license": "CC BY 4.0",
+      "open_software": true,
+      "open_raw_data": true,
+      "claim_boundary": "Static 2030 least-cost paths are not forecasts of realized trade, port congestion, ship operations, fuel lifecycle emissions or responses to hazards.",
+      "relation_to_user": "Second-layer network/cost paper: useful if future research needs a route-cost counterfactual, but not evidence about cyclone-induced behavior or emissions.",
+      "priority": "medium",
+      "minimum_check": "Run the published minimal example, then add port/ship capacity and a disruption shock to test whether least-cost route switching predicts observed AIS redistribution.",
+      "links": {
+        "publisher": "https://www.nature.com/articles/s41467-026-78710-7",
+        "doi": "https://doi.org/10.1038/s41467-026-78710-7",
+        "code": "https://github.com/ulicious/hermes",
+        "docs": "https://hermes-h2.readthedocs.io/en/main/"
+      }
+    },
+    {
+      "id": "W20261109-04",
+      "doi": "10.1057/s41278-026-00372-5",
+      "title": "Logistical competition and risk in wheat trade and impacts of changes in Black Sea shipping",
+      "title_zh": "黑海航运变化下的小麦贸易、港口竞争与物流风险",
+      "authors": [
+        "William Wilson",
+        "David W. Bullock"
+      ],
+      "journal": "Maritime Economics & Logistics",
+      "article_type": "Original Article",
+      "first_online_date": "2026-11-02",
+      "date_precision": "day",
+      "publisher_timezone": null,
+      "boundary_note": "Publisher exposes only the calendar date. Because the search window starts at 08:00 Asia/Singapore on the same day, exact inclusion cannot be certified.",
+      "issue_date": null,
+      "volume": null,
+      "issue": null,
+      "article_number": null,
+      "version_status": "Online-first Version of Record",
+      "correction_status": "Publisher record checked 2026-11-09; no correction or retraction relation observed.",
+      "reading_scope": "full_html_sections: publisher abstract, model description, scenario results, conclusions, data availability and bibliographic record; downloadable PDF/code not obtained.",
+      "selection": "selected_boundary_day",
+      "first_reported_issue": "2026-11-09",
+      "last_reported_issue": "2026-11-09",
+      "branches": [
+        "Q03",
+        "Q04"
+      ],
+      "topics": [
+        "Black Sea",
+        "wheat trade",
+        "port capacity",
+        "route substitution",
+        "geopolitical disruption",
+        "stochastic network flow"
+      ],
+      "research_question": "How do seasonal port capacity, uncertain prices/freight/supply/demand and alternative Baltic/Caspian routes redistribute global wheat flows under Black Sea disruption?",
+      "sample_clock_inclusion": "Monthly global wheat-trade network with exporter ports and importing regions/countries; stochastic FOB prices, ocean freight, export supply, import demand and port capacity. The accessible HTML does not expose a concise complete estimation-period table or all input sample counts.",
+      "core_method": "Optimized Monte Carlo Simulation repeatedly solves a stochastic minimum-cost network-flow problem: minimize FOB plus ocean transport cost subject to monthly export supply, import demand, trade-policy and port-capacity constraints. Scenarios relax or expand Baltic/Caspian capacity and Russian export restrictions.",
+      "evidence_anchors": [
+        "Model section: monthly stochastic network-flow design",
+        "Tables/scenarios: Baltic capacity and route changes",
+        "Conclusions: seasonal binding capacity and competing-exporter displacement",
+        "Data availability: request-only"
+      ],
+      "principal_results": "Base constraints bind mainly during peak seasons. A limited Baltic expansion shifts about 3.0 MMT; a larger expansion increases Baltic exports by 9.1 MMT while Black Sea/Sea of Azov exports fall 7.6 MMT. Relaxing the Russian export quota increases exports by about 2.4 MMT. The model predicts trade displacement across exporters and destinations, not only local port effects.",
+      "author_claim": "Seasonality, uncertainty and capacity constraints jointly determine route substitution, maritime-network resilience and trade competition.",
+      "independent_check": "The monthly capacity clock is a real advance over annual capacity comparisons. However, results depend on modeled costs/capacities and conflict scenarios; data are request-only, no public code was identified, and the model does not validate route changes against AIS.",
+      "direct_method_antecedents": [
+        {
+          "citation": "Shipping trade and geopolitical turmoil: The case of the Ukrainian Maritime network",
+          "doi": "10.1016/j.jtrangeo.2025.104342",
+          "relation": "observed Ukrainian maritime-network change; new paper adds stochastic commodity competition and monthly capacity"
+        },
+        {
+          "citation": "Systemic impacts of disruptions at maritime chokepoints",
+          "doi": "10.1038/s41467-025-65403-w",
+          "relation": "global cascading-disruption neighbor; new paper resolves one commodity and seasonal trade competition"
+        }
+      ],
+      "nearest_researchmap": [
+        {
+          "id": "P0094",
+          "relation": "closest observed Black Sea/Ukrainian network change"
+        },
+        {
+          "id": "P0131",
+          "relation": "systemic chokepoint cascades at broader multi-commodity scale"
+        },
+        {
+          "id": "P0145",
+          "relation": "port disruption propagation and systemic risk; climate instead of geopolitical trigger"
+        }
+      ],
+      "input_data": "Monthly FOB prices, ocean freight rates, export supply, import demand, port handling capacities, trade-policy constraints and alternative-route capacities.",
+      "output_data": "Optimal monthly flows by origin/destination/port, binding-capacity diagnostics, delayed/deferred shipments and scenario-specific exporter/market reallocations.",
+      "data_status": "Authors state data are available on request; no open dataset was confirmed.",
+      "code_status": "No public implementation or software licence was found; not obtained and not run.",
+      "open_paper": true,
+      "license": "Open access; exact licence variant not captured in checked excerpt",
+      "open_software": false,
+      "open_raw_data": false,
+      "claim_boundary": "Optimization results are model-dependent trade reallocations; they are not observed vessel behavior, causal conflict impacts or emissions estimates.",
+      "relation_to_user": "Second-layer analogue for spatial reorganization: shows why event-scale vessel displacement should be interpreted against seasonal port capacity and commodity competition.",
+      "priority": "medium_high",
+      "minimum_check": "Acquire inputs/code, reproduce the Baltic expansion scenario and compare predicted port-volume shifts with AIS or customs observations during a held-out disruption.",
+      "links": {
+        "publisher": "https://link.springer.com/article/10.1057/s41278-026-00372-5",
+        "doi": "https://doi.org/10.1057/s41278-026-00372-5"
       }
     }
   ]
