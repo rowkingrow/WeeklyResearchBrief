@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.1",
+  "issue": "2026-11-09",
+  "planned_time": "2026-11-09T08:00:00+08:00",
+  "actual_start": "2026-11-09T08:00:24+08:00",
+  "cutoff": "2026-11-09T08:00:00+08:00",
+  "search_window_start": "2026-11-02T08:00:00+08:00",
+  "content_readback_completed_at": "2026-11-09T08:10:43+08:00",
+  "public_content_commit": "34e4dd527dd7de14df6231a9d57ba904284b6460",
+  "researchmap_reference_commit": "75e7d801c09dff54eea1ada4833b1a901e98b8b6",
+  "branch": "main",
+  "force_update": false,
+  "public_readback": {
+    "files": 5,
+    "bytes": 218043,
+    "index_paper_count": 42,
+    "new_ids": [
+      "W20261109-01",
+      "W20261109-02",
+      "W20261109-03",
+      "W20261109-04"
+    ],
+    "doi_unique": true,
+    "exact_content_match": true,
+    "resource_updates": 1,
+    "visual": "Markdown source structure, tables, equations, headings, links and JSON structure were inspected at the fixed commit; no browser-rendered preview was opened."
+  },
+  "search_status": {
+    "academic_search_mcp": "unavailable; publisher/primary-source fallback used",
+    "boundary_day_items": [
+      "W20261109-01",
+      "W20261109-04"
+    ],
+    "direct_core_negative_result": true
+  },
+  "access_failures": [
+    {
+      "item": "W20261109-02 RAFT-Ports source repository",
+      "status": "publisher claims open source; resolved GitHub endpoint returned 404; code not obtained or run"
+    }
+  ],
+  "permission_boundaries": {
+    "weeklyresearchbrief": "written to existing authorized main branch only; no new branch, PR, Issue or extra polling",
+    "researchmap": "read-only reference/deduplication only; no file, ID, commit, issue or PR changes",
+    "google_drive": "disabled; no upload, rename, move or archive action"
+  },
+  "content_scope": "Public original commentary, issue metadata, checks, index, README and receipt only. No private originals, user notes or internal research records.",
+  "binary_assets_added": 0,
+  "code_execution": "No paper code was run. HERMES repository/licence were checked; RAFT retrieval failed; other code was unavailable.",
+  "status": "published_discover_only_no_researchmap_write"
+}

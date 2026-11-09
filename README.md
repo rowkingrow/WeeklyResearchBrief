@@ -8,7 +8,7 @@
 
 ## 最新简报
 
-[2026-11-09｜4篇研究、2篇重点，另1项资源更新](briefs/2026/2026-11-09.md) · [配套元数据](briefs/2026/2026-11-09.papers.json) · [核验记录](reviews/2026-11-09-checks.md)
+[2026-11-09｜4篇研究、2篇重点，另1项资源更新](briefs/2026/2026-11-09.md) · [配套元数据](briefs/2026/2026-11-09.papers.json) · [核验记录](reviews/2026-11-09-checks.md) · [发布回执](reviews/2026-11-09-publication.json)
 
 [2026-11-02｜4篇研究、1篇重点](briefs/2026/2026-11-02.md) · [配套元数据](briefs/2026/2026-11-02.papers.json) · [核验记录](reviews/2026-11-02-checks.md) · [发布回执](reviews/2026-11-02-publication.json)
 
