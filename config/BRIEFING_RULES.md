@@ -27,7 +27,7 @@ AIS、遥感、因果推断、深度学习等作为跨问题的方法/数据标�
 - `index/journals.json`：各期刊在库篇数（`paper_ids`）。
 - `index/team_profiles.json`：`tier` 为 `core`、`follow` 的团队。
 - `framework/FRAMEWORK_MATRIX.md`：稀疏格和“仅参考层”格。
-- `index/ideas.json`、`index/idea_seeds.json`：只用于内部确定回溯主题和检索侧重，公开边界见“时间、连接、归档与隐私”。
+- `index/ideas.json`、`index/idea_seeds.json`：用户2026-11-11确认可以读取。只用于内部确定回溯主题和检索侧重，公开边界见“时间、连接、归档与隐私”。
 
 读不到的文件在核验记录中逐个列出，并写明本期因此缺少哪条通道；不为此请求写权限。
 
