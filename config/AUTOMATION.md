@@ -29,6 +29,14 @@ END:VEVENT
 
 每次运行保存计划时刻、实际开始、内容完成与发布回读完成时刻。常规时间窗口固定为计划时刻向前7天，迟到运行保留原窗口。2026-10-12原定运行由10月11日提前运行替代，具体衔接见下。
 
+## 2026-11-11检索与输出规则更新
+
+依据用户2026-11-11的要求，[BRIEFING_RULES.md](BRIEFING_RULES.md) 改为以文献库为锚的检索、候选清单、补漏窗与回溯栏，并改读 ResearchMap 的跨层查重表。本次只更新仓库配置：不改变每周一08:00、Asia/Singapore 的计划，不新建任务，不改变“仅本仓库归档、ResearchMap 只读、Drive 零写入”的边界。平台保存的提示词未在本次修改或核实；仓库规则要求每次运行读取最新配置，与旧提示词冲突时以仓库规则为准。
+
+### 平台替换提示词草案（已准备，未直接应用）
+
+请运行原“近期研究周报”，保持每周一08:00、Asia/Singapore和原完成通知目的地不变。先核实GitHub连接，读取rowkingrow/WeeklyResearchBrief的main分支README.md、profile/RESEARCH_PROFILE.md、config/BRIEFING_RULES.md、config/AUTOMATION.md和index/papers.json，并只读读取ResearchMap main的index/paper_lookup.json、index/papers.json、index/framework_coordinates.json、index/journals.json、index/team_profiles.json、framework/FRAMEWORK_MATRIX.md、index/ideas.json和index/idea_seeds.json。按当前BRIEFING_RULES执行：依次完成引文追踪、期刊扫描、团队跟踪、预印本、关键词补网和中文来源六条通道，逐条记录是否执行；新文献窗7天、补漏窗再向前28天，另做一个不限年份的回溯主题；按跨层查重表去重，参考层、补充阅读和已排除的论文不再推荐。输出不超过15条候选（通道、问题分支、驱动×结果格、一句说明、最近邻编号、建议去向）、至多1篇精读、回溯栏和只含数量的采纳反馈；不够就少报，不凑数。ResearchMap只读，不新增或修改其中任何内容；不向Google Drive写入。研究想法、种子、个人阅读状态和逐篇去向不得写入本公开仓库，公开文字只用Q01–Q05和框架词表名称。保持DOI/版本去重、阅读深度标记、版权限制、非强制提交和远端读回。运行或归档受阻时如实报告。完成后在原任务对话简要通知本周要点、最值得看的1–2条、链接、发布状态和实际完成时间。
+
 ## 2026-10-22配置优化与平台核验边界
 
 用户要求基于科研领域脉络讨论优化原“近期研究周报”。本轮更新仓库运行规则与背景，不创建重复任务、不改变原每周一08:00新加坡时间计划。现行筛选、阅读和输出以本仓库BRIEFING_RULES.md为准；旧prompt中的宽泛主题优先级由现行规则替代。
