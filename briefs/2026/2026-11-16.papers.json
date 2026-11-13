@@ -1,0 +1,1253 @@
+{
+  "schema_version": "2.0",
+  "issue": "2026-11-16",
+  "planned_cutoff": "2026-11-16T08:00:00+08:00",
+  "actual_start_observed": "2026-11-14T01:41:32+08:00",
+  "window_start": "2026-11-09T08:00:00+08:00",
+  "window_end": "2026-11-16T08:00:00+08:00",
+  "observed_through": "2026-11-14T01:41:32+08:00",
+  "catchup_start": "2026-10-12T08:00:00+08:00",
+  "catchup_end": "2026-11-09T08:00:00+08:00",
+  "mode": "advance_of_existing_monday_issue",
+  "timezone": "Asia/Singapore",
+  "coverage_note": "归档日期对应 11 月 16 日期次。以原计划时刻锚定 7 天新文献窗及此前 28 天的补漏窗。检索提前至 11 月 14 日 01:41:32，该时刻至计划截止尚未观察。",
+  "lanes_run": [
+    {
+      "lane": "citation",
+      "executed": true,
+      "coverage": "partial",
+      "source": [
+        "OpenAlex works/cites",
+        "OpenCitations Index v2",
+        "Semantic Scholar",
+        "RePEc",
+        "ROSA P",
+        "University of Oregon Scholars’ Bank"
+      ],
+      "checked": {
+        "hazard_core": 65,
+        "rotating_core": 22,
+        "anchors_attempted": 87,
+        "openalex_graphs": 82,
+        "additional_doi_queries": 2,
+        "additional_doi_edges_returned": 0,
+        "anchors_without_complete_cited_by": 3,
+        "distinct_records": 56,
+        "openalex_anchor_edges": 97
+      },
+      "method": "按核心卡第一驱动选择灾害锚点，其余 88 篇按编号递增取第 1、5、9…位。查询日界覆盖两个窗口，逐条按首次在线日期判定。3 项报告、工作论文或学位论文用题名、作者及机构入口补检。",
+      "retained_candidates": 3,
+      "retained_backfill": 2
+    },
+    {
+      "lane": "venue",
+      "executed": true,
+      "coverage": "11/11",
+      "source": [
+        "Crossref journal works（online / created）",
+        "OpenAlex source / works",
+        "各期刊及机构库"
+      ],
+      "checked": {
+        "eligible_journals": 11,
+        "journals_queried": 11,
+        "distinct_records": 1671,
+        "journals_by_record_count": {
+          "Ocean Engineering": 685,
+          "Transportation Research Part D: Transport and Environment": 53,
+          "Reliability Engineering & System Safety": 180,
+          "Transportation Research Part E: Logistics and Transportation Review": 38,
+          "Journal of Marine Science and Engineering": 270,
+          "Ocean & Coastal Management": 32,
+          "Weather and Forecasting": 7,
+          "Journal of Cleaner Production": 256,
+          "Transportation Research Part C: Emerging Technologies": 52,
+          "Transport Policy": 66,
+          "Journal of Transport Geography": 32
+        }
+      },
+      "method": "按当次各刊收录量≥4入选，先合并书目，再在题名／摘要中过滤灾害或运行约束与海上对象、行为及其结果。在窄窗新著中另核公开在线版本。",
+      "retained_candidates": 3,
+      "retained_backfill": 0
+    },
+    {
+      "lane": "team",
+      "executed": true,
+      "coverage": "37/37 leads; member identity limits",
+      "source": [
+        "OpenAlex authorships",
+        "锚点论文 DOI 对应署名和机构",
+        "期刊作者栏"
+      ],
+      "checked": {
+        "teams_queried": 37,
+        "unique_requested_names": 138,
+        "names_with_doi_anchored_author_id_search": 128,
+        "additional_names_checked_with_affiliation": 10,
+        "additional_accepted_results": 0,
+        "distinct_records": 77
+      },
+      "method": "由锚点署名解析作者。遇作者档案分拆则检索候选档案并核对期刊署名。另 10 个署名采用机构／合作者匹配，未确认新增成果。",
+      "retained_candidates": 2,
+      "retained_backfill": 0
+    },
+    {
+      "lane": "preprint",
+      "executed": true,
+      "coverage": "field and site searches",
+      "source": [
+        "arXiv",
+        "SSRN",
+        "EarthArXiv",
+        "ESS Open Archive / ESSOAr"
+      ],
+      "checked": {
+        "search_expressions": 5,
+        "initial_arxiv_hits": 4,
+        "initial_ssrn_hits": 6,
+        "initial_joint_earth_hits": 0,
+        "additional_earth_search_hits": 2
+      },
+      "method": "分别检索并复核预印本页面的题名、首发时间及期刊关系。关键词含气旋、海运、船舶航迹、港口及中断。",
+      "retained_candidates": 0,
+      "retained_backfill": 0
+    },
+    {
+      "lane": "keyword",
+      "executed": true,
+      "coverage": "ranked queries plus publisher checks",
+      "source": [
+        "OpenAlex",
+        "出版社和作者机构库网页索引"
+      ],
+      "checked": {
+        "openalex_query_strings": 7,
+        "openalex_records_returned_before_merge": 161,
+        "openalex_distinct_records": 139,
+        "initial_web_query_strings": 4,
+        "initial_web_results": 9
+      },
+      "method": "组合台风／封港／涌浪／气象预报与航速、AIS、港口挂靠、绕航、油耗；OpenAlex 每式至多读前 30 条。按命中继续查原题、原文及日期。",
+      "retained_candidates": 3,
+      "retained_backfill": 1
+    },
+    {
+      "lane": "chinese",
+      "executed": true,
+      "coverage": "journal sites; CNKI/Wanfang interactive portals unverified",
+      "source": [
+        "中文期刊官方网站",
+        "CNKI 期刊门户公开页",
+        "万方期刊公开页"
+      ],
+      "checked": {
+        "initial_web_query_strings": 3,
+        "initial_result_entries": 14,
+        "interactive_catalogues_accessed": 0
+      },
+      "method": "中文词组覆盖台风、避台、封航、航速、船舶 AIS 与学位论文。检索到的期刊原页已读。本期未检索中文数据库的站内结果集，CNKI／万方全库和学位论文覆盖受限。",
+      "retained_candidates": 0,
+      "retained_backfill": 1
+    }
+  ],
+  "dedup_basis": {
+    "map_records": 282,
+    "weekly_records_before": 42,
+    "keys": [
+      "DOI",
+      "title_key",
+      "version_family",
+      "original_title_and_author_for_no_doi"
+    ],
+    "tiers_checked": [
+      "P",
+      "R",
+      "S",
+      "T"
+    ]
+  },
+  "selection_count": 7,
+  "new_count": 2,
+  "catchup_count": 5,
+  "preprint_count": 0,
+  "backfill_topic": "Q01",
+  "backfill_anchor_ids": [
+    "P0190",
+    "P0193",
+    "P0194"
+  ],
+  "backfill_count": 4,
+  "next_backfill_topic": "Q02",
+  "papers": [
+    {
+      "id": "W20261116-01",
+      "number": "01",
+      "window": "new",
+      "title": "The Global Kilometric Tropical Cyclone Wind Database (CyclObs) Enabling High-Resolution Data-Driven Studies",
+      "title_zh": "用卫星过境风场核对船舶的气旋暴露",
+      "authors": [
+        "Arthur Avenas",
+        "Taiga Tsukada",
+        "Théo Cévaër",
+        "John Knaff",
+        "Bertrand Chapron",
+        "Alexis Mouche"
+      ],
+      "journal": "Bulletin of the American Meteorological Society",
+      "citation_detail": "Early Online Release",
+      "first_online_date": "2026-11-11",
+      "doi": "10.1175/BAMS-D-25-0144.1",
+      "lane": [
+        "team"
+      ],
+      "branches": [
+        "Q01"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "航行安全与碰撞风险"
+      ],
+      "nearest_prior_work": [
+        "P0190",
+        "P0193"
+      ],
+      "one_line": "作者用逾 2,500 景合成孔径雷达（SAR）观测重建至少 500 个气旋的海面风场，并与独立卫星、机载仪器和投落送观测校验。",
+      "source": "https://journals.ametsoc.org/view/journals/bams/aop/BAMS-D-25-0144.1/BAMS-D-25-0144.1.xml",
+      "fulltext_url": "https://archimer.ifremer.fr/doc/01003/111423/125280.pdf",
+      "open_paper": "期刊摘要公开，作者预印本全文开放",
+      "input_data": "多颗 C 波段卫星的雷达后向散射、最佳路径与独立测风观测。",
+      "output_data": "过境时刻的海面风速场、最大持续风速及内外风圈结构量。",
+      "data_status": "作者提供 Ifremer CyclObs 门户。已核数据声明及入口；未取样，各传感器产品许可待核。",
+      "code_status": "完整处理代码及其许可待核。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "full_pdf_pages_checked",
+      "article_type": "期刊论文／观测资料",
+      "issue_date": null,
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "reading_by_version": {
+        "journal": "abstract_only",
+        "preprint_v1": "full_pdf_pages_checked",
+        "pdf_pages_checked": [
+          10,
+          16
+        ],
+        "printed_pages": [
+          9,
+          15
+        ],
+        "figures": [
+          2,
+          5
+        ]
+      },
+      "sources": [
+        "https://journals.ametsoc.org/collection/bams?access=all&t_2=THE+MAP+ROOM",
+        "https://archimer.ifremer.fr/doc/01003/111423/",
+        "https://cyclobs.ifremer.fr/app/tropical"
+      ],
+      "version_relations": [
+        {
+          "doi": "10.22541/essoar.176676860.01253431/v1",
+          "date": "2025-12-26",
+          "type": "preprint_v1",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "date_basis": "AMS 列期刊首次在线 11 月 11 日，Crossref 登记 has-preprint。正式摘要写观测自 2013 年起，v1 摘要写 2016 年。",
+      "boundary": "框架坐标指航行安全研究所需的气旋暴露输入。船位匹配需要卫星覆盖及时间差，决策时可见的天气需要历史预报发布时间。",
+      "method_tags": [
+        "SAR",
+        "气旋风场反演",
+        "独立测风配对"
+      ],
+      "nearest_comparison": "P0190 核验业务风圈预报，P0193 处理风速概率。CyclObs 新增有时刻、有覆盖边界的二维实测反演风场，可分别与这两种预报产品核对。",
+      "sample_and_comparison": "至少 500 个气旋、逾 2,500 景。卫星、机载和投落送的匹配尺度不同。风场时钟是卫星过境，行为解释还要另取船舶决策时刻。",
+      "reading_evidence": "期刊摘要、预印本 v1 的风场反演方法及图 2、5。",
+      "author_claim": "作者用逾 2,500 景合成孔径雷达（SAR）观测重建至少 500 个气旋的海面风场，并与独立卫星、机载仪器和投落送观测校验。",
+      "claim_boundary": "框架坐标指航行安全研究所需的气旋暴露输入。船位匹配需要卫星覆盖及时间差，决策时可见的天气需要历史预报发布时间。",
+      "problem_branch": [
+        "Q01"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0190",
+          "title": "An Examination of Model and Official National Hurricane Center Tropical Cyclone Size Forecasts",
+          "doi": "10.1175/WAF-D-15-0158.1"
+        },
+        {
+          "id": "P0193",
+          "title": "Improvements to the Operational Tropical Cyclone Wind Speed Probability Model",
+          "doi": "10.1175/WAF-D-12-00116.1"
+        }
+      ],
+      "code_access_verified": false,
+      "data_archive": "https://cyclobs.ifremer.fr/app/tropical",
+      "input_source_links": [
+        "https://www.remss.com/missions/smap/",
+        "https://www.aoml.noaa.gov/ftp/pub/hrd/data/dropsonde/",
+        "https://ftp.nhc.noaa.gov/atcf/",
+        "https://www.ncei.noaa.gov/products/international-best-track-archive"
+      ],
+      "early_version_note": "预印本与期刊版已对照。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://journals.ametsoc.org/view/journals/bams/aop/BAMS-D-25-0144.1/BAMS-D-25-0144.1.xml",
+        "fulltext": "https://archimer.ifremer.fr/doc/01003/111423/125280.pdf",
+        "doi": "https://doi.org/10.1175/BAMS-D-25-0144.1"
+      },
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-02",
+      "number": "02",
+      "window": "new",
+      "title": "Port-LCA for maritime decarbonization: AIS-based time-resolved analysis of alternative marine fuels",
+      "title_zh": "按船小时比较釜山港燃料路径",
+      "authors": [
+        "Ioannis Chalaris",
+        "Byongug Jeong",
+        "Sefer A. Gunbeyaz",
+        "Jaehoon Jee"
+      ],
+      "journal": "Ocean Engineering",
+      "citation_detail": "371(1), 129459",
+      "first_online_date": "2026-11-12",
+      "doi": "10.1016/j.oceaneng.2026.129459",
+      "lane": [
+        "venue",
+        "keyword"
+      ],
+      "branches": [
+        "Q04"
+      ],
+      "framework_cell": [
+        "技术与行业转型",
+        "能耗与排放"
+      ],
+      "nearest_prior_work": [
+        "P0066",
+        "P0098"
+      ],
+      "one_line": "釜山港 7 艘集装箱船、5 种燃料路径的模型估计显示，电制氨和常规氨的平均全生命周期强度分别为 4,056 和 23,967 kg CO₂e／船小时。",
+      "source": "https://strathprints.strath.ac.uk/97794/",
+      "fulltext_url": "https://strathprints.strath.ac.uk/97794/",
+      "open_paper": "机构库开放正式 PDF，CC BY 4.0",
+      "input_data": "船舶 AIS、航速—功率关系、单位功率油耗与燃料上游及船端排放因子。",
+      "output_data": "港界逐时排放强度、分燃料情景和到 2050 年的预测。",
+      "data_status": "机构库登记正式全文；未核实原始轨迹和衍生量的独立公开包。",
+      "code_status": "公开代码和许可待核。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "abstract_only",
+      "article_type": "期刊研究论文",
+      "issue_date": "2027-01",
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "date_basis": "作者机构库分别登记 2026-11-09 接收、11-12 在线、2027-01 卷期。",
+      "boundary": "每船小时是单位，7 艘船是样本；跨船型、全港排放与极端天气效应需另行验证。",
+      "method_tags": [
+        "AIS",
+        "全生命周期排放",
+        "燃料情景"
+      ],
+      "nearest_comparison": "P0066 用 AIS 估算岸电减排，P0098 比较港口脱碳情景。本研究沿航迹还原功率和耗油，把五种燃料换算成可在同一港界比较的每船小时排放。",
+      "sample_and_comparison": "釜山港 7 艘集装箱船、5 条燃料路径。改变船队组成时，绝对量约有 +15% 至 −20% 的变动，燃料排序在该检查中稳定。",
+      "reading_evidence": "机构库正式版题录、日期、许可与摘要。",
+      "author_claim": "釜山港 7 艘集装箱船、5 种燃料路径的模型估计显示，电制氨和常规氨的平均全生命周期强度分别为 4,056 和 23,967 kg CO₂e／船小时。",
+      "claim_boundary": "每船小时是单位，7 艘船是样本；跨船型、全港排放与极端天气效应需另行验证。",
+      "problem_branch": [
+        "Q04"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0066",
+          "title": "AIS data-driven assessment of shore side electricity’s emission reduction potential in China",
+          "doi": "10.1016/j.tranpol.2025.03.027"
+        },
+        {
+          "id": "P0098",
+          "title": "Decarbonization pathways and key emission drivers in ports: A scenario-based study of Shanghai Port",
+          "doi": "10.1016/j.scs.2025.106877"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://strathprints.strath.ac.uk/97794/",
+        "fulltext": "https://strathprints.strath.ac.uk/97794/",
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.129459"
+      },
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-03",
+      "number": "03",
+      "window": "catchup",
+      "title": "Spatial Partitioning of Large-Vessel Traffic by Integrating Speed Dynamics and Influencing Mechanisms",
+      "title_zh": "按反复出现的船速变化划分交通区",
+      "authors": [
+        "Junnan Zhao",
+        "Chunhui Zhou",
+        "Caiyun Xu",
+        "Jiale Xiang",
+        "Myo Ko Ko Latt",
+        "Lei Du"
+      ],
+      "journal": "Journal of Marine Science and Engineering",
+      "citation_detail": "14(21), 2110",
+      "first_online_date": "2026-11-07",
+      "doi": "10.3390/jmse14212110",
+      "lane": [
+        "citation",
+        "venue"
+      ],
+      "branches": [
+        "Q02",
+        "Q03"
+      ],
+      "framework_cell": [
+        "无特定驱动：常态活动测量或方法开发",
+        "空间与网络"
+      ],
+      "nearest_prior_work": [
+        "P0155",
+        "P0020"
+      ],
+      "one_line": "作者将多船多航次的速度振荡按位置和航向聚合，在长江江苏段划出 49 个交通区，其中 25 个为关键区。",
+      "source": "https://www.mdpi.com/2077-1312/14/21/2110",
+      "fulltext_url": "https://www.mdpi.com/2077-1312/14/21/2110/pdf",
+      "open_paper": "开放 HTML／PDF，CC BY 4.0",
+      "input_data": "大型海轮历史轨迹、航速和周边交通量。",
+      "output_data": "方向分区、实际航行时间与容量利用指标。",
+      "data_status": "结果收在正文，通讯作者接受进一步查询；原始航迹的开放授权待核。",
+      "code_status": "作者实现与许可待核。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "full_html_sections",
+      "article_type": "期刊研究论文",
+      "issue_date": null,
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "sources": [
+        "https://www.mdpi.com/2077-1312/14/21/2110/notes"
+      ],
+      "date_basis": "期刊版本表列正式 PDF 于 11 月 7 日 08:49 CET 上线，折合新加坡时间 15:49，属于本期补漏窗。",
+      "first_online_timestamp": "2026-11-07T08:49:00+01:00",
+      "boundary": "按常态航速变化划区。跨事件比较须固定分区定义，并检查事件前后 AIS 覆盖。",
+      "method_tags": [
+        "AIS",
+        "连续小波变换",
+        "贝叶斯网络",
+        "方向分区"
+      ],
+      "nearest_comparison": "P0155 从历史航速构建常态基线，P0020 评估实时交通复杂度。本文把反复出现的速度振荡落在顺逆航向各自的空间分区上。",
+      "sample_and_comparison": "船长至少 200 m，有研究水域港口作业，作业记录与 AIS 时间差不超过 2 h。115 艘船有 213 个合格进出港航次，得到 256 个速度振荡事件。按历史轨迹对照分区的航速、航时和容量利用。",
+      "reading_evidence": "期刊摘要、第 3.1 节与案例结果、数据声明及版本表。",
+      "author_claim": "作者将多船多航次的速度振荡按位置和航向聚合，在长江江苏段划出 49 个交通区，其中 25 个为关键区。",
+      "claim_boundary": "按常态航速变化划区。跨事件比较须固定分区定义，并检查事件前后 AIS 覆盖。",
+      "problem_branch": [
+        "Q02",
+        "Q03"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0155",
+          "title": "Relation analysis of ship speed & environmental conditions: Can historic AIS data form a baseline for autonomous determination of safe speed?",
+          "doi": "10.1017/S0373463323000127"
+        },
+        {
+          "id": "P0020",
+          "title": "Real-time graph-based traffic complexity evaluation for intelligent maritime supervision using multi-source data fusion",
+          "doi": "10.1016/j.ress.2026.112380"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://www.mdpi.com/2077-1312/14/21/2110",
+        "fulltext": "https://www.mdpi.com/2077-1312/14/21/2110/pdf",
+        "doi": "https://doi.org/10.3390/jmse14212110"
+      },
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-04",
+      "number": "04",
+      "window": "catchup",
+      "title": "Ship fuel consumption prediction and speed optimization under weather forecast uncertainty using ensemble forecasts",
+      "title_zh": "集合天气预报下的航速与油耗",
+      "authors": [
+        "Jinfeng Zhang",
+        "Rundi Sun",
+        "Weihao Ma"
+      ],
+      "journal": "Results in Engineering",
+      "citation_detail": "32, 113627",
+      "first_online_date": "2026-10-17",
+      "doi": "10.1016/j.rineng.2026.113627",
+      "lane": [
+        "keyword"
+      ],
+      "branches": [
+        "Q02",
+        "Q04"
+      ],
+      "framework_cell": [
+        "气候与环境变化",
+        "能耗与排放"
+      ],
+      "nearest_prior_work": [
+        "P0152",
+        "P0135"
+      ],
+      "one_line": "作者在到达时间与航速限制下优化分段航速，3 个航次的 153 个集合成员情景中，有 127 个情景的预测油耗低于对照方案。",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2590123026046372",
+      "fulltext_url": "https://www.sciencedirect.com/science/article/pii/S2590123026046372",
+      "open_paper": "开放论文，CC BY 4.0",
+      "input_data": "历史船舶运行资料、ERA5 与各航段预报集合成员。",
+      "output_data": "CatBoost 逐时油耗预测、分段调速方案与各情景的预测燃油量。",
+      "data_status": "数据须向作者申请。",
+      "code_status": "所读记录中的代码获取路径与授权待核。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "abstract_only",
+      "article_type": "期刊研究论文",
+      "issue_date": "2026-12",
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "date_basis": "出版社 Available online 为 10 月 17 日。",
+      "boundary": "3 个独立航次，153 是成员情景数。摘要 127/153，Highlights 另列 78/102；两组口径不合并。海上实测节油仍待验证。",
+      "method_tags": [
+        "集合天气预报",
+        "CatBoost",
+        "条件风险价值（CVaR）",
+        "分段调速"
+      ],
+      "nearest_comparison": "P0152 将风荷载联系到远洋燃耗，P0135 用概率预报支持港口决策。本文把集合成员的预报误差传到每段燃耗，再将高耗油尾部风险纳入航速优化。",
+      "sample_and_comparison": "3 个航次、153 个成员情景。到达时限和航速范围约束分段调速。摘要与 Highlights 的情景分母不同，后者明确与确定性规划比较。",
+      "reading_evidence": "出版社摘要、Highlights、在线日期及数据声明。",
+      "author_claim": "作者在到达时间与航速限制下优化分段航速，3 个航次的 153 个集合成员情景中，有 127 个情景的预测油耗低于对照方案。",
+      "claim_boundary": "3 个独立航次，153 是成员情景数。摘要 127/153，Highlights 另列 78/102；两组口径不合并。海上实测节油仍待验证。",
+      "problem_branch": [
+        "Q02",
+        "Q04"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0152",
+          "title": "Impact of wind loads on long-term fuel consumption and emissions in trans-oceanic shipping",
+          "doi": "10.21278/brod69402"
+        },
+        {
+          "id": "P0135",
+          "title": "From prediction to intervention: Probabilistic waiting time forecasting for resilient port management under tropical cyclones",
+          "doi": "10.1016/j.tranpol.2026.104503"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://www.sciencedirect.com/science/article/pii/S2590123026046372",
+        "fulltext": "https://www.sciencedirect.com/science/article/pii/S2590123026046372",
+        "doi": "https://doi.org/10.1016/j.rineng.2026.113627"
+      },
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-05",
+      "number": "05",
+      "window": "catchup",
+      "title": "MSRA-Net: A Novel Multi-Ship Risk Attribution Network for Collision-Risk Prediction",
+      "title_zh": "估计每艘船对短时风险预测的贡献",
+      "authors": [
+        "Hongliang Wang",
+        "Weihuang Wu",
+        "Yi Liu",
+        "Xi Huang",
+        "Wenru Zhang",
+        "Yihao Liu"
+      ],
+      "journal": "Journal of Marine Science and Engineering",
+      "citation_detail": "14(20), 1959",
+      "first_online_date": "2026-10-20",
+      "doi": "10.3390/jmse14201959",
+      "lane": [
+        "venue"
+      ],
+      "branches": [
+        "Q03"
+      ],
+      "framework_cell": [
+        "无特定驱动：常态活动测量或方法开发",
+        "航行安全与碰撞风险"
+      ],
+      "nearest_prior_work": [
+        "P0014",
+        "P0019"
+      ],
+      "one_line": "作者用长江武汉段 6,433,925 条 AIS 观测建立多船交互图，1、3、5 分钟预测的平均 MAE 为 0.0493，并用逐船删除检验模型给出的贡献排序。",
+      "source": "https://www.mdpi.com/2077-1312/14/20/1959",
+      "fulltext_url": "https://www.mdpi.com/2077-1312/14/20/1959/pdf",
+      "open_paper": "开放 HTML／PDF，CC BY 4.0",
+      "input_data": "船位时间序列、船舶状态和相遇关系。",
+      "output_data": "风险指标预测、船舶与交互层面的贡献。",
+      "data_status": "通讯作者接受数据申请；再用许可待核。",
+      "code_status": "作者实现与许可待核。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "full_html_sections",
+      "article_type": "期刊研究论文",
+      "issue_date": null,
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "sources": [
+        "https://www.mdpi.com/2077-1312/14/20/1959/notes"
+      ],
+      "date_basis": "期刊版本表列正式 PDF 于 10 月 20 日 13:58 CEST 上线。",
+      "boundary": "删除检验度量的是模型对输入的敏感性。事故概率、责任和风暴期迁移性能均需独立证据。",
+      "method_tags": [
+        "AIS",
+        "动态多船交互图",
+        "风险预测",
+        "逐船删除检验"
+      ],
+      "nearest_comparison": "P0014 识别群船相遇场景，P0019 预测多船交通压力。MSRA-Net 进一步按船、按交互归因，并改变删除顺序检查风险预测对模型输入的敏感性。",
+      "sample_and_comparison": "长江武汉段 6,433,925 条船位记录。对比 1、3、5 分钟风险预测。第 5 分钟 MAE 为 0.0632，按归因从高到低删除、随机删除、从低到高删除的 DelAUC 分别为 0.1730、0.3016、0.4384。",
+      "reading_evidence": "期刊摘要、第 2.2–2.3 节、结论、数据声明与版本表。",
+      "author_claim": "作者用长江武汉段 6,433,925 条 AIS 观测建立多船交互图，1、3、5 分钟预测的平均 MAE 为 0.0493，并用逐船删除检验模型给出的贡献排序。",
+      "claim_boundary": "删除检验度量的是模型对输入的敏感性。事故概率、责任和风暴期迁移性能均需独立证据。",
+      "problem_branch": [
+        "Q03"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0014",
+          "title": "Spatiotemporal graph-based identification and classification of dynamic multi-ship encounter scenarios",
+          "doi": "10.1016/j.oceaneng.2026.125410"
+        },
+        {
+          "id": "P0019",
+          "title": "Prediction-Driven Assessment of Multi-Ship Traffic Pressure and Maritime Traffic Situation",
+          "doi": "10.3390/jmse14131233"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://www.mdpi.com/2077-1312/14/20/1959",
+        "fulltext": "https://www.mdpi.com/2077-1312/14/20/1959/pdf",
+        "doi": "https://doi.org/10.3390/jmse14201959"
+      },
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-06",
+      "number": "06",
+      "window": "catchup",
+      "title": "Assessment of vulnerability and economic losses of typical Chinese ports under the influence of tropical cyclones",
+      "title_zh": "中国五港的气旋脆弱性与损失",
+      "authors": [
+        "Tianni Wang",
+        "Tina Ziting Xu",
+        "Wen Zhang",
+        "Mark Ching-Pong Poo"
+      ],
+      "journal": "Frontiers in Marine Science",
+      "citation_detail": "13, 1953661",
+      "first_online_date": "2026-10-13",
+      "doi": "10.3389/fmars.2026.1953661",
+      "lane": [
+        "citation",
+        "team",
+        "keyword"
+      ],
+      "branches": [
+        "Q04",
+        "Q05"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "经济与贸易"
+      ],
+      "nearest_prior_work": [
+        "P0049",
+        "P0125"
+      ],
+      "one_line": "作者比较五座中国港口，上海的脆弱性排名最高，2014–2023 年的估算损失中货物装卸费损失最突出。",
+      "source": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953661/full",
+      "fulltext_url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953661/full",
+      "open_paper": "开放全文",
+      "input_data": "专家调查、港口指标与气旋影响资料。",
+      "output_data": "加权脆弱性排序与分项经济损失。",
+      "data_status": "作者将资料指向文章和补充材料，进一步资料向通讯作者查询。",
+      "code_status": "独立实现与许可待核。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "full_html_sections",
+      "article_type": "期刊研究论文",
+      "issue_date": null,
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "date_basis": "期刊原页列 2026-10-13。",
+      "boundary": "脆弱性随评价权重变化。建模损失与实际审计金额的对应关系待核。",
+      "method_tags": [
+        "专家调查",
+        "熵权",
+        "AHP",
+        "TOPSIS",
+        "港口损失核算"
+      ],
+      "nearest_comparison": "P0049 评价飓风引致的港口作业风险，P0125 模拟单个集装箱码头的恶劣天气损失。本文在同一框架下比较五港脆弱性和十年间不同来源的经济损失。",
+      "sample_and_comparison": "上海、深圳、青岛、厦门、钦州五港。专家和熵权赋权后比较港际指标，按 2014–2023 年气旋影响估算分项损失。",
+      "reading_evidence": "期刊摘要、方法与数据声明。",
+      "author_claim": "作者比较五座中国港口，上海的脆弱性排名最高，2014–2023 年的估算损失中货物装卸费损失最突出。",
+      "claim_boundary": "脆弱性随评价权重变化。建模损失与实际审计金额的对应关系待核。",
+      "problem_branch": [
+        "Q04",
+        "Q05"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0049",
+          "title": "A methodology for evaluating the economic risks of hurricane-related disruptions to port operations",
+          "doi": "10.1016/j.tra.2022.05.010"
+        },
+        {
+          "id": "P0125",
+          "title": "Simulation-based severe weather-induced container terminal economic loss estimation",
+          "doi": "10.1080/03088839.2018.1516049"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953661/full",
+        "fulltext": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953661/full",
+        "doi": "https://doi.org/10.3389/fmars.2026.1953661"
+      },
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-07",
+      "number": "07",
+      "window": "catchup",
+      "title": "Spatiotemporal patterns and geopolitical disruptions of global shipping greenhouse gas emissions: Evidence from AIS data",
+      "title_zh": "红海与好望角的排放重分布",
+      "authors": [
+        "Jia Shi",
+        "Taiyang Li",
+        "Hao Chen",
+        "Jun Ye",
+        "Weipan Zhang"
+      ],
+      "journal": "Marine Pollution Bulletin",
+      "citation_detail": "234(1), 120544",
+      "first_online_date": "2026-11-05",
+      "doi": "10.1016/j.marpolbul.2026.120544",
+      "lane": [
+        "citation"
+      ],
+      "branches": [
+        "Q03",
+        "Q04"
+      ],
+      "framework_cell": [
+        "地缘冲突、制裁与贸易摩擦",
+        "能耗与排放"
+      ],
+      "nearest_prior_work": [
+        "P0009",
+        "P0115"
+      ],
+      "one_line": "作者用 2024 年全球商船 AIS 构建排放清单，1–3 月间估算排放在红海—苏伊士走廊下降，在好望角走廊上升。",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42987530/",
+      "fulltext_url": "https://doi.org/10.1016/j.marpolbul.2026.120544",
+      "open_paper": "摘要公开，全文开放许可待核",
+      "input_data": "2024 年全球商船高频 AIS。",
+      "output_data": "按走廊、船型和运营状态拆分的温室气体估计。",
+      "data_status": "原始轨迹和衍生清单的可下载路径与许可待核。",
+      "code_status": "摘要记录未列代码。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "abstract_only",
+      "article_type": "期刊研究论文",
+      "issue_date": "2027-01",
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "date_basis": "PubMed 电子发表日 11 月 5 日。",
+      "boundary": "对空间转移的归因还需区分航距、货量和船队构成变化。",
+      "method_tags": [
+        "全球商船 AIS",
+        "排放清单",
+        "航线重组"
+      ],
+      "nearest_comparison": "P0009 估算绕航的环境与经济代价，P0115 描述船舶排放的空间格局。本文以 2024 年实际交通重建清单，观察红海和好望角走廊之间的月际重分布。",
+      "sample_and_comparison": "2024 年全球商船。比较 1–3 月两条走廊的空间变化，并按船型和作业状态拆分。跨走廊反向变化与绕航解释一致，单船行为及货量变化尚需进一步检验。",
+      "reading_evidence": "PubMed 题录、电子发表日期与摘要。",
+      "author_claim": "作者用 2024 年全球商船 AIS 构建排放清单，1–3 月间估算排放在红海—苏伊士走廊下降，在好望角走廊上升。",
+      "claim_boundary": "对空间转移的归因还需区分航距、货量和船队构成变化。",
+      "problem_branch": [
+        "Q03",
+        "Q04"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0009",
+          "title": "Geopolitical disruptions and maritime transitions: Environmental and economic costs of rerouting",
+          "doi": "10.1016/j.tra.2025.104737"
+        },
+        {
+          "id": "P0115",
+          "title": "Pathways and geographical patterns of international shipping CO2 emissions in the future",
+          "doi": "10.1016/j.scib.2026.03.004"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42987530/",
+        "fulltext": "https://doi.org/10.1016/j.marpolbul.2026.120544",
+        "doi": "https://doi.org/10.1016/j.marpolbul.2026.120544"
+      },
+      "code_obtained": false
+    }
+  ],
+  "backfill": [
+    {
+      "id": "W20261116-H1",
+      "number": "H1",
+      "window": "backfill",
+      "title": "Statistical Tropical Cyclone Wind Radii Prediction Using Climatology and Persistence",
+      "title_zh": "五日风圈预报的气候态基线",
+      "authors": [
+        "John A. Knaff",
+        "Charles R. Sampson",
+        "Mark DeMaria",
+        "Timothy P. Marchok",
+        "James M. Gross",
+        "Colin J. McAdie"
+      ],
+      "journal": "Weather and Forecasting",
+      "citation_detail": "22(4), 781–791",
+      "first_online_date": "2007-08-01",
+      "doi": "10.1175/WAF1026.1",
+      "lane": [
+        "citation"
+      ],
+      "branches": [
+        "Q01"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "航行安全与碰撞风险"
+      ],
+      "nearest_prior_work": [
+        "P0190",
+        "P0194"
+      ],
+      "one_line": "作者按海盆拟合非对称风场，用两年独立资料检验 34、50、64 节风圈的五日预报。",
+      "source": "https://journals.ametsoc.org/view/journals/wefo/22/4/waf1026_1.xml",
+      "fulltext_url": "https://rammb.cira.colostate.edu/resources/docs/knaff_et_al_2007_wrclip.pdf",
+      "open_paper": "NOAA 开放作者全文",
+      "input_data": "NHC／JTWC 分象限风圈。",
+      "output_data": "三海盆五日风圈预报及对照检验。",
+      "data_status": "资料来源见文章，逐样本校准数据及许可待核。",
+      "code_status": "对应研究版本的代码路径待核。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "abstract_only",
+      "article_type": "期刊研究论文",
+      "issue_date": null,
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "date_basis": "期刊列 2007 年 8 月，Crossref 在线字段为 08-01。",
+      "boundary": "设计用于风圈预报的气候态及持续性基准。",
+      "method_tags": [
+        "风圈预报",
+        "气候态与持续性",
+        "独立样本验证"
+      ],
+      "nearest_comparison": "为 P0190 所比较的风圈预报提供可重建的统计基线，并可与 P0194 的概率输出对照。",
+      "sample_and_comparison": "三个海盆的分象限风圈，以两个独立年份评估 34、50、64 节风圈的五日预报。",
+      "reading_evidence": "期刊摘要与机构全文入口。",
+      "author_claim": "作者按海盆拟合非对称风场，用两年独立资料检验 34、50、64 节风圈的五日预报。",
+      "claim_boundary": "设计用于风圈预报的气候态及持续性基准。",
+      "problem_branch": [
+        "Q01"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0190",
+          "title": "An Examination of Model and Official National Hurricane Center Tropical Cyclone Size Forecasts",
+          "doi": "10.1175/WAF-D-15-0158.1"
+        },
+        {
+          "id": "P0194",
+          "title": "A New Method for Estimating Tropical Cyclone Wind Speed Probabilities",
+          "doi": "10.1175/2009WAF2222286.1"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://journals.ametsoc.org/view/journals/wefo/22/4/waf1026_1.xml",
+        "fulltext": "https://rammb.cira.colostate.edu/resources/docs/knaff_et_al_2007_wrclip.pdf",
+        "doi": "https://doi.org/10.1175/WAF1026.1"
+      },
+      "backfill_topic": "Q01",
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-H2",
+      "number": "H2",
+      "window": "backfill",
+      "title": "Tropical Cyclone Gale Wind Radii Estimates, Forecasts, and Error Forecasts for the Western North Pacific",
+      "title_zh": "西北太平洋烈风圈与预报误差",
+      "authors": [
+        "Charles R. Sampson",
+        "James S. Goerss",
+        "John A. Knaff",
+        "Brian R. Strahl",
+        "Edward M. Fukada",
+        "Efren A. Serra"
+      ],
+      "journal": "Weather and Forecasting",
+      "citation_detail": "33(4), 1081–1092",
+      "first_online_date": null,
+      "doi": "10.1175/WAF-D-17-0153.1",
+      "lane": [
+        "citation"
+      ],
+      "branches": [
+        "Q01"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "航行安全与碰撞风险"
+      ],
+      "nearest_prior_work": [
+        "P0190",
+        "P0193"
+      ],
+      "one_line": "作者利用集合预报的离散程度、初始风圈大小和预报强度，估计 34 节风圈预报在业务发布时的误差。",
+      "source": "https://journals.ametsoc.org/view/journals/wefo/33/4/waf-d-17-0153_1.xml",
+      "fulltext_url": "https://repository.library.noaa.gov/view/noaa/64570/noaa_64570_DS1.pdf",
+      "open_paper": "NOAA 开放全文",
+      "input_data": "JTWC 业务估计、ATCF 与季后最佳路径。",
+      "output_data": "烈风圈共识预报及实时误差估计。",
+      "data_status": "资料与模型说明见文，校准样本的独立包及许可待核。",
+      "code_status": "同版代码未核实。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "abstract_only",
+      "article_type": "期刊研究论文",
+      "issue_date": "2018-08",
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "display_date": "2018（正式版 8 月）",
+      "date_basis": "Crossref 正式在线字段为 08-17，OpenAlex 日期为 03-21，早期版本的首次上线日待核。",
+      "boundary": "误差估计需与预报发报时可用的变量对齐。",
+      "method_tags": [
+        "西北太平洋",
+        "烈风圈",
+        "预报误差"
+      ],
+      "nearest_comparison": "把 P0190 的风圈预报误差评价和 P0193 的概率预报视角带入西北太平洋，并使用业务发报时能够取得的变量估计误差。",
+      "sample_and_comparison": "以西北太平洋 34 节烈风圈为对象，比较气旋初始分析、业务预报和季后最佳路径。",
+      "reading_evidence": "期刊摘要、NOAA 书目及正式版本日期。",
+      "author_claim": "作者利用集合预报的离散程度、初始风圈大小和预报强度，估计 34 节风圈预报在业务发布时的误差。",
+      "claim_boundary": "误差估计需与预报发报时可用的变量对齐。",
+      "problem_branch": [
+        "Q01"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0190",
+          "title": "An Examination of Model and Official National Hurricane Center Tropical Cyclone Size Forecasts",
+          "doi": "10.1175/WAF-D-15-0158.1"
+        },
+        {
+          "id": "P0193",
+          "title": "Improvements to the Operational Tropical Cyclone Wind Speed Probability Model",
+          "doi": "10.1175/WAF-D-12-00116.1"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://journals.ametsoc.org/view/journals/wefo/33/4/waf-d-17-0153_1.xml",
+        "fulltext": "https://repository.library.noaa.gov/view/noaa/64570/noaa_64570_DS1.pdf",
+        "doi": "https://doi.org/10.1175/WAF-D-17-0153.1"
+      },
+      "backfill_topic": "Q01",
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-H3",
+      "number": "H3",
+      "window": "backfill",
+      "title": "A dataset of global tropical cyclone wind and surface wave measurements from buoy and satellite platforms",
+      "title_zh": "逐气旋配对的浮标与卫星风浪观测",
+      "authors": [
+        "Ali Tamizi",
+        "Ian R. Young"
+      ],
+      "journal": "Scientific Data",
+      "citation_detail": "11, 106",
+      "first_online_date": "2024-01-22",
+      "doi": "10.1038/s41597-024-02955-4",
+      "lane": [
+        "keyword"
+      ],
+      "branches": [
+        "Q01"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "航行安全与碰撞风险"
+      ],
+      "nearest_prior_work": [
+        "P0199",
+        "P0190"
+      ],
+      "one_line": "作者将 1985–2017 年 2,927 个气旋的最佳路径、浮标与卫星风浪观测按风暴归档，可检查单次过境的观测覆盖。",
+      "source": "https://www.nature.com/articles/s41597-024-02955-4",
+      "fulltext_url": "https://www.nature.com/articles/s41597-024-02955-4.pdf",
+      "open_paper": "开放全文、数据及整理代码",
+      "input_data": "浮标、卫星高度计／散射计／辐射计与最佳路径。",
+      "output_data": "逐气旋 NetCDF 风浪档案。",
+      "data_status": "已核墨尔本大学数据存档及文件清单，许可 CC BY 4.0。",
+      "code_status": "已核作者代码存档、压缩包及 CC BY 4.0 许可，未运行。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "full_html_sections",
+      "article_type": "Data Descriptor",
+      "issue_date": null,
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "sources": [
+        "https://doi.org/10.26188/24471688",
+        "https://doi.org/10.26188/24515113"
+      ],
+      "date_basis": "期刊发布日期 2024-01-22。",
+      "boundary": "逐船匹配需检查观测轨迹、海区、传感器及时间差。",
+      "method_tags": [
+        "最佳路径",
+        "浮标与卫星配对",
+        "风浪观测"
+      ],
+      "nearest_comparison": "P0199 分解风海与涌浪，P0190 核验风圈预报。本档案以单个气旋贯通多种传感器，能检查可得到观测的时空范围。",
+      "sample_and_comparison": "1985–2017 年共 2,927 个气旋，每次观测与路径关联。可对照传感器、空间足印和观测时差。",
+      "reading_evidence": "期刊方法与数据可用性、大学数据和代码存档。",
+      "author_claim": "作者将 1985–2017 年 2,927 个气旋的最佳路径、浮标与卫星风浪观测按风暴归档，可检查单次过境的观测覆盖。",
+      "claim_boundary": "逐船匹配需检查观测轨迹、海区、传感器及时间差。",
+      "problem_branch": [
+        "Q01"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0199",
+          "title": "Wind-sea–swell separation reveals outer-region swell hazards for deep-ocean operations under western North Pacific tropical cyclones",
+          "doi": "10.1088/1748-9326/ae8319"
+        },
+        {
+          "id": "P0190",
+          "title": "An Examination of Model and Official National Hurricane Center Tropical Cyclone Size Forecasts",
+          "doi": "10.1175/WAF-D-15-0158.1"
+        }
+      ],
+      "code_access_verified": true,
+      "data_archive": "https://doi.org/10.26188/24471688",
+      "code_archive": "https://doi.org/10.26188/24515113",
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://www.nature.com/articles/s41597-024-02955-4",
+        "fulltext": "https://www.nature.com/articles/s41597-024-02955-4.pdf",
+        "doi": "https://doi.org/10.1038/s41597-024-02955-4"
+      },
+      "backfill_topic": "Q01",
+      "code_obtained": false
+    },
+    {
+      "id": "W20261116-H4",
+      "number": "H4",
+      "window": "backfill",
+      "title": "船舶综合应用多途径气象信息防避台风实例分析",
+      "title_zh": "卡努与苏拉的船上避台决策",
+      "authors": [
+        "黄磊",
+        "栾法敏",
+        "崔浩然"
+      ],
+      "journal": "青岛远洋船员职业学院学报",
+      "citation_detail": "45(4), 1–5",
+      "first_online_date": "2024-12-25",
+      "doi": null,
+      "lane": [
+        "chinese"
+      ],
+      "branches": [
+        "Q01",
+        "Q02"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "船舶行为"
+      ],
+      "nearest_prior_work": [
+        "P0002",
+        "P0041"
+      ],
+      "one_line": "作者通过卡努、苏拉两个特殊路径台风的案例，说明船舶驾驶员怎样综合不同海况预报，研判台风动向和避台时机。",
+      "source": "https://qdyy.cbpt.cnki.net/portal/journal/portal/client/paper/194a049c45f33422ab438393c87f9e43",
+      "fulltext_url": "https://qdyy.cbpt.cnki.net/portal/journal/portal/client/paper/194a049c45f33422ab438393c87f9e43",
+      "open_paper": "期刊中英文摘要公开，PDF 取阅条件待核",
+      "input_data": "两场台风案例中使用的气象和海况信息。",
+      "output_data": "船上信息判读与避台案例。",
+      "data_status": "期刊原页可读，原始日志及许可待核。",
+      "code_status": "摘要未涉及软件。",
+      "code_run": false,
+      "analysis_code_downloaded": false,
+      "reading_scope": "abstract_only",
+      "article_type": "期刊研究论文",
+      "issue_date": null,
+      "correction_dates": null,
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "title_en_editorial": "Using multiple sources of weather information for shipboard typhoon avoidance: two cases",
+      "date_basis": "官方期刊发布与出版日均为 2024-12-25，DOI 栏为空。英文题名为本期译名。",
+      "boundary": "案例能解释决策过程；风险下降幅度需独立对照。",
+      "method_tags": [
+        "船上气象信息",
+        "台风",
+        "案例比较"
+      ],
+      "nearest_comparison": "P0002 从 AIS 识别响应，P0041 研究船舶撤离时机。两次避台案例补入驾驶员收到并解释气象信息的决策过程。",
+      "sample_and_comparison": "卡努和苏拉两个特殊路径台风。案例之间可比较信息来源和判读时机，原始航海日志及对照船待核。",
+      "reading_evidence": "期刊中英文摘要、引文和出版信息。",
+      "author_claim": "作者通过卡努、苏拉两个特殊路径台风的案例，说明船舶驾驶员怎样综合不同海况预报，研判台风动向和避台时机。",
+      "claim_boundary": "案例能解释决策过程；风险下降幅度需独立对照。",
+      "problem_branch": [
+        "Q01",
+        "Q02"
+      ],
+      "nearest_bibliography": [
+        {
+          "id": "P0002",
+          "title": "AIS-Based Recognition of Typhoon-Related Ship Responses: A Dual-Behavior Framework",
+          "doi": "10.3390/jmse14050487"
+        },
+        {
+          "id": "P0041",
+          "title": "Empirical analysis method for evacuation timing of ships in storm areas",
+          "doi": "10.1016/j.ssci.2021.105323"
+        }
+      ],
+      "code_access_verified": false,
+      "early_version_note": "在所读出版和机构记录中未核实另行发布的预印本或修订。",
+      "correction_status": "在所查出版或作者记录中未见单列勘误，检查截至本期检索截止。",
+      "links": {
+        "source": "https://qdyy.cbpt.cnki.net/portal/journal/portal/client/paper/194a049c45f33422ab438393c87f9e43",
+        "fulltext": "https://qdyy.cbpt.cnki.net/portal/journal/portal/client/paper/194a049c45f33422ab438393c87f9e43"
+      },
+      "backfill_topic": "Q01",
+      "code_obtained": false
+    }
+  ],
+  "focus": {
+    "id": "W20261116-01",
+    "paragraphs": [
+      "船经过台风附近时，给每个 AIS 船位配上什么风速，取决于雷达何时、在何处扫过。相对 P0190 对业务风圈预报的核验，CyclObs 提供过境时的二维观测。Tamizi 与 Young 的逐气旋档案（H3）便于跨平台对照，CyclObs 又能分辨近眼风速梯度和风圈不对称。",
+      "期刊摘要给出逾 2,500 景、至少 500 个气旋，覆盖自 2013 年起。公开预印本 v1 的摘要写作 2016 年起。以下图号和数值取自 v1。产品像元间距 1 km，有效分辨率 3 km。图 2 以 SMOS、SMAP、机载 SFMR 和投落送分别校验。卫星配对时间差小于 30 分钟，与两种卫星的相关系数分别为 0.94、0.95；机载和投落送配对的风速差标准差约为 4.4 和 4.3 m/s。",
+      "两种卫星对照的足印约 40–50 km，内核区的小尺度梯度仍需机载等独立观测判断。图 5 保留了 Kirk 三次过境的扫描条带。圆形风圈会穿过条带之外的空白。用于 Q01 时，可先查 AIS 船位是否落入有效像元，登记船位与过境时间差，再核对决策前已签发的预报。暴露可由此复核，判断船是否因风减速还需行为对照。"
+    ],
+    "evidence_anchors": [
+      "期刊版摘要",
+      "ESS Open Archive v1 图 2、图 5，PDF 文件第 10、16 页"
+    ],
+    "independent_check": "核对四幅散点图的相关系数与风速差标准差，以及三幅 Kirk 雷达条带的覆盖与空白。",
+    "minimum_check": "一次过境、同一有效像元及相近时刻的 AIS 位置与独立测风参考。要重建决策信息，另需过境前已签发的预报通告。"
+  },
+  "feedback": {
+    "by_issue": {
+      "2026-10-19": {
+        "P": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "unprocessed": 8,
+        "total": 8
+      },
+      "2026-10-26": {
+        "P": 4,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "unprocessed": 0,
+        "total": 4
+      },
+      "2026-11-02": {
+        "P": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "unprocessed": 4,
+        "total": 4
+      },
+      "2026-11-09": {
+        "P": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "unprocessed": 4,
+        "total": 4
+      }
+    },
+    "total": {
+      "P": 4,
+      "R": 0,
+      "S": 0,
+      "T": 0,
+      "unprocessed": 16,
+      "total": 20
+    },
+    "by_lane": {
+      "unattributed": {
+        "P": 4,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "unprocessed": 16,
+        "total": 20
+      }
+    }
+  },
+  "recall_questions": [
+    "假设某艘船处在 Kirk 的 34 节风圈内，船位落在图 5 当次扫描条带外。给这个船位赋风速，还需要哪条证据？",
+    "用季后重建风场解释一次减速，与用当时发布的预报解释同一次减速，分别该对齐哪个时刻？"
+  ],
+  "public_scope": "公开题录、框架坐标、最近邻编号、原创评述与汇总数量。",
+  "researchmap_access": "read_only",
+  "drive_writes": 0
+}
