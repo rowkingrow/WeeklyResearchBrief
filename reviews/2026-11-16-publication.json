@@ -1,0 +1,95 @@
+{
+  "schema_version": "2.0",
+  "issue": "2026-11-16",
+  "execution": "advance_run_of_existing_brief",
+  "timezone": "Asia/Singapore",
+  "planned_time": "2026-11-16T08:00:00+08:00",
+  "actual_start": "2026-11-14T01:41:32+08:00",
+  "observation_cutoff": "2026-11-14T01:41:32+08:00",
+  "new_publication_window": {
+    "start": "2026-11-09T08:00:00+08:00",
+    "end": "2026-11-16T08:00:00+08:00",
+    "observed_through": "2026-11-14T01:41:32+08:00"
+  },
+  "catchup_window": {
+    "start": "2026-10-12T08:00:00+08:00",
+    "end": "2026-11-09T08:00:00+08:00"
+  },
+  "content_readback_completed_at": "2026-11-14T02:52:30+08:00",
+  "actual_completed_at": "2026-11-14T02:52:30+08:00",
+  "completion_event": "正文、题录、索引、首页和核验记录均已从下列固定提交逐字节读回。回执另行提交。",
+  "branch": "main",
+  "visibility": "public",
+  "force_update": false,
+  "prepublish_head": "f3e7c83c33c8b547a17a8d9f76d3b8af65c856e5",
+  "public_content_commit": "3a8d967bacbffd8e508c342035ed68dc90ee356a",
+  "public_content_tree": "c38d5087cef3b0fcc3457140ffee3f8a3a88d5c8",
+  "public_readback": {
+    "files": 5,
+    "bytes": 293125,
+    "exact_content_match": true,
+    "artifacts": [
+      {
+        "path": "README.md",
+        "bytes": 5360,
+        "blob_sha": "4f3af4e2334891785ed3b68107a4511b5eff0b7e",
+        "exact_byte_match": true
+      },
+      {
+        "path": "briefs/2026/2026-11-16.md",
+        "bytes": 11359,
+        "blob_sha": "32e85e1301051104fed884a249f9bfe635cdd64a",
+        "exact_byte_match": true
+      },
+      {
+        "path": "briefs/2026/2026-11-16.papers.json",
+        "bytes": 55723,
+        "blob_sha": "c3c23329c1335efb4bcbef3b3f3b3a6cfb346e9c",
+        "exact_byte_match": true
+      },
+      {
+        "path": "index/papers.json",
+        "bytes": 216063,
+        "blob_sha": "6434172094a74c288d4b1f272f312c73c814eb30",
+        "exact_byte_match": true
+      },
+      {
+        "path": "reviews/2026-11-16-checks.md",
+        "bytes": 4620,
+        "blob_sha": "947bf1e73518620c092b0ff8a2c5ec2677682782",
+        "exact_byte_match": true
+      }
+    ],
+    "index_paper_count": 53,
+    "earlier_index_objects": 42,
+    "earlier_index_objects_bytes_preserved": true,
+    "weekly_candidates": 7,
+    "new": 2,
+    "catchup": 5,
+    "retrospective": 4,
+    "verified_distinct_article_dois": 10,
+    "article_without_assigned_doi": 1,
+    "featured_full_reading": 1
+  },
+  "verification": {
+    "reading": "六通道已执行，论文阅读深度按版本记录。CyclObs 公开预印本核到 PDF 第 10、16 页。",
+    "numerical": "25 + 24 = 49，127 / 153 = 83.01%。对照论文与基础算术，模型复算次数为 0。",
+    "visual": "核对预印本两页图。正文经本地 Markdown 排版，核看 950 px 和 390 px 宽的首页及 390 px 宽的反馈表。GitHub 原生页面视觉状态未核。",
+    "limits": [
+      "实际观察止于提前执行时刻。",
+      "3 篇引文锚点未取得完整施引列表，另 2 篇的 DOI 检索返回空集。",
+      "CNKI、万方站内及学位库结果受限。",
+      "前四期通道字段缺失，反馈按历史通道未标注汇总。"
+    ]
+  },
+  "binary_assets_added": 0,
+  "code_execution": {
+    "paper_code_downloads": 0,
+    "paper_model_runs": 0
+  },
+  "other_destination_writes": {
+    "ResearchMap": 0,
+    "Google_Drive": 0
+  },
+  "status": "published_content_readback_verified"
+}
