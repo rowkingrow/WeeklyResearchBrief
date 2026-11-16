@@ -1,0 +1,38 @@
+{
+  "issue": "2026-11-16",
+  "scheduled_cutoff": "2026-11-16T08:00:00+08:00",
+  "content_readback_completed_at": "2026-11-16T08:06:14+08:00",
+  "public_content_commit": "0083c39f157bf691c680880b1b8549103a0d83e9",
+  "branch": "main",
+  "force": false,
+  "readback": [
+    {
+      "path": "README.md",
+      "git_blob": "23d8c80479a60af0caff1882ca633575378d419a",
+      "exact_match": true
+    },
+    {
+      "path": "index/papers.json",
+      "git_blob": "87a9574db9ce650d0dff262cc151b57ed4d6ebde",
+      "exact_match": true
+    },
+    {
+      "path": "briefs/2026/2026-11-16-close.md",
+      "git_blob": "5b6a8ee8c0d03817579c19f271f1edba3102fec1",
+      "exact_match": true
+    },
+    {
+      "path": "briefs/2026/2026-11-16-close.papers.json",
+      "git_blob": "d39f49c2f7f94b0b920f81c55dce86daf8c9cb1f",
+      "exact_match": true
+    }
+  ],
+  "source_index_count": 53,
+  "index_count": 56,
+  "new_candidates_added": 2,
+  "previously_available_work_with_new_issue_page": 1,
+  "paper_models_run": 0,
+  "original_issue_files_modified": 0,
+  "researchmap_writes": 0,
+  "drive_writes": 0
+}
