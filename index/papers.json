@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-14T01:41:32+08:00",
-  "dedup_scope": "42 earlier weekly works and 282 cross-tier records checked by DOI, normalized title and work version. Dated retrospective items are indexed once.",
+  "updated_at": "2026-11-16T08:00:00+08:00",
+  "dedup_scope": "53 prior weekly records and 287 cross-tier records. Includes dated publication versions.",
   "papers": [
     {
       "id": "B01",
@@ -3937,6 +3937,189 @@
       },
       "backfill_topic": "Q01",
       "code_obtained": false
+    },
+    {
+      "number": "08",
+      "title": "A Spatiotemporal Collision Avoidance Support System for Remote Operators of MASSs",
+      "title_zh": "多船相遇时，用时间圈显示风险能否守住会遇净距？",
+      "authors": [
+        "Taemin Hwang",
+        "Teuk Seob Song",
+        "Ik-Hyun Youn"
+      ],
+      "journal": "Journal of Marine Science and Engineering",
+      "citation_detail": "2026, 14(22), 2158",
+      "doi": "10.3390/jmse14222158",
+      "first_online_date": "2026-11-14",
+      "revision": "2026-11-09（审稿修订）",
+      "version": "2026-11-14 10:31 CET 正式 PDF 上线。",
+      "window": "new",
+      "lane": [
+        "venue",
+        "keyword"
+      ],
+      "branches": [
+        "Q03"
+      ],
+      "framework_cell": [
+        "无特定驱动：常态活动测量或方法开发",
+        "航行安全与碰撞风险"
+      ],
+      "nearest_prior_work": [
+        "P0014",
+        "P0019"
+      ],
+      "comparison": "Fiorini 与 Shiller（1998）的速度障碍法标出危险速度方向。本文再用每艘目标船到最近会遇点的剩余时间排列风险方向。相较 P0019《Prediction-Driven Assessment of Multi-Ship Traffic Pressure and Maritime Traffic Situation》，指标从区域交通压力移到本船可采取的转向与复航。",
+      "one_line": "在相同预报时长的仿真中，时间圈法在 9 组设置中有 5 组低于预设会遇净距。",
+      "sample": "AIS 仿真及 30 分钟训练场景。3 个预测时长 × 3 个净距要求 × 2 种算法，共 18 次匹配运行。另有 26 条训练记录。",
+      "independent_check": "表 3 的 0.4 海里要求下，三种时长的实际最小间距为 0.274、0.392、0.392 海里，均低于要求。18 次均在 30 分钟内回到距航线 0.05 海里范围。",
+      "boundary": "显示更细与净距合规是不同结局。训练记录属于探索性分析，风暴海况下的迁移和操作者表现的因果改善均待验证。",
+      "input_data": "AIS 轨迹、目标船状态、预测时长和净距阈值。",
+      "output_data": "转向方案、最小会遇距离与复航时刻。",
+      "data_status": "作者公开轨迹及实验结果，已核到 MAT 文件目录。独立再用许可待核。",
+      "code_status": "作者仓库含模拟器网页，本文算法可复现版本与许可待核。",
+      "resources": [
+        "https://github.com/TaeminHwang11/HtMS_Ship_Handler_54-/blob/main/Original_Data-Spatiotemporal_Collision_Avoidance_Support.mat",
+        "https://www.mdpi.com/2077-1312/14/22/2158/notes"
+      ],
+      "reading_scope": "full_pdf_text",
+      "source": "https://www.mdpi.com/2077-1312/14/22/2158",
+      "fulltext_url": "https://mdpi-res.com/d_attachment/jmse/jmse-14-02158/article_deploy/jmse-14-02158.pdf",
+      "access": "正式全文开放，CC BY。",
+      "id": "W20261116-08",
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "article_type": "期刊研究论文",
+      "code_obtained": false,
+      "code_run": false,
+      "correction_status": "本次所查出版记录未见单列勘误。",
+      "links": {
+        "publisher": "https://www.mdpi.com/2077-1312/14/22/2158",
+        "fulltext": "https://mdpi-res.com/d_attachment/jmse/jmse-14-02158/article_deploy/jmse-14-02158.pdf",
+        "doi": "https://doi.org/10.3390/jmse14222158"
+      }
+    },
+    {
+      "number": "09",
+      "title": "Assessment of container port network resilience under extreme weather: operational analysis and adaptive recovery strategy optimization",
+      "title_zh": "气旋造成各港错时减容时，改挂其他港能缩短多久的恢复期？",
+      "authors": [
+        "Behnood Rahbari",
+        "Gholamreza Heravi",
+        "Amir Aminshokravi"
+      ],
+      "journal": "Reliability Engineering & System Safety",
+      "citation_detail": "2026, Journal Pre-proof, 113856",
+      "doi": "10.1016/j.ress.2026.113856",
+      "first_online_date": "2026-11-13",
+      "version": "出版社标为 11 月 13 日在线的 Journal Pre-proof，本次检出时补入。卷期和更早单独预印本日期待核。",
+      "window": "new",
+      "lane": [
+        "venue"
+      ],
+      "branches": [
+        "Q04",
+        "Q05"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "港口能力与韧性"
+      ],
+      "nearest_prior_work": [
+        "P0167",
+        "P0125"
+      ],
+      "comparison": "P0167《Beyond the V-shaped Recovery Curve》从 AIS 观测区分初始扰动与拥堵。本文用离散事件仿真和深度 Q 网络，在港口减容与排队持续变化时选择替代港，并与启发式改挂规则对照。",
+      "one_line": "在伊朗南部集装箱港网的合成气旋场景中，作者报告学习策略使港级服务可靠性指标平均提前 10.9 天恢复。",
+      "sample": "一个区域港网的仿真。枢纽承受相当于三级气旋的风，外围港口的风力随距离减弱，扰动时段错开。",
+      "independent_check": "出版摘要将成本与等待的变化写作挽回扰动所致增量的 26.3% 和 29%，两项指标的分母均为扰动增量。",
+      "boundary": "气旋与调度结果来自仿真。用真实气旋评估时，还需对照原定和实际挂靠、港口容量与队列。",
+      "input_data": "港网运营与容量参数、移动风场及各港减容、船舶队列。",
+      "output_data": "替代挂靠建议、运营成本、排队时长和服务恢复时间。",
+      "data_status": "公开题录未核到输入数据或衍生结果的独立下载包及再用许可。",
+      "code_status": "DES 与 DQN 实现的公开地址和许可待核。",
+      "reading_scope": "abstract_only",
+      "source": "https://www.sciencedirect.com/science/article/pii/S0951832026016583",
+      "fulltext_url": "https://www.sciencedirect.com/science/article/pii/S0951832026016583",
+      "access": "可读出版摘要及引言预览，全文下载权限待核。",
+      "id": "W20261116-09",
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "article_type": "期刊研究论文",
+      "code_obtained": false,
+      "code_run": false,
+      "correction_status": "本次所查出版记录未见单列勘误。",
+      "links": {
+        "publisher": "https://www.sciencedirect.com/science/article/pii/S0951832026016583",
+        "fulltext": "https://www.sciencedirect.com/science/article/pii/S0951832026016583",
+        "doi": "https://doi.org/10.1016/j.ress.2026.113856"
+      }
+    },
+    {
+      "number": "V1",
+      "title": "Route planning for ship typhoon avoidance based on dynamic artificial potential field method",
+      "title_zh": "基于动态人工势场法的船舶避台航线规划",
+      "authors": [
+        "孟景慧",
+        "张可",
+        "邵哲平",
+        "潘家财",
+        "胡智辉"
+      ],
+      "journal": "交通科学与工程",
+      "citation_detail": "2026, 42(5), 1–9",
+      "doi": "10.16544/j.cnki.cn43-1494/u.20250903001",
+      "first_online_date": null,
+      "issue_date": "2026-10",
+      "dated_version": "2026-11-13",
+      "version": "卷期版期刊页登记 11 月 13 日上线，PDF 卷期标为 10 月。更早的优先出版页已有同题同作者摘要，日期栏空缺。2025-09-03 是收稿日。",
+      "window": "version_update",
+      "lane": [
+        "chinese",
+        "keyword"
+      ],
+      "branches": [
+        "Q01",
+        "Q02",
+        "Q04"
+      ],
+      "framework_cell": [
+        "台风／飓风／热带气旋",
+        "能耗与排放"
+      ],
+      "nearest_prior_work": [
+        "P0142",
+        "P0041"
+      ],
+      "comparison": "气象不确定下的船舶避台路径优化（2021，DOI 10.16411/j.cnki.issn1006-7736.2021.02.007）将人工势场用于局部规划。本文把七级风圈半径放进斥力函数，并设置避台与复航时机。P0142 从台湾海峡真实航迹识别避台行为，此处用真实航迹给规划方案设对照。",
+      "one_line": "在台风“纳沙”的单船个案中，模型估算规划航线较实际航线少耗油 147.96 吨、早到约 6 小时。",
+      "sample": "载质量 2 万吨的“凯旋9号”，2022 年 10 月青岛至菲律宾 Tubay。案例取七级风圈半径 200 km，船至台风中心的安全阈值为 230 km。",
+      "independent_check": "据正文复算 393.39 − 245.43 = 147.96 吨。作者用 Kwon 失速模型及速度—油耗拟合计算分段燃油。",
+      "boundary": "模型估算两条路线的差值。替代路线从未实航，风圈信息当时是否可得、主机负荷及实测燃耗仍待独立核对。",
+      "input_data": "实际航迹、船舶航行资料、台风位置及风圈。",
+      "output_data": "规划航线、分段航速、油耗与到达时间。",
+      "data_status": "期刊公开 PDF。原始航迹、台风预报批次和油耗拟合资料的独立存档及许可待核。",
+      "code_status": "未核到作者实现和再利用许可。",
+      "resources": [
+        "https://jtkxygc.csust.edu.cn/jtkxygc/article/abstract/JYXB20250903001",
+        "https://doi.org/10.16411/j.cnki.issn1006-7736.2021.02.007"
+      ],
+      "reading_scope": "full_pdf_text",
+      "source": "https://jtkxygc.csust.edu.cn/jtkxygc/article/abstract/20260501",
+      "fulltext_url": "https://jtkxygc.csust.edu.cn/jtkxygc/article/pdf/20260501",
+      "access": "期刊 PDF 可公开下载，全文再发布许可待核。",
+      "id": "W20261116-V1",
+      "first_reported_issue": "2026-11-16",
+      "last_reported_issue": "2026-11-16",
+      "article_type": "期刊研究论文",
+      "code_obtained": false,
+      "code_run": false,
+      "correction_status": "本次所查出版记录未见单列勘误。",
+      "links": {
+        "publisher": "https://jtkxygc.csust.edu.cn/jtkxygc/article/abstract/20260501",
+        "fulltext": "https://jtkxygc.csust.edu.cn/jtkxygc/article/pdf/20260501",
+        "doi": "https://doi.org/10.16544/j.cnki.cn43-1494/u.20250903001"
+      }
     }
   ]
 }
