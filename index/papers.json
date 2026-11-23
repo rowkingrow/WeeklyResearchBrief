@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-16T08:00:00+08:00",
+  "updated_at": "2026-11-23",
   "dedup_scope": "53 prior weekly records and 287 cross-tier records. Includes dated publication versions.",
   "papers": [
     {
@@ -4119,6 +4119,368 @@
         "publisher": "https://jtkxygc.csust.edu.cn/jtkxygc/article/abstract/20260501",
         "fulltext": "https://jtkxygc.csust.edu.cn/jtkxygc/article/pdf/20260501",
         "doi": "https://doi.org/10.16544/j.cnki.cn43-1494/u.20250903001"
+      }
+    },
+    {
+      "article_type": "journal_article",
+      "first_online_date": "2026-11-18",
+      "issue_date": null,
+      "correction_status": "未检得独立勘误；非穷尽核验",
+      "code_obtained": false,
+      "code_run": false,
+      "number": "01",
+      "title": "Physics-informed offline reinforcement learning reduces worst-case fuel risk in maritime routing",
+      "title_zh": "物理约束离线强化学习与航线燃耗尾部风险",
+      "authors": [
+        "Aniruddha Bora",
+        "Julie Chalfant",
+        "Chryssostomos Chryssostomidis"
+      ],
+      "journal": "Scientific Reports",
+      "citation_detail": "Article in Press (2026)",
+      "doi": "10.1038/s41598-026-79923-y",
+      "date_evidence": "出版社 Published 字段；日精度，时区未提供",
+      "version": "已接受的 Article in Press；最终排版版待替换",
+      "window": "new",
+      "lane": [
+        "keyword"
+      ],
+      "branches": [
+        "Q02",
+        "Q04"
+      ],
+      "framework_cell": "气候与环境变化 × 能耗与排放",
+      "nearest_prior_work": [
+        "P0001",
+        "P0153"
+      ],
+      "one_line": "在墨西哥湾 2023 年海况驱动的五航线模拟中，PIER 相对大圆航线的平均航次 CO₂ 估计降低 10.2%。",
+      "comparison": "相对 P0001 的环境条件排放估算，增加策略优化；相对 P0153 的避恶劣天气与实际遭遇海况比较，增加离线策略及燃耗尾部评价。直接算法先例为 Implicit Q-Learning（Kostrikov 等，2022），需要与气象 A* 在同一出发协议下进一步比较。",
+      "sample": "全年七航线 ×12月 ×10次随机出发＝每方法840次；主要CO₂比较限五航线600次尝试，PIER到达577、大圆569。步长1小时、共同500小时上限、距终点5海里内为到达。表2另用200小时诊断，不能合并。",
+      "independent_check": "表4均值166.7与185.5吨/航次，计算降幅10.13%，与作者未舍入10.2%一致；2/577=0.3466%、17/569=2.9877%。95百分位247.0对244.3吨，略有增加。正文表4、方法及图9 PDF页20已核对；图9d阈值为1.5倍中位数。",
+      "boundary": "全部燃耗由代理模型与历史环境推算。随机按行20%留出，速度损失模型R²=0.018；缺少独立实船燃油验证。CO₂统计以成功到达为条件，失败成本须另算。A*队列采用不同出发协议。预报噪声不进入PIER输入，其恒定表现不能单独建立真实部署优势。",
+      "input_data": "作者列 MarineCadastre AIS、NOAA CoastWatch的OSCAR v2.0/CCMP v3.1/AVISO-DUACS L4、Copernicus GLOBAL_ANALYSIS_FORECAST_WAV_001_027。Methods称8,149货船校准样本为proprietary，与文末所有输入公开的概括存在不一致。",
+      "output_data": "处理后的评估航次、训练配置、模型与核验脚本声明拟存Zenodo；本轮未取得。",
+      "data_status": "原文声明公开来源；具体产品许可、获取账号及受限校准样本重建条件待确认。",
+      "code_status": "Zenodo 10.5281/zenodo.19079029：正文仍写审稿期受限、接受后开放；当前API请求超时，公开访问及代码许可待确认。",
+      "reading_scope": "full_pdf_pages_checked",
+      "pages_checked": [
+        20
+      ],
+      "read_sections": [
+        "全文文本",
+        "Table 1–4",
+        "Extended Data Tables 7–10",
+        "Methods",
+        "Data availability",
+        "Figure 9"
+      ],
+      "source": "https://www.nature.com/articles/s41598-026-79923-y",
+      "fulltext_url": "https://www.nature.com/articles/s41598-026-79923-y_reference.pdf",
+      "access": "全文已取得并读文本；CC BY-NC-ND 4.0；原件未发布",
+      "resources": [
+        "https://doi.org/10.5281/zenodo.19079029",
+        "https://marinecadastre.gov/ais/",
+        "https://coastwatch.pfeg.noaa.gov/erddap",
+        "https://marine.copernicus.eu"
+      ],
+      "id": "W20261123-01",
+      "first_reported_issue": "2026-11-23",
+      "last_reported_issue": "2026-11-23",
+      "links": {
+        "source": "https://www.nature.com/articles/s41598-026-79923-y",
+        "fulltext": "https://www.nature.com/articles/s41598-026-79923-y_reference.pdf"
+      }
+    },
+    {
+      "article_type": "journal_article",
+      "first_online_date": "2026-11-18",
+      "issue_date": "2026-12",
+      "correction_status": "未检得独立勘误；非穷尽核验",
+      "code_obtained": false,
+      "code_run": false,
+      "number": "02",
+      "title": "Risk Assessment and Mitigation for International Multimodal Container Transport Networks Under Compound Flood and Tropical Cyclone Events",
+      "title_zh": "复合洪水—气旋下多式联运网络风险",
+      "authors": [
+        "Yifan Zhu",
+        "Mengqiao Xu",
+        "Ran Yan"
+      ],
+      "journal": "Risk Analysis",
+      "citation_detail": "46(12), e70413 (2026)",
+      "doi": "10.1111/risa.70413",
+      "date_evidence": "出版社向Crossref登记的published-online字段；PubMed核对卷期与作者；出版社HTML获取受阻",
+      "version": "期刊论文",
+      "window": "new",
+      "lane": [
+        "citation",
+        "team"
+      ],
+      "branches": [
+        "Q01",
+        "Q03",
+        "Q05"
+      ],
+      "framework_cell": "台风／飓风／热带气旋 × 空间与网络；其他自然灾害 × 港口能力与韧性",
+      "nearest_prior_work": [
+        "P0050",
+        "P0147"
+      ],
+      "one_line": "中国大陆多式联运网络情景模拟表明，同一事件超越概率对应的县域损失存在差异，结合构件关键性和失效特征的加固方案效果较好。",
+      "comparison": "P0050关注Ma-on下集装箱海运网络，P0147关注台风港口中断的区域经济损失；本研究将洪水与气旋复合事件、跨方式网络和县域异质损失放入同一概率评估。增量判断限摘要。",
+      "sample": "中国大陆真实多式联运集装箱运输网络；网络/县域两层，常见到罕见事件的超越概率分组。节点数、年份、灾害相关结构与外部验证样本未获全文核实。",
+      "independent_check": "Crossref题录、电子发表日与出版者摘要核对；PubMed题录一致。未复算网络损失。",
+      "boundary": "作者结果来自概率灾害与网络情景模拟；是否具备事件级外部验证、加固成本公平比较及行为改道反馈，摘要不足以判断。",
+      "input_data": "多模式运输网络、多源数据、洪水与气旋危险信息；摘要未列产品与版本，获取路径和许可待确认。",
+      "output_data": "网络/县域风险与加固情景结果；公开数据集未核实。",
+      "data_status": "待确认",
+      "code_status": "摘要及题录未提供已核实代码入口；许可待确认",
+      "reading_scope": "abstract_only",
+      "source": "https://onlinelibrary.wiley.com/doi/10.1111/risa.70413",
+      "fulltext_url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/risa.70413",
+      "access": "摘要可读；PDF为出版社入口，全文可获取性与OA许可未确认",
+      "resources": [
+        "https://api.crossref.org/works/10.1111/risa.70413",
+        "https://pubmed.ncbi.nlm.nih.gov/43046721/"
+      ],
+      "id": "W20261123-02",
+      "first_reported_issue": "2026-11-23",
+      "last_reported_issue": "2026-11-23",
+      "links": {
+        "source": "https://onlinelibrary.wiley.com/doi/10.1111/risa.70413",
+        "fulltext": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/risa.70413"
+      }
+    },
+    {
+      "article_type": "institutional_report",
+      "first_online_date": "2026-11-18",
+      "issue_date": null,
+      "correction_status": "未检得独立勘误；非穷尽核验",
+      "code_obtained": false,
+      "code_run": false,
+      "number": "03",
+      "title": "Extreme Weather Risks to International Oil and Natural Gas Shipping",
+      "title_zh": "极端天气与国际油气航运安全",
+      "authors": [
+        "International Energy Agency"
+      ],
+      "journal": "IEA, Paris",
+      "citation_detail": "机构研究报告，2026",
+      "doi": null,
+      "date_evidence": "IEA官方发布日",
+      "version": "官方报告",
+      "window": "new",
+      "lane": [
+        "keyword"
+      ],
+      "branches": [
+        "Q01",
+        "Q04",
+        "Q05"
+      ],
+      "framework_cell": "台风／飓风／热带气旋 × 港口能力与韧性；其他自然灾害 × 经济与贸易",
+      "nearest_prior_work": [
+        "P0050",
+        "P0147"
+      ],
+      "one_line": "IEA对1,606个有常规油轮挂靠的海港评估气旋和洪水暴露，并讨论油气运输中断、航路替代及能源供应缓冲。",
+      "comparison": "相对P0050的集装箱网络与P0147的中国港口经济损失，该报告扩展到全球油气港口—通道—燃料库存链；机构综合报告的证据层级单独登记。",
+      "sample": "1,606海港，平均每年至少一次油轮挂靠；气旋/洪水图采用500年重现期。PortWatch访问截至2026-06-15；摘要含2024贸易背景及未来情景。",
+      "independent_check": "读官方概览、执行摘要及图注。暴露图说明明确区分资产位于危险区与资产脆弱性。",
+      "boundary": "500年重现期暴露无法直接给出本周停港概率；报告综合的年均停工与损失指标需回到各原研究统一口径。全文方法与独立验证未完整核查。",
+      "input_data": "官方执行摘要链接STORM、IMF PortWatch、JRC洪水图、WRI Aqueduct；各数据许可需逐项核查。",
+      "output_data": "报告内地图/汇总图可读；可下载分析数据与代码未确认。",
+      "data_status": "官方入口与源数据引用已核实；未取得数据样例",
+      "code_status": "未找到可核实代码入口，未取得、未运行；许可未知",
+      "reading_scope": "full_html_sections",
+      "read_sections": [
+        "About this report",
+        "Executive summary",
+        "图注及来源"
+      ],
+      "source": "https://www.iea.org/reports/extreme-weather-risks-to-international-oil-and-natural-gas-shipping",
+      "fulltext_url": "https://www.iea.org/files/57d8a347-3a4a-41d9-b608-a8ea7c933bb8/ExtremeWeatherRiskstoInternationalOilandNaturalGasShipping.pdf",
+      "access": "官方完整PDF入口；CC BY 4.0；本轮读HTML章节",
+      "resources": [
+        "https://www.iea.org/reports/extreme-weather-risks-to-international-oil-and-natural-gas-shipping/executive-summary",
+        "https://portwatch.imf.org/"
+      ],
+      "id": "W20261123-03",
+      "first_reported_issue": "2026-11-23",
+      "last_reported_issue": "2026-11-23",
+      "links": {
+        "source": "https://www.iea.org/reports/extreme-weather-risks-to-international-oil-and-natural-gas-shipping",
+        "fulltext": "https://www.iea.org/files/57d8a347-3a4a-41d9-b608-a8ea7c933bb8/ExtremeWeatherRiskstoInternationalOilandNaturalGasShipping.pdf"
+      }
+    },
+    {
+      "article_type": "review",
+      "first_online_date": null,
+      "issue_date": "2020-10",
+      "correction_status": "未检得独立勘误；非穷尽核验",
+      "code_obtained": false,
+      "code_run": false,
+      "number": "H1",
+      "title": "Ship weather routing: A taxonomy and survey",
+      "title_zh": "气象导航方法分类与比较标准",
+      "authors": [
+        "Thalis P. V. Zis",
+        "Harilaos N. Psaraftis",
+        "Li Ding"
+      ],
+      "journal": "Ocean Engineering",
+      "citation_detail": "213,107697 (2020)",
+      "doi": "10.1016/j.oceaneng.2020.107697",
+      "date_evidence": "原发表年2020；精确首次在线日本轮未核实",
+      "version": "期刊正式版",
+      "window": "backfill",
+      "lane": [
+        "keyword"
+      ],
+      "branches": [
+        "Q02",
+        "Q04"
+      ],
+      "framework_cell": "气候与环境变化 × 船舶行为；气候与环境变化 × 能耗与排放",
+      "nearest_prior_work": [
+        "P0153",
+        "P0211"
+      ],
+      "one_line": "综述将气象导航按目标、应用与方法分类，指出节省量报告和基准实例需要统一。",
+      "comparison": "给P0211的路径算法、P0153的避天气行为提供更广的优化问题与基准框架；可用于检查本期PIER的对照是否公平。",
+      "sample": "方法综述；摘要未给系统检索库、截止日和纳入篇数。",
+      "independent_check": "DTU作者机构题录与摘要、出版社DOI一致；DTU提供正式版PDF。",
+      "boundary": "综述提出的分类与基准建议不构成单一算法的实船节油验证。",
+      "input_data": "既有文献；纳排细节待读正文。",
+      "output_data": "分类体系与未来研究议题；机器可读数据未确认。",
+      "data_status": "公开全文入口已核实；数据不适用/待确认",
+      "code_status": "未核实配套代码；未取得、未运行",
+      "reading_scope": "abstract_only",
+      "source": "https://orbit.dtu.dk/en/publications/ship-weather-routing-a-taxonomy-and-survey/",
+      "fulltext_url": "https://backend.orbit.dtu.dk/ws/files/242353436/Zis_Psaraftis_Ding_2020_Weather_routing_a_taxonomy_and_survey.pdf",
+      "access": "DTU正式版PDF可获取；机构页允许个人研究使用、链接分享，未确认进一步再发布许可",
+      "resources": [
+        "https://doi.org/10.1016/j.oceaneng.2020.107697"
+      ],
+      "id": "W20261123-H1",
+      "first_reported_issue": "2026-11-23",
+      "last_reported_issue": "2026-11-23",
+      "links": {
+        "source": "https://orbit.dtu.dk/en/publications/ship-weather-routing-a-taxonomy-and-survey/",
+        "fulltext": "https://backend.orbit.dtu.dk/ws/files/242353436/Zis_Psaraftis_Ding_2020_Weather_routing_a_taxonomy_and_survey.pdf"
+      }
+    },
+    {
+      "article_type": "journal_article",
+      "first_online_date": null,
+      "issue_date": "2020-09",
+      "correction_status": "未检得独立勘误；非穷尽核验",
+      "code_obtained": false,
+      "code_run": false,
+      "number": "H2",
+      "title": "A swift turnaround? Abating shipping greenhouse gas emissions via port call optimization",
+      "title_zh": "港口周转优化的实际决策约束",
+      "authors": [
+        "René Taudal Poulsen",
+        "Helen Sampson"
+      ],
+      "journal": "Transportation Research Part D: Transport and Environment",
+      "citation_detail": "86,102460 (2020)",
+      "doi": "10.1016/j.trd.2020.102460",
+      "date_evidence": "原发表年2020；2020-07-02为接受日，不能代替首次在线日，精确在线日待核",
+      "version": "期刊论文；机构存接受稿",
+      "window": "backfill",
+      "lane": [
+        "keyword"
+      ],
+      "branches": [
+        "Q02",
+        "Q04"
+      ],
+      "framework_cell": "市场与日常运营 × 船舶行为；市场与日常运营 × 能耗与排放",
+      "nearest_prior_work": [
+        "P0135",
+        "P0003"
+      ],
+      "one_line": "研究从船员和航运企业角度解释挂靠等待，指出政府等港口相关方限制了船方调整空间。",
+      "comparison": "相对P0135的等待时间预测，补充决策权与组织约束；可检验P0003等运输延误解释中哪些等待具有可操作性。",
+      "sample": "船员与航运公司相关经验材料；本轮摘要未核实访谈人数、船舶数、国家和年份。",
+      "independent_check": "Cardiff机构题录/摘要与作者机构列表相符；机构接受稿链接可见。",
+      "boundary": "解释性经验研究；摘要未建立港口优化的因果减排效应或可外推节省百分比。",
+      "input_data": "船舶挂靠与参与者材料；原始资料取得、同意条件和匿名化要求待确认。",
+      "output_data": "等待成因的解释；原始资料、编码表公开情况未知。",
+      "data_status": "全文入口已核实；原始质性材料状态待确认",
+      "code_status": "未核实配套代码；未取得、未运行",
+      "reading_scope": "abstract_only",
+      "source": "https://orca.cardiff.ac.uk/id/eprint/133146/",
+      "fulltext_url": "https://orca.cf.ac.uk/133146/1/Sampson_A%20swift%20turnaround.pdf",
+      "access": "机构接受稿可读，版权由作者及权利人保留；使用依机构政策",
+      "resources": [
+        "https://doi.org/10.1016/j.trd.2020.102460"
+      ],
+      "id": "W20261123-H2",
+      "first_reported_issue": "2026-11-23",
+      "last_reported_issue": "2026-11-23",
+      "links": {
+        "source": "https://orca.cardiff.ac.uk/id/eprint/133146/",
+        "fulltext": "https://orca.cf.ac.uk/133146/1/Sampson_A%20swift%20turnaround.pdf"
+      }
+    },
+    {
+      "article_type": "journal_article",
+      "first_online_date": "2008-02-28",
+      "issue_date": "2008-05-01",
+      "correction_status": "未检得独立勘误；非穷尽核验",
+      "code_obtained": false,
+      "code_run": false,
+      "number": "H3",
+      "title": "Effects of Avoidance of Heavy Weather on the Wave-Induced Load on Ships",
+      "title_zh": "避恶劣天气如何改变船体波浪载荷",
+      "authors": [
+        "Zhi Shu",
+        "Torgeir Moan"
+      ],
+      "journal": "Journal of Offshore Mechanics and Arctic Engineering",
+      "citation_detail": "130(2),021002 (2008)",
+      "doi": "10.1115/1.2779331",
+      "date_evidence": "Crossref出版者登记的online/print字段",
+      "version": "期刊版；同题2006会议论文10.1115/OMAE2006-92406作为相关早期版本，不重复计项；具体增补内容待全文比对",
+      "window": "backfill",
+      "lane": [
+        "citation",
+        "keyword"
+      ],
+      "branches": [
+        "Q02"
+      ],
+      "framework_cell": "气候与环境变化 × 船舶行为；气候与环境变化 × 航行安全与碰撞风险",
+      "nearest_prior_work": [
+        "P0153",
+        "P0152"
+      ],
+      "one_line": "研究用VERES与WASIM比较考虑避恶劣天气的长期波浪载荷，并与船舶规则值对照。",
+      "comparison": "P0153考察遭遇海况，此前方法先例已将避险运行约束纳入载荷计算；P0152的能耗环境作用可与其安全结果并读。",
+      "sample": "多船型水动力计算；摘要未列样本船数量与运行观测期。比较二维条带理论、三维Rankine面元法与不同波浪散布图。",
+      "independent_check": "直接读取出版者Crossref摘要、作者、DOI与日期；由回溯引文链命中。",
+      "boundary": "第一类避险模型按运行准则实施；第二类依赖船长可获得海况预报。实船行为验证与预测能力未由摘要建立。",
+      "input_data": "船型水动力资料、波浪散布图、运行限值；具体数据、商业软件许可待核。",
+      "output_data": "长期波浪船体梁载荷与规则对比；可下载数据未确认。",
+      "data_status": "待确认",
+      "code_status": "VERES/WASIM是文中使用的软件；公开源代码及许可未确认，未取得、未运行",
+      "reading_scope": "abstract_only",
+      "source": "https://asmedigitalcollection.asme.org/offshoremechanics/article/doi/10.1115/1.2779331/419903/Effects-of-Avoidance-of-Heavy-Weather-on-the",
+      "fulltext_url": "https://doi.org/10.1115/1.2779331",
+      "access": "已读出版者登记摘要；开放全文未确认，DOI为获取入口",
+      "resources": [
+        "https://api.crossref.org/works/10.1115/1.2779331"
+      ],
+      "id": "W20261123-H3",
+      "first_reported_issue": "2026-11-23",
+      "last_reported_issue": "2026-11-23",
+      "links": {
+        "source": "https://asmedigitalcollection.asme.org/offshoremechanics/article/doi/10.1115/1.2779331/419903/Effects-of-Avoidance-of-Heavy-Weather-on-the",
+        "fulltext": "https://doi.org/10.1115/1.2779331"
       }
     }
   ]
