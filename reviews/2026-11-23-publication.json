@@ -1,0 +1,66 @@
+{
+  "issue": "2026-11-23",
+  "status": "published_and_read_back",
+  "content_commit": "9072b4693a0bc0beb34af2572e27ab4bae8e492e",
+  "branch": "main",
+  "visibility": "public",
+  "publication_readback_completed_at": "2026-11-23T08:13:03+08:00",
+  "timezone": "Asia/Singapore",
+  "files": [
+    {
+      "path": "briefs/2026/2026-11-23.md",
+      "content_equal": true,
+      "sha": "b77c7a5dbac834a19dfefe4ae567597a3ee4dd76",
+      "git_blob_sha_matches_local": true
+    },
+    {
+      "path": "briefs/2026/2026-11-23.papers.json",
+      "content_equal": true,
+      "sha": "7e04a6b753591ea358b7bae7752cdd3f35304838",
+      "git_blob_sha_matches_local": true
+    },
+    {
+      "path": "index/papers.json",
+      "content_equal": true,
+      "sha": "7724e51abf0b76a0902cfff65c6da5dc212be1ae",
+      "git_blob_sha_matches_local": true
+    },
+    {
+      "path": "README.md",
+      "content_equal": true,
+      "sha": "5dc566a6a578426211e9b3c615d3b614bba38fcd",
+      "git_blob_sha_matches_local": true
+    },
+    {
+      "path": "reviews/2026-11-23-checks.md",
+      "content_equal": true,
+      "sha": "6e42a314df85e6f7bad8a7667bcafbbeec0cc882",
+      "git_blob_sha_matches_local": true
+    }
+  ],
+  "checks": {
+    "prior_index_objects_preserved": 56,
+    "index_records_after": 62,
+    "fixed_commit_readback": true,
+    "utf8_content_equal": true,
+    "git_blob_sha_equal": true,
+    "scientific_code_obtained": false,
+    "scientific_code_run": false,
+    "pdf_visual_pages": [
+      20
+    ],
+    "numerical_checks": "表4汇总数的简单复算完成；未复现科学模型",
+    "researchmap_mutations": 0,
+    "google_drive_mutations": 0,
+    "automation_mutations": 0
+  },
+  "remaining": [
+    "期刊API完整结果8/11刊；JMSE/TRD/TRE以网页补检，覆盖有限。",
+    "中文数据库本期未检索；公开网页补检完成。",
+    "PIER代码存档访问及许可、受限校准数据重建条件待确认。",
+    "摘要级条目的样本、输入数据许可及外部验证缺项见元数据。",
+    "H1、H2精确首次在线日未核实，已按历史回溯登记。",
+    "原任务保留，当前工具未单独提供通知开关字段；通知对话与任务配置保持。"
+  ],
+  "receipt_note": "本回执单独提交；最终回执的远端回读完成时间在原任务对话通知。"
+}
